@@ -35,7 +35,6 @@ export const HeaderContainer = styled.div`
 	}
 	.header__user_btn {
 		font-size: 16px;
-		color: ${colors.gray_77};
 		border: none;
 		background-color: ${colors.primary};
 		color: white;

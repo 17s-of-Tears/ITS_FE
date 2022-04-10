@@ -1,9 +1,9 @@
 import { lazy } from 'react'
 import { useRoutes } from 'react-router-dom'
 
-const Home = lazy(() => import('pages/HomePage'))
-const List = lazy(() => import('pages/ListPage'))
-const Post = lazy(() => import('pages/PostPage'))
+const Home = lazy(() => import('pages/Home/HomePage'))
+const List = lazy(() => import('pages/List/ListPage'))
+const Post = lazy(() => import('pages/Post/PostPage'))
 
 const RouterConfig = () => {
 	const routes = useRoutes([
