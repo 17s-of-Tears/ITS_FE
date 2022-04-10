@@ -1,6 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import { ReactComponent as Home } from 'assets/svg/home.svg'
+import { ReactComponent as Member } from 'assets/svg/member.svg'
+import { ReactComponent as Members } from 'assets/svg/members.svg'
+import { ReactComponent as Like } from 'assets/svg/like.svg'
+import { ReactComponent as Arrow } from 'assets/svg/arrow.svg'
 import Its from '../its'
 import { MainContainer } from './styles'
 
@@ -28,32 +32,11 @@ const HomePage = () => {
 					</p>
 
 					<button onClick={onMovePageList} className="home__intro_btn">
-						서비스 시작하기 ▶
+						서비스 시작하기
+						<Arrow className="home__btn_svg" />
 					</button>
 				</div>
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-			</div>
-
-			<div className="blank">
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
-				<img src="images/logo.png" alt="hosu" />
+				<Home />
 			</div>
 
 			<div className="home__result">
@@ -69,17 +52,17 @@ const HomePage = () => {
 				</div>
 				<div className="home__result_img">
 					<div>
-						<img src="images/logo.png" alt="hosu" />
+						<Member className="home__result_svg" />
 						<p className="home__result_txt3">10,000+</p>
 						<p className="home__result_txt4">누적 스터디 멤버 수</p>
 					</div>
 					<div>
-						<img src="images/logo.png" alt="hosu" />
+						<Members className="home__result_svg" />
 						<p className="home__result_txt3">3500+</p>
 						<p className="home__result_txt4">누적 스터디 개설 수</p>
 					</div>
 					<div>
-						<img src="images/logo.png" alt="hosu" />
+						<Like className="home__result_svg" />
 						<p className="home__result_txt3">
 							4.5<span>/5.0</span>
 						</p>

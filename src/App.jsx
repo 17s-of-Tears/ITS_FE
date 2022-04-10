@@ -5,7 +5,7 @@ import Header from 'components/common/Header'
 import GlobalStyle from 'styles/GlobalStyled'
 import RouterConfig from 'router'
 import styled from 'styled-components'
-import Footer from 'components/common/Footer'
+import Footer from 'components/common/footer'
 
 const Container = styled.div`
 	background-color: #f8f9fd;

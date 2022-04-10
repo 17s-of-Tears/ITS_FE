@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { ReactComponent as ItsLogo } from 'assets/svg/logo.svg'
 
 import colors from 'styles/colors'
 
@@ -12,7 +13,6 @@ const Container = styled.div`
 	a {
 		display: flex;
 		align-items: center;
-		gap: 10px;
 		text-decoration: none;
 		color: ${colors.primary};
 	}
@@ -20,16 +20,15 @@ const Container = styled.div`
 		filter: brightness(80%);
 	}
 `
-
-const ImgWrapper = styled.img`
-	width: 34px;
-	height: 20px;
+const StyledItsLogo = styled(ItsLogo)`
+	width: 100px;
+	height: 100px;
 `
 
 const Logo = () => (
 	<Container>
 		<Link to="/">
-			<ImgWrapper src="images/logo.png" alt="logo" />
+			<StyledItsLogo />
 			It's
 		</Link>
 	</Container>

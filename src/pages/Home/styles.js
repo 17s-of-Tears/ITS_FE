@@ -33,6 +33,7 @@ export const MainContainer = styled.div`
 	}
 	.home__intro_btn {
 		display: flex;
+		align-items: center;
 		background-color: ${colors.primary};
 		font-size: 20px;
 		color: white;
@@ -40,14 +41,10 @@ export const MainContainer = styled.div`
 		padding: 8px 12px;
 		margin-top: 20px;
 		font-family: Noto Sans, Noto Sans KR;
-		cursor: pointer;
 		transition: 0.3s;
+		gap: 5px;
 		&:hover {
 			filter: brightness(80%);
-		}
-		a {
-			text-decoration: none;
-			color: white;
 		}
 	}
 
@@ -94,7 +91,14 @@ export const MainContainer = styled.div`
 		font-size: 20px;
 		margin-top: 15px;
 	}
-	.blank {
-		margin-top: 150px;
+	.home__result_svg {
+		width: 130px;
+		height: 130px;
+		fill: ${colors.gray_55};
+	}
+	.home__btn_svg {
+		margin-top: 2px;
+		width: 15px;
+		height: 15px;
 	}
 `
