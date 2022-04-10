@@ -31,29 +31,29 @@ const HomePage = () => {
 						서비스 시작하기 ▶
 					</button>
 				</div>
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
 			</div>
 
 			<div className="blank">
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
-				<img src="images/logo.png" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
+				<img src="images/logo.png" alt="hosu" />
 			</div>
 
 			<div className="home__result">
@@ -69,17 +69,17 @@ const HomePage = () => {
 				</div>
 				<div className="home__result_img">
 					<div>
-						<img src="images/logo.png" />
+						<img src="images/logo.png" alt="hosu" />
 						<p className="home__result_txt3">10,000+</p>
 						<p className="home__result_txt4">누적 스터디 멤버 수</p>
 					</div>
 					<div>
-						<img src="images/logo.png" />
+						<img src="images/logo.png" alt="hosu" />
 						<p className="home__result_txt3">3500+</p>
 						<p className="home__result_txt4">누적 스터디 개설 수</p>
 					</div>
 					<div>
-						<img src="images/logo.png" />
+						<img src="images/logo.png" alt="hosu" />
 						<p className="home__result_txt3">
 							4.5<span>/5.0</span>
 						</p>
