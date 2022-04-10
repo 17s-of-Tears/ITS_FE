@@ -11,6 +11,11 @@ const globalStyle = css`
 		font-family: Noto Sans, Noto Sans KR;
 		color: #333;
 	}
+	button {
+		text-decoration: none;
+		border: 0;
+		cursor: pointer;
+	}
 `
 
 const GlobalStyle = createGlobalStyle`

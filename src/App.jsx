@@ -5,9 +5,9 @@ import Header from 'components/common/Header'
 import GlobalStyle from 'styles/GlobalStyled'
 import RouterConfig from 'router'
 import styled from 'styled-components'
+import Footer from 'components/common/Footer'
 
 const Container = styled.div`
-	height: 500vh;
 	background-color: #f8f9fd;
 `
 
@@ -19,6 +19,7 @@ const App = () => (
 			<Suspense fallback={<span>Loading...</span>}>
 				<RouterConfig />
 			</Suspense>
+			<Footer />
 		</BrowserRouter>
 	</Container>
 )
