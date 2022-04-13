@@ -28,19 +28,20 @@ const ListPage = () => (
 					</select>
 				</div>
 			</div>
-			<div className="list__join_txt">
-				<p>총 100개의 팀</p>
-				<p className="list__join_stxt">
-					관심있는 팀에 댓글을 남겨 팀에 참여해 보세요!
-				</p>
-			</div>
-			<div>
-				{cardData.map(data => (
-					<Card key={data.id} {...data} />
-				))}
-			</div>
+		</div>
+		<div className="list__join_txt">
+			<p>총 100개의 팀</p>
+			<p className="list__join_stxt">
+				관심있는 팀에 댓글을 남겨 팀에 참여해 보세요!
+			</p>
+		</div>
+		<div className='list__card'>
+			{cardData.map(data => (
+				<Card key={data.id} {...data} />
+			))}
 		</div>
 	</MainContainer>
 )
+
 
 export default ListPage

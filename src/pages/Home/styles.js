@@ -4,49 +4,50 @@ import colors from 'styles/colors'
 export const MainContainer = styled.div`
 	justify-content: space-between;
 	align-items: center;
-	padding: 150px 278px 100px 278px;
+	padding: 200px 278px 100px 278px;
 	.home__intro {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-	}
-	.home__intro_txt {
+		.home__intro_txt {
 		font-size: 42px;
 		color: ${colors.gray_33};
 		font-family: Noto Sans, Noto Sans KR;
-		span {
+			span {
 			font-weight: 600;
+			}
+		}
+		.home__intro_plat {
+			display: flex;
+			gap: 10px;
+		}
+		.home__intro_stxt {
+			font-size: 20px;
+			color: ${colors.gray_77};
+			margin-top: 20px;
+		}
+		.home__intro_stxt2 {
+			font-size: 20px;
+			color: ${colors.primary};
+		}
+		.home__intro_btn {
+			display: flex;
+			align-items: center;
+			background-color: ${colors.primary};
+			font-size: 20px;
+			color: white;
+			border-radius: 8px;
+			padding: 8px 12px;
+			margin-top: 20px;
+			font-family: Noto Sans, Noto Sans KR;
+			transition: 0.3s;
+			gap: 5px;
+			&:hover {
+				filter: brightness(80%);
+			}
 		}
 	}
-	.home__intro_plat {
-		display: flex;
-		gap: 10px;
-	}
-	.home__intro_stxt {
-		font-size: 20px;
-		color: ${colors.gray_77};
-		margin-top: 20px;
-	}
-	.home__intro_stxt2 {
-		font-size: 20px;
-		color: ${colors.primary};
-	}
-	.home__intro_btn {
-		display: flex;
-		align-items: center;
-		background-color: ${colors.primary};
-		font-size: 20px;
-		color: white;
-		border-radius: 8px;
-		padding: 8px 12px;
-		margin-top: 20px;
-		font-family: Noto Sans, Noto Sans KR;
-		transition: 0.3s;
-		gap: 5px;
-		&:hover {
-			filter: brightness(80%);
-		}
-	}
+	
 
 	.home__result {
 		margin-top: 100px;

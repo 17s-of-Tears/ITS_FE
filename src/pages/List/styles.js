@@ -12,17 +12,20 @@ export const MainContainer = styled.div`
 		font-size: 42px;
 		font-weight: 500;
 		gap: 10px;
-	}
-	.list__filter_stxt {
+		.list__filter_stxt {
 		font-size: 24px;
 		color: ${colors.gray_aa};
+		}
 	}
+	
 	.list__filter_box {
+		margin-top: 20px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 	.list__join_txt {
+		padding: 50px 278px 0px 278px;
 		display: flex;
 		align-items: center;
 		font-size: 20px;
@@ -32,5 +35,13 @@ export const MainContainer = styled.div`
 			font-size: 14px;
 			color: ${colors.gray_aa};
 		}
+	}
+	.list__card {
+		padding: 0px 278px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 20px;
+		align-items: center;
+		margin-top: 80px;
 	}
 `
