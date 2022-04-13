@@ -6,7 +6,7 @@ import { ReactComponent as ItsLogo } from 'assets/svg/logo.svg'
 import colors from 'styles/colors'
 
 const Container = styled.div`
-	font-size: 25px;
+	font-size: 30px;
 	font-weight: 600;
 	transition: 0.3s;
 	position: relative;

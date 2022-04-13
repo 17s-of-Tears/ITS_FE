@@ -1,19 +1,20 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from 'react'
 import { ReactComponent as Home } from 'assets/svg/home.svg'
 import { ReactComponent as Member } from 'assets/svg/member.svg'
 import { ReactComponent as Members } from 'assets/svg/members.svg'
 import { ReactComponent as Like } from 'assets/svg/like.svg'
 import { ReactComponent as Arrow } from 'assets/svg/arrow.svg'
+import Modal from 'components/modal/Login'
 import Its from '../its'
 import { MainContainer } from './styles'
 
 const HomePage = () => {
-	const navigate = useNavigate()
+	const [isModal, setIsModal] = useState(false)
 
-	const onMovePageList = () => {
-		navigate('/list')
+	const onOpenModal = () => {
+		setIsModal(true)
 	}
+	const onCloseModal = () => setIsModal(false)
 
 	return (
 		<MainContainer>
@@ -31,7 +32,7 @@ const HomePage = () => {
 						찾아보세요!
 					</p>
 
-					<button onClick={onMovePageList} className="home__intro_btn">
+					<button onClick={onOpenModal} className="home__intro_btn">
 						서비스 시작하기
 						<Arrow className="home__btn_svg" />
 					</button>
@@ -70,6 +71,7 @@ const HomePage = () => {
 					</div>
 				</div>
 			</div>
+			{isModal && <Modal onCloseModal={onCloseModal} />}
 		</MainContainer>
 	)
 }
