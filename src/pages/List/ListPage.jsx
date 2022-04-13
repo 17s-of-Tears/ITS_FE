@@ -1,5 +1,7 @@
 import React from 'react'
+import Card from 'components/list/Card'
 import { MainContainer } from './styles'
+import cardData from '../../data/cardData'
 
 const ListPage = () => (
 	<MainContainer>
@@ -26,39 +28,16 @@ const ListPage = () => (
 					</select>
 				</div>
 			</div>
-		</div>
-		<div className="list__join">
 			<div className="list__join_txt">
 				<p>총 100개의 팀</p>
 				<p className="list__join_stxt">
 					관심있는 팀에 댓글을 남겨 팀에 참여해 보세요!
 				</p>
 			</div>
-			<div className="list__join_pro">
-				<div className="list__join_box">
-					<p>프로젝트</p>
-					<p>같이 팀 프로젝트하실 분 구해요!</p>
-					<p>2022-04-01</p>
-					<p>댓글10 조회수100</p>
-				</div>
-				<div className="list__join_box">
-					<p>프로젝트</p>
-					<p>같이 팀 프로젝트하실 분 구해요!</p>
-					<p>2022-04-01</p>
-					<p>댓글10 조회수100</p>
-				</div>
-				<div className="list__join_box">
-					<p>프로젝트</p>
-					<p>같이 팀 프로젝트하실 분 구해요!</p>
-					<p>2022-04-01</p>
-					<p>댓글10 조회수100</p>
-				</div>
-				<div className="list__join_box">
-					<p>프로젝트</p>
-					<p>같이 팀 프로젝트하실 분 구해요!</p>
-					<p>2022-04-01</p>
-					<p>댓글10 조회수100</p>
-				</div>
+			<div>
+				{cardData.map(data => (
+					<Card key={data.id} {...data} />
+				))}
 			</div>
 		</div>
 	</MainContainer>

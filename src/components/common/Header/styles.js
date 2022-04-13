@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import colors from 'styles/colors'
 
 export const HeaderContainer = styled.div`
+	height: 80px;
 	color: white;
 	display: flex;
 	justify-content: space-between;

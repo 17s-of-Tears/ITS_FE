@@ -9,7 +9,12 @@ const Container = styled.div`
 	font-size: 25px;
 	font-weight: 600;
 	transition: 0.3s;
+	position: relative;
 	cursor: pointer;
+	.logo_test {
+		position: absolute;
+		left: 80px;
+	}
 	a {
 		display: flex;
 		align-items: center;
@@ -21,6 +26,8 @@ const Container = styled.div`
 	}
 `
 const StyledItsLogo = styled(ItsLogo)`
+	position: absolute;
+	left: 0;
 	width: 100px;
 	height: 100px;
 `
@@ -29,7 +36,7 @@ const Logo = () => (
 	<Container>
 		<Link to="/">
 			<StyledItsLogo />
-			It's
+			<div className="logo_test">It's</div>
 		</Link>
 	</Container>
 )
