@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import { ReactComponent as Home } from 'assets/svg/home.svg'
 import { ReactComponent as Member } from 'assets/svg/member.svg'
 import { ReactComponent as Members } from 'assets/svg/members.svg'
 import { ReactComponent as Like } from 'assets/svg/like.svg'
 import { ReactComponent as Arrow } from 'assets/svg/arrow.svg'
-import Modal from 'components/modal/Login'
+import Modal from 'components/modal/Service'
 import Its from '../its'
 import { MainContainer } from './styles'
 
@@ -37,8 +36,11 @@ const HomePage = () => {
 						<Arrow className="home__btn_svg" />
 					</button>
 				</div>
-				<Home />
+				<img src="images/comp1.png" alt="11"></img>
+				<img src="images/comp2.png" alt="11"></img>
 			</div>
+
+			<img className="home__preview" src="images/preview.png" alt="11"></img>
 
 			<div className="home__result">
 				<div className="home__result_txt">

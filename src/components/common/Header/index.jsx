@@ -1,10 +1,18 @@
-import React, { useMemo } from 'react'
+import Modal from 'components/modal/Login'
+import React, { useMemo, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 import Logo from '../Logo'
 import { HeaderContainer } from './styles'
 
 const Header = () => {
+	const [isModal, setIsModal] = useState(false)
+
+	const onOpenModal = () => {
+		setIsModal(true)
+	}
+	const onCloseModal = () => setIsModal(false)
+
 	const location = useLocation()
 
 	const menus = useMemo(
@@ -29,7 +37,10 @@ const Header = () => {
 					</Link>
 				))}
 			</div>
-			<button className="header__user_btn">로그인 | 회원가입</button>
+			<button onClick={onOpenModal} className="header__user_btn">
+				로그인 | 회원가입
+			</button>
+			{isModal && <Modal onCloseModal={onCloseModal} />}
 		</HeaderContainer>
 	)
 }

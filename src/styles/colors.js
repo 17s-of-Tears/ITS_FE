@@ -6,5 +6,7 @@ export default {
 	gray_55: '#555555',
 	gray_70: '#707070',
 	gray_ea: '#eaeaea',
-	gray_aa: '#aaaaaa'
+	gray_aa: '#aaaaaa',
+	white_ff: '#fff',
+	black_22: '#222'
 }

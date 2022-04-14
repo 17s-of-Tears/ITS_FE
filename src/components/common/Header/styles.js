@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0px 278px;
+	padding: 0px 278px 0px 267px;
 	border-bottom: 1px solid ${colors.gray_f1};
 	position: sticky;
 	top: 0;
@@ -16,6 +16,7 @@ export const HeaderContainer = styled.div`
 	.header__menus {
 		display: flex;
 		gap: 20px;
+		margin-left: 100px;
 		a {
 			text-decoration: none;
 			color: ${colors.gray_77};

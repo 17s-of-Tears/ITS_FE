@@ -10,11 +10,11 @@ export const MainContainer = styled.div`
 		justify-content: space-between;
 		align-items: center;
 		.home__intro_txt {
-		font-size: 42px;
-		color: ${colors.gray_33};
-		font-family: Noto Sans, Noto Sans KR;
+			font-size: 42px;
+			color: ${colors.gray_33};
+			font-family: Noto Sans, Noto Sans KR;
 			span {
-			font-weight: 600;
+				font-weight: 600;
 			}
 		}
 		.home__intro_plat {
@@ -47,7 +47,10 @@ export const MainContainer = styled.div`
 			}
 		}
 	}
-	
+
+	.home__preview {
+		margin-top: 150px;
+	}
 
 	.home__result {
 		margin-top: 100px;
