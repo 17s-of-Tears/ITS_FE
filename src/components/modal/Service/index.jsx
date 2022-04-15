@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ReactComponent as Close } from 'assets/svg/close.svg'
+import Logo from 'components/common/Logo'
 import { ModalContainer } from './styles'
 
 const Modal = ({ onCloseModal }) => {
@@ -16,8 +17,10 @@ const Modal = ({ onCloseModal }) => {
 				<button className="modal__service_close" onClick={onCloseModal}>
 					<Close />
 				</button>
-				<p className="modal__service_its">It's</p>
 
+				<div className="modal__service_logo">
+					<Logo />
+				</div>
 				<p className="modal__service_txt">
 					이츠에서 같이 성장할 팀을 구해보세요!
 				</p>

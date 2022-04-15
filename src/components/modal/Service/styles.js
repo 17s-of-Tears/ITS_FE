@@ -3,7 +3,6 @@ import colors from 'styles/colors'
 
 export const ModalContainer = styled.div`
 	position: fixed;
-
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -17,21 +16,27 @@ export const ModalContainer = styled.div`
 	}
 	.modal__service {
 		position: absolute;
-		padding: 50px 137px 100px 137px;
+		padding: 40px 137px 100px 137px;
 		border-radius: 10px;
 		background-color: #fff;
 		width: 1088px;
 		height: 830px;
+		display: flex;
+		flex-direction: column;
 
-		.modal__service_its {
-			font-size: 30px;
-			font-weight: 600;
-			color: ${colors.primary};
-		}
 		.modal__service_close {
-			width: 24px;
-			height: 24px;
+			display: flex;
+			justify-content: flex-end;
 			background-color: #fff;
+			svg {
+				width: 24px;
+				height: 24px;
+				background-color: #fff;
+			}
+		}
+		.modal__service_logo {
+			display: flex;
+			justify-content: center;
 		}
 		.modal__service_both {
 			margin-top: 30px;
