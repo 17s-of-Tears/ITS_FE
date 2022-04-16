@@ -7,6 +7,9 @@ export default {
 	gray_70: '#707070',
 	gray_ea: '#eaeaea',
 	gray_aa: '#aaaaaa',
+	gray_dd: '#dddddd',
+	gray_ee: '#eeeeee',
 	white_ff: '#fff',
-	black_22: '#222'
+	black_22: '#222',
+	red_74: '#e74c3c'
 }

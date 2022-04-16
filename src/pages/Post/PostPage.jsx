@@ -1,4 +1,3 @@
-// import Modal from 'components/modal/Login'
 import React from 'react'
 import { MainContainer } from './styles'
 

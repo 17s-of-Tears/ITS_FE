@@ -9,8 +9,10 @@ export const ModalContainer = styled.div`
 	right: 0;
 	background: rgba(0, 0, 0, 0.8);
 	padding: 110px 416px 110px 416px;
-	margin: auto;
 	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 20;
 	p {
 		text-align: center;
 	}
@@ -37,6 +39,7 @@ export const ModalContainer = styled.div`
 		.modal__service_logo {
 			display: flex;
 			justify-content: center;
+			pointer-events: none;
 		}
 		.modal__service_both {
 			margin-top: 30px;

@@ -2,19 +2,33 @@ import styled from 'styled-components'
 import colors from 'styles/colors'
 
 export const CardContainer = styled.div`
+	border: 1px solid black;
+	width: 100%;
+	position: relative;
+	background-color: white;
+	border: 1px solid ${colors.gray_ea};
+	border-radius: 5px;
+	&::after {
+		display: block;
+		content: '';
+		padding-bottom: 100%;
+	}
+	&:hover {
+		box-shadow: 3px 3px 10px 5px rgba(119, 119, 119, 0.16);
+	}
 	.list__join_pro {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		text-align: center;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		cursor: pointer;
 		.list__join_box {
-			padding:30px 0;
-			width: 326px;
-			height: 290px;
-			background-color: white;
-			border: 1px solid ${colors.gray_ea};
-			border-radius: 5px;
-			box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+			padding: 30px 0;
+			width: 100%;
+
 			.list__category {
 				font-size: 16px;
 				color: ${colors.gray_aa};

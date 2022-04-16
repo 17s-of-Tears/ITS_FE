@@ -1,5 +1,6 @@
 import Modal from 'components/modal/Login'
-import React, { useMemo, useState } from 'react'
+import { homeMenus } from 'lib/staticData'
+import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 import Logo from '../Logo'
@@ -15,19 +16,11 @@ const Header = () => {
 
 	const location = useLocation()
 
-	const menus = useMemo(
-		() => [
-			{ id: 1, name: '팀 찾기', to: '/list' },
-			{ id: 2, name: '커뮤니티', to: '/post' }
-		],
-		[]
-	)
-
 	return (
 		<HeaderContainer>
 			<Logo />
 			<div className="header__menus">
-				{menus.map(menu => (
+				{homeMenus.map(menu => (
 					<Link
 						key={menu.id}
 						to={menu.to}

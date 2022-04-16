@@ -8,9 +8,10 @@ export const LoginContainer = styled.div`
 	bottom: 0;
 	right: 0;
 	background: rgba(0, 0, 0, 0.8);
-	padding: 150px 623px 0px 623px;
-	margin: auto;
+	padding: 50px 623px 0px 623px;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	p {
 		text-align: center;
 	}
@@ -36,6 +37,7 @@ export const LoginContainer = styled.div`
 		.modal__login_logo {
 			display: flex;
 			justify-content: center;
+			pointer-events: none;
 		}
 		.modal__login_lg {
 			color: ${colors.gray_33};
@@ -51,7 +53,7 @@ export const LoginContainer = styled.div`
 			color: ${colors.gray_aa};
 			border: solid 1px ${colors.gray_aa};
 			border-radius: 5px;
-			padding: 13px 544px 13px 20px;
+			padding: 13px 0px 13px 20px;
 		}
 		.modal__login_pw {
 			margin-top: 10px;
@@ -61,7 +63,7 @@ export const LoginContainer = styled.div`
 			color: ${colors.gray_aa};
 			border: solid 1px ${colors.gray_aa};
 			border-radius: 5px;
-			padding: 13px 544px 13px 20px;
+			padding: 13px 0px 13px 20px;
 		}
 		.modal__login_btn1 {
 			width: 614px;
@@ -83,6 +85,7 @@ export const LoginContainer = styled.div`
 			margin-top: 30px;
 			color: ${colors.gray_aa};
 			span {
+				cursor: pointer;
 				color: ${colors.primary};
 			}
 		}

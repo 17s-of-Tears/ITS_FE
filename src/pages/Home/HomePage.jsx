@@ -10,9 +10,7 @@ import { MainContainer } from './styles'
 const HomePage = () => {
 	const [isModal, setIsModal] = useState(false)
 
-	const onOpenModal = () => {
-		setIsModal(true)
-	}
+	const onOpenModal = () => setIsModal(true)
 	const onCloseModal = () => setIsModal(false)
 
 	return (
@@ -36,8 +34,7 @@ const HomePage = () => {
 						<Arrow className="home__btn_svg" />
 					</button>
 				</div>
-				<img src="images/comp1.png" alt="11"></img>
-				<img src="images/comp2.png" alt="11"></img>
+				<img src="images/two.png" alt="11"></img>
 			</div>
 
 			<img className="home__preview" src="images/preview.png" alt="11"></img>

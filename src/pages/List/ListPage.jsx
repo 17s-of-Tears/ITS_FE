@@ -13,9 +13,6 @@ const ListPage = () => (
 			<div className="list__filter_box">
 				<div>
 					<select>
-						<option>지역</option>
-					</select>
-					<select>
 						<option>종류</option>
 					</select>
 					<select>
@@ -35,13 +32,12 @@ const ListPage = () => (
 				관심있는 팀에 댓글을 남겨 팀에 참여해 보세요!
 			</p>
 		</div>
-		<div className='list__card'>
+		<div className="list__card">
 			{cardData.map(data => (
 				<Card key={data.id} {...data} />
 			))}
 		</div>
 	</MainContainer>
 )
-
 
 export default ListPage

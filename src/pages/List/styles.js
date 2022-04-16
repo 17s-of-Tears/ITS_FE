@@ -13,11 +13,11 @@ export const MainContainer = styled.div`
 		font-weight: 500;
 		gap: 10px;
 		.list__filter_stxt {
-		font-size: 24px;
-		color: ${colors.gray_aa};
+			font-size: 24px;
+			color: ${colors.gray_aa};
 		}
 	}
-	
+
 	.list__filter_box {
 		margin-top: 20px;
 		display: flex;
@@ -40,8 +40,10 @@ export const MainContainer = styled.div`
 		padding: 0px 278px;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: 20px;
-		align-items: center;
+		gap: 25px;
 		margin-top: 80px;
+		@media screen and (max-width: 1024px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 `

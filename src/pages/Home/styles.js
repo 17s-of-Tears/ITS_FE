@@ -50,6 +50,7 @@ export const MainContainer = styled.div`
 
 	.home__preview {
 		margin-top: 150px;
+		width: 100%;
 	}
 
 	.home__result {

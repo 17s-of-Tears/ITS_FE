@@ -32,19 +32,9 @@ const Modal = ({ onCloseModal }) => {
 							className="modal__login_pw"
 							placeholder="비밀번호"
 						></input>
-						<input
-							type="password"
-							className="modal__login_pw"
-							placeholder="비밀번호"
-						></input>
-						<input
-							type="password"
-							className="modal__login_pw"
-							placeholder="비밀번호"
-						></input>
 						<button className="modal__login_btn1">로그인</button>
 						<p className="modal__login_first">
-							이츠가 처음이신가요?<span onClick={onChangeMode}>회원가입</span>
+							이츠가 처음이신가요? <span onClick={onChangeMode}>회원가입</span>
 						</p>
 						<div className="modal__modal_or">
 							<hr />
@@ -64,13 +54,23 @@ const Modal = ({ onCloseModal }) => {
 							placeholder="이메일"
 						></input>
 						<input
+							type="text"
+							className="modal__login_pw"
+							placeholder="닉네임"
+						></input>
+						<input
 							type="password"
 							className="modal__login_pw"
 							placeholder="비밀번호"
 						></input>
+						<input
+							type="password"
+							className="modal__login_pw"
+							placeholder="비밀번호 확인"
+						></input>
 						<button className="modal__login_btn1">회원가입</button>
 						<p className="modal__login_first">
-							로그인?<span onClick={onChangeMode}>로그인</span>
+							이미 이츠 회원이신가요? <span onClick={onChangeMode}>로그인</span>
 						</p>
 						<div className="modal__modal_or">
 							<hr />
