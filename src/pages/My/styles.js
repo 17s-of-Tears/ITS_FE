@@ -45,7 +45,6 @@ export const MainContainer = styled.div`
 						width: 101px;
 						height: 40px;
 						border-radius: 5px;
-						box-shadow: 3px 3px 10px 0 rgba(119, 119, 119, 0.16);
 						&:hover {
 							filter: brightness(80%);
 						}
@@ -56,7 +55,6 @@ export const MainContainer = styled.div`
 						width: 101px;
 						height: 40px;
 						border-radius: 5px;
-						box-shadow: 3px 3px 10px 0 rgba(119, 119, 119, 0.16);
 						&:hover {
 							filter: brightness(80%);
 						}
@@ -86,7 +84,6 @@ export const MainContainer = styled.div`
 						width: 164px;
 						height: 40px;
 						border-radius: 5px;
-						box-shadow: 3px 3px 10px 0 rgba(119, 119, 119, 0.16);
 						background-color: ${colors.primary};
 						&:hover {
 							filter: brightness(80%);
@@ -97,7 +94,6 @@ export const MainContainer = styled.div`
 						width: 164px;
 						height: 40px;
 						border-radius: 5px;
-						box-shadow: 3px 3px 10px 0 rgba(119, 119, 119, 0.16);
 						background-color: ${colors.red_74};
 						&:hover {
 							filter: brightness(80%);
@@ -109,13 +105,13 @@ export const MainContainer = styled.div`
 				display: flex;
 				flex-direction: column;
 				gap: 8px;
+				width: 100%;
 			}
 			.my__profile_team {
 				font-size: 20px;
 				color: ${colors.gray_77};
 				font-weight: 300;
 				margin-top: 7px;
-				width: 398px;
 				height: 49px;
 				padding: 10px 0px 10px 20px;
 				border-radius: 5px;
@@ -134,7 +130,7 @@ export const MainContainer = styled.div`
 			}
 		}
 		.my__profile_right {
-			height: 651px;
+			height: 652px;
 			width: 80%;
 			padding: 30px 30px 240.5px;
 			border-radius: 10px;
@@ -179,7 +175,6 @@ export const MainContainer = styled.div`
 					width: 122px;
 					height: 40px;
 					border-radius: 5px;
-					box-shadow: 3px 3px 10px 0 rgba(119, 119, 119, 0.16);
 					background-color: ${colors.primary};
 					&:hover {
 						filter: brightness(80%);

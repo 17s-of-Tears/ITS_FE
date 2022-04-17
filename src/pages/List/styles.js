@@ -5,24 +5,16 @@ export const MainContainer = styled.div`
 	.list__filter {
 		border-bottom: 1px solid ${colors.gray_ea};
 		padding: 50px 278px 50px 278px;
-	}
-	.list__filter_txt {
-		align-items: center;
-		display: flex;
-		font-size: 42px;
-		font-weight: 500;
-		gap: 10px;
-		.list__filter_stxt {
-			font-size: 24px;
-			color: ${colors.gray_aa};
+		.list__filter_txt {
+			display: flex;
+			font-size: 42px;
+			font-weight: 500;
+			gap: 10px;
+			span {
+				font-size: 24px;
+				color: ${colors.gray_aa};
+			}
 		}
-	}
-
-	.list__filter_box {
-		margin-top: 20px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 	}
 	.list__join_txt {
 		padding: 50px 278px 0px 278px;
