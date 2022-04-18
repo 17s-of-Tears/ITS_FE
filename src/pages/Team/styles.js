@@ -135,4 +135,63 @@ export const Maincontainer = styled.div`
 			background-color: ${colors.white_ff};
 		}
 	}
+
+	.memo__box {
+		display: flex;
+		gap: 30px;
+		width: 100%;
+		height: 707px;
+		border-radius: 5px;
+		background-color: ${colors.white_ff};
+		padding: 30px 50px;
+		.memo__contents {
+			width: 25%;
+			height: 650px;
+			background-color: ${colors.gray_eb};
+			border-radius: 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-top: 20px;
+			gap: 20px;
+			.memo__contents_box {
+				font-size: 18px;
+				color: ${colors.gray_33};
+				width: 90%;
+				height: 9%;
+				border-radius: 10px;
+				background-color: ${colors.white_ff};
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding-left: 10px;
+				svg {
+					width: 25%;
+					height: 25%;
+					cursor: pointer;
+				}
+			}
+			.memo__add_btn {
+				margin-top: 65%;
+				background-color: ${colors.primary};
+				font-size: 18px;
+				color: ${colors.white_ff};
+				width: 90%;
+				height: 9%;
+				border-radius: 10px;
+			}
+		}
+	}
+
+	.chat_box {
+		display: flex;
+		gap: 30px;
+		width: 100%;
+		height: 707px;
+		border-radius: 5px;
+		background-color: ${colors.white_ff};
+		font-size: 48px;
+		align-items: center;
+		justify-content: center;
+	}
 `

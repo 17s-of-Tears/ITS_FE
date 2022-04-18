@@ -58,3 +58,13 @@ export const teamPageMembers = [
 ]
 
 export const teamMenus = [{ id: 1, name: '팀 페이지 이동', to: '/team/4/home' }]
+
+export const memoContentBox = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]
+
+export const memoContents = [
+	{ id: 1 },
+	{ id: 2 },
+	{ id: 3 },
+	{ id: 4 },
+	{ id: 5 }
+]
