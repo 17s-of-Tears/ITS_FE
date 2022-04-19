@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import colors from 'styles/colors'
 
 export const MainContainer = styled.div`
-	padding: 80px 278px 0px 278px;
+	padding: 5% 14.5%;
 	color: ${colors.gray_70};
 	.my__profile_its {
 		font-size: 40px;

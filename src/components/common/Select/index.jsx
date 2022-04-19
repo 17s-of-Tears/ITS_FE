@@ -5,7 +5,7 @@ import { SelectContainer } from './styles'
 const SelectBox = () => (
 	<SelectContainer>
 		<div className="select__left">
-			<select>
+			<select className="select__kind">
 				<option value="" selected disabled hidden>
 					종류
 				</option>
@@ -16,7 +16,7 @@ const SelectBox = () => (
 					</option>
 				))}
 			</select>
-			<select>
+			<select className="select__lang">
 				<option value="" selected disabled hidden>
 					언어
 				</option>
@@ -29,7 +29,7 @@ const SelectBox = () => (
 			</select>
 		</div>
 		<div className="select__right">
-			<select>
+			<select className="select__line">
 				{LineOptions.map(line => (
 					<option key={line.id} value={line.value}>
 						{line.name}

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import colors from 'styles/colors'
 
 export const Maincontainer = styled.div`
-	padding: 50px 278px 0px 278px;
+	padding: 5% 14.5%;
 	width: 100%;
 	.team__profile {
 		padding-bottom: 30px;
@@ -26,6 +26,9 @@ export const Maincontainer = styled.div`
 			width: 45px;
 			height: 45px;
 			margin-top: 25px;
+		}
+		img {
+			cursor: pointer;
 		}
 	}
 	.team__play {

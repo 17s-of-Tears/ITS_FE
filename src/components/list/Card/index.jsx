@@ -3,22 +3,22 @@ import { CardContainer } from './styles'
 
 const Card = ({ title, category, date, skills, comment, hits }) => (
 	<CardContainer>
-		<div className="list__join_pro">
-			<div className="list__join_box">
-				<p className='list__category'>{category}</p>
-				<p className='list__title'>{title}</p>
-				<p className='list__date'>{date}</p>
-				<div className="list__skills">
-					{skills.map(skill => (
-						<div className="skill_box" key={skill.id}>
-							<span>{skill.title}</span>
-							<img src={skill.img} alt={skill.title} />
-						</div>
-					))}
-				</div>
-				<p className='list__comment'>
+		<div className="list_box">
+			<span className="list__box_category">{category}</span>
+			<span className="list__box_title">{title}</span>
+			<span className="list__box_date">{date}</span>
+			<div className="skill">
+				{skills.map(skill => (
+					<div className="skill__box" key={skill.id}>
+						{skill.title}
+						<img src={skill.img} alt={skill.title} />
+					</div>
+				))}
+			</div>
+			<div className="list__box_like">
+				<span>
 					댓글{comment} 조회수{hits}
-				</p>
+				</span>
 			</div>
 		</div>
 	</CardContainer>

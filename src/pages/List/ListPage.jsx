@@ -6,21 +6,22 @@ import cardData from '../../data/cardData'
 
 const ListPage = () => (
 	<MainContainer>
-		<div className="list__filter">
-			<div className="list__filter_txt">
-				<p>
-					검색 필터 <span>| Filter</span>
-				</p>
-			</div>
+		<div className="list__top">
+			<span>
+				검색 필터 <span className="list__top_filter">| Filter</span>
+			</span>
+		</div>
+		<div className="list__select">
 			<SelectBox />
 		</div>
-		<div className="list__join_txt">
-			<p>총 100개의 팀</p>
-			<p className="list__join_stxt">
+		<hr />
+		<div className="list__card_info">
+			<span className="list__info_total">총 100개의 팀</span>
+			<span className="list__info_join">
 				관심있는 팀에 댓글을 남겨 팀에 참여해 보세요!
-			</p>
+			</span>
 		</div>
-		<div className="list__card">
+		<div className="list__card_box">
 			{cardData.map(data => (
 				<Card key={data.id} {...data} />
 			))}

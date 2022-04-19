@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 const Liker = () => {
 	const navigate = useNavigate()
 	const onMovePageTeam = () => {
-		navigate('/teampage')
+		navigate('/team/4/home')
 	}
 	return (
 		<>

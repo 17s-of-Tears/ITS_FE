@@ -4,7 +4,7 @@ import colors from 'styles/colors'
 export const MainContainer = styled.div`
 	justify-content: space-between;
 	align-items: center;
-	padding: 200px 278px 100px 278px;
+	padding: 10% 14.5%;
 	.home__intro {
 		display: flex;
 		justify-content: space-between;

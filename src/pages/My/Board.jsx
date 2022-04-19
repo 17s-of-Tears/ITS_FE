@@ -1,6 +1,9 @@
 import React from 'react'
-import { MainContainer } from './styles'
 
-const Board = () => <MainContainer>오호 수터디</MainContainer>
+const Board = () => (
+	<>
+		<p>작성한 글</p>
+	</>
+)
 
 export default Board

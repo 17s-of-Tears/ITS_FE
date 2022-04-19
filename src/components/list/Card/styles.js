@@ -2,66 +2,46 @@ import styled from 'styled-components'
 import colors from 'styles/colors'
 
 export const CardContainer = styled.div`
-	border: 1px solid black;
 	width: 100%;
-	position: relative;
-	background-color: white;
-	border: 1px solid ${colors.gray_ea};
+	height: auto;
+	background-color: ${colors.white_ff};
 	border-radius: 5px;
-	&::after {
-		display: block;
-		content: '';
-		padding-bottom: 100%;
-	}
+	padding: 10%;
+	cursor: pointer;
 	&:hover {
-		box-shadow: 3px 3px 10px 5px rgba(119, 119, 119, 0.16);
+		box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.16);
 	}
-	.list__join_pro {
+	.list_box {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		justify-content: space-between;
-		text-align: center;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		cursor: pointer;
-		.list__join_box {
-			padding: 30px 0;
-			width: 100%;
-
-			.list__category {
-				font-size: 16px;
-				color: ${colors.gray_aa};
-			}
-			.list__title {
-				font-size: 20px;
-				margin-top: 5px;
-				color: ${colors.gray_33};
-			}
-			.list__date {
-				font-size: 14px;
-				margin-top: 10px;
-				color: ${colors.gray_aa};
-			}
-			.list__comment {
-				font-size: 14px;
-				margin-top: 27px;
-				color: ${colors.gray_aa};
-			}
-			.list__skills {
-				margin-top: 20px;
-				display: flex;
-				gap: 25px;
-				align-items: center;
-				justify-content: center;
-				.skill_box {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					gap: 10px;
-				}
-			}
+		gap: 15px;
+		.list__box_category {
+			font-size: 12px;
+			color: ${colors.gray_aa};
+		}
+		.list__box_title {
+			font-size: 16px;
+			color: ${colors.gray_33};
+		}
+		.list__box_date {
+			font-size: 12px;
+			color: ${colors.gray_aa};
+		}
+		.skill {
+			display: flex;
+			gap: 10px;
+		}
+		.skill__box {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-size: 12px;
+			color: ${colors.gray_33};
+		}
+		.list__box_like {
+			font-size: 12px;
+			color: ${colors.gray_aa};
 		}
 	}
 `
