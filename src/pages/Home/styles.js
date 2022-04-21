@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import colors from 'styles/colors'
+import theme from 'styles/fonts'
 
 export const MainContainer = styled.div`
 	justify-content: space-between;
@@ -10,7 +11,7 @@ export const MainContainer = styled.div`
 		justify-content: space-between;
 		align-items: center;
 		.home__intro_txt {
-			font-size: 42px;
+			font-size: ${theme.fontSizes.titleSize};
 			color: ${colors.gray_33};
 			font-family: Noto Sans, Noto Sans KR;
 			span {
@@ -27,14 +28,14 @@ export const MainContainer = styled.div`
 			margin-top: 20px;
 		}
 		.home__intro_stxt2 {
-			font-size: 20px;
+			font-size: ${theme.fontSizes.xl};
 			color: ${colors.primary};
 		}
 		.home__intro_btn {
 			display: flex;
 			align-items: center;
 			background-color: ${colors.primary};
-			font-size: 20px;
+			font-size: ${theme.fontSizes.xl};
 			color: white;
 			border-radius: 8px;
 			padding: 8px 12px;
@@ -58,22 +59,23 @@ export const MainContainer = styled.div`
 		align-items: center;
 	}
 	.home__result_txt {
-		font-size: 42px;
+		font-size: ${theme.fontSizes.subTitleSize};
 		color: ${colors.gray_33};
 		font-family: Noto Sans, Noto Sans KR;
 	}
 	.home__result_txt2 {
-		font-size: 32px;
+		font-size: ${theme.fontSizes.xxxl};
 		span {
 			font-weight: 600;
 		}
 	}
 	.home__result_plat {
 		display: flex;
+		align-items: center;
 		gap: 10px;
 	}
 	.home__result_stxt {
-		font-size: 20px;
+		font-size: ${theme.fontSizes.base};
 	}
 	.home__result_img {
 		display: flex;
@@ -82,7 +84,7 @@ export const MainContainer = styled.div`
 		margin-top: 100px;
 	}
 	.home__result_txt3 {
-		font-size: 42px;
+		font-size: ${theme.fontSizes.subTitleSize};
 		color: ${colors.gray_55};
 		font-weight: 600;
 		margin-top: 15px;
@@ -93,7 +95,7 @@ export const MainContainer = styled.div`
 	}
 	.home__result_txt4 {
 		color: ${colors.gray_55};
-		font-size: 20px;
+		font-size: ${theme.fontSizes.xl};
 		margin-top: 15px;
 	}
 	.home__result_svg {

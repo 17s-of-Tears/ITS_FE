@@ -175,7 +175,7 @@ export const Maincontainer = styled.div`
 				}
 			}
 			.memo__add_btn {
-				margin-top: 65%;
+				margin-top: 94%;
 				background-color: ${colors.primary};
 				font-size: 18px;
 				color: ${colors.white_ff};

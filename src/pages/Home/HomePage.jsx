@@ -38,7 +38,6 @@ const HomePage = () => {
 			</div>
 
 			<img className="home__preview" src="images/preview.png" alt="11"></img>
-
 			<div className="home__result">
 				<div className="home__result_txt">
 					<p className="home__result_txt2">
