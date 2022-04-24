@@ -6,6 +6,7 @@ const List = lazy(() => import('pages/List/ListPage'))
 const Post = lazy(() => import('pages/Post/PostPage'))
 const My = lazy(() => import('pages/My/MyPage'))
 const Team = lazy(() => import('pages/Team/TeamPage'))
+const Making = lazy(() => import('pages/Making/MakingPage'))
 
 const RouterConfig = () => {
 	const routes = useRoutes([
@@ -13,7 +14,8 @@ const RouterConfig = () => {
 		{ path: '/list', element: <List /> },
 		{ path: '/post', element: <Post /> },
 		{ path: '/my/:id/*', element: <My /> },
-		{ path: '/team/:id/*', element: <Team /> }
+		{ path: '/team/:id/*', element: <Team /> },
+		{ path: '/making/:id/*', element: <Making /> }
 	])
 
 	return routes

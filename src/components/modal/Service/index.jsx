@@ -11,6 +11,10 @@ const Modal = ({ onCloseModal }) => {
 		navigate('/list')
 	}
 
+	const onMovePageMaking = () => {
+		navigate('/making/4/purpose')
+	}
+
 	return (
 		<ModalContainer>
 			<div className="modal__service">
@@ -38,7 +42,7 @@ const Modal = ({ onCloseModal }) => {
 						/>
 						<p className="modal__service_txt">스터디장이신가요?</p>
 						<p className="modal__service_txt2">팀페이지를 만들 수 있어요!</p>
-						<button onClick={onMovePageList} className="modal__service_btn">
+						<button onClick={onMovePageMaking} className="modal__service_btn">
 							스터디장으로 진행하기
 						</button>
 					</div>
