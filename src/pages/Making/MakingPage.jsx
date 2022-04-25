@@ -15,6 +15,7 @@ const MakingPage = () => {
 		} else {
 			setCount(count + 1)
 		}
+		navigate('/making/4/skill')
 	}
 	const MinusCount = () => {
 		if (count === 1) {
@@ -22,11 +23,7 @@ const MakingPage = () => {
 		} else {
 			setCount(count - 1)
 		}
-	}
-
-	const onMoveToPage = () => {
-		AddCount()
-		navigate('/making/4/skill')
+		navigate('/making/4/purpose')
 	}
 
 	return (
@@ -50,7 +47,7 @@ const MakingPage = () => {
 				>
 					홈으로 돌아가기
 				</button>
-				<button className="nextbtn" onClick={onMoveToPage}>
+				<button className="nextbtn" onClick={AddCount}>
 					다음 단계로 넘어가기
 				</button>
 			</div>

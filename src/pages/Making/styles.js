@@ -51,7 +51,7 @@ export const MainContainer = styled.div`
 				border-radius: 10px;
 				cursor: pointer;
 				&:hover {
-					border: solid 2px ${colors.primary};
+					border: solid 1px ${colors.primary};
 				}
 			}
 			.box__purpose_box2 {
@@ -65,7 +65,7 @@ export const MainContainer = styled.div`
 				border-radius: 10px;
 				cursor: pointer;
 				&:hover {
-					border: solid 2px ${colors.primary};
+					border: solid 1px ${colors.primary};
 				}
 			}
 			.box__purpose_box_txt1 {
@@ -106,6 +106,10 @@ export const MainContainer = styled.div`
 					gap: 15.5px;
 					border: solid 1px ${colors.gray_aa};
 					border-radius: 10px;
+					cursor: pointer;
+					&:hover {
+						border: solid 1px ${colors.primary};
+					}
 					svg {
 						width: 45px;
 					}
@@ -119,6 +123,10 @@ export const MainContainer = styled.div`
 					gap: 10px;
 					border: solid 1px ${colors.gray_aa};
 					border-radius: 10px;
+					cursor: pointer;
+					&:hover {
+						border: solid 1px ${colors.primary};
+					}
 					svg {
 						width: 45px;
 					}
