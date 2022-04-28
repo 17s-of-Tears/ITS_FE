@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import colors from 'styles/colors'
+import theme from 'styles/fonts'
 
 export const MainContainer = styled.div`
 	padding-top: 3%;
@@ -8,16 +9,16 @@ export const MainContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	gap: 30px;
-	span {
-		font-size: 35px;
-	}
 	.progress {
 		background-color: ${colors.gray_ee};
 		width: 45%;
 		height: 15px;
 		border-radius: 7.5px;
 	}
-	.box {
+	.making_title {
+		font-size: ${theme.fontSizes.subTitleSize};
+	}
+	.box__purpose {
 		width: 45%;
 		border-radius: 10px;
 		background-color: ${colors.white_ff};
@@ -32,7 +33,7 @@ export const MainContainer = styled.div`
 		}
 		hr {
 			border: solid 0.5px #f1f3f7;
-			margin-top: 25px;
+			margin: 25px 0px;
 		}
 		.box__purpose_box {
 			margin-top: 25px;
@@ -132,6 +133,40 @@ export const MainContainer = styled.div`
 					}
 				}
 			}
+		}
+		.making__name {
+			width: 100%;
+			height: 50px;
+			border: solid 1px ${colors.gray_aa};
+			border-radius: 10px;
+		}
+		.making__description {
+			width: 100%;
+			height: 150px;
+			border: solid 1px ${colors.gray_aa};
+			border-radius: 10px;
+		}
+	}
+	.box__success {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		width: 45%;
+		border-radius: 10px;
+		background-color: ${colors.white_ff};
+		padding: 25px 25px;
+		font-size: ${theme.fontSizes.base};
+	}
+	.success__img {
+		width: 200px;
+		height: 200px;
+	}
+	.success__txt1 {
+		font-size: ${theme.fontSizes.big};
+		color: ${colors.gray_33};
+		.success__txt2 {
+			color: ${colors.primary};
+			font-weight: 600;
 		}
 	}
 	.btn {

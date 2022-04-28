@@ -77,3 +77,19 @@ export const makingChoiceSkill = [
 	{ id: 5 },
 	{ id: 6 }
 ]
+
+export const makingTitle = [
+	{ id: 1, name: '팀 목적 정하기' },
+	{ id: 2, name: '기술 선택하기' },
+	{ id: 3, name: '팀 이름 정하기' },
+	{ id: 4, name: '팀 설명 입력하기' },
+	{ id: 5, name: '팀을 성공적으로 만들었습니다!' }
+]
+
+export const makingLink = [
+	{ id: 1, prev: '/', next: '/making/skill' },
+	{ id: 2, prev: '/making/purpose', next: '/making/name' },
+	{ id: 3, prev: '/making/skill', next: '/making/description' },
+	{ id: 4, prev: '/making/name', next: '/making/success' },
+	{ id: 5, prev: '/making/description', next: 'openModal' }
+]
