@@ -24,19 +24,19 @@ const Home = () => {
 							<p onClick={onOpenModal} className="notice__txt1">
 								{notice.name}
 							</p>
-							<p>
+							<span>
 								{nowYear()}.{nowMonth()}.{nowDate()}
-							</p>
+							</span>
 						</div>
 					))}
 					<hr />
 					<div className="notice__num">
 						&lt;
-						<p>1</p>
-						<p>2</p>
-						<p>3</p>
-						<p>4</p>
-						<p>5</p>
+						<span>1</span>
+						<span>2</span>
+						<span>3</span>
+						<span>4</span>
+						<span>5</span>
 						&gt;
 					</div>
 				</div>

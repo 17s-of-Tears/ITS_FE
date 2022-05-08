@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import colors from 'styles/colors'
 
 export const FooterContainer = styled.footer`
-	margin-top: 150px;
 	align-items: center;
 	padding: 20px 278px;
 	font-size: 16px;

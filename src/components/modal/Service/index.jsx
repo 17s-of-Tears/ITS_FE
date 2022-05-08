@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+
 import { ReactComponent as Close } from 'assets/svg/close.svg'
 import Logo from 'components/common/Logo'
 import { ModalContainer } from './styles'
@@ -7,13 +8,8 @@ import { ModalContainer } from './styles'
 const Modal = ({ onCloseModal }) => {
 	const navigate = useNavigate()
 
-	const onMovePageList = () => {
-		navigate('/list')
-	}
-
-	const onMovePageMaking = () => {
-		navigate('/making/4/purpose')
-	}
+	const onMovePageList = () => navigate('/list')
+	const onMovePageMaking = () => navigate('/making/purpose')
 
 	return (
 		<ModalContainer>

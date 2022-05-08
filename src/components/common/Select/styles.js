@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import theme from 'styles/fonts'
 
 export const SelectContainer = styled.div`
 	width: 100%;
@@ -13,10 +14,24 @@ export const SelectContainer = styled.div`
 		.select__kind {
 			width: 100%;
 			padding: 4%;
+			font-size: ${theme.fontSizes.small};
+			@media ${theme.device.tabletL} {
+				font-size: ${theme.fontSizes.xsmall};
+			}
+			@media ${theme.device.mobileL} {
+				font-size: ${theme.fontSizes.xxsmall};
+			}
 		}
 		.select__lang {
 			width: 100%;
 			padding: 4%;
+			font-size: ${theme.fontSizes.small};
+			@media ${theme.device.tabletL} {
+				font-size: ${theme.fontSizes.xsmall};
+			}
+			@media ${theme.device.mobileL} {
+				font-size: ${theme.fontSizes.xxsmall};
+			}
 		}
 	}
 	.select__right {
@@ -25,6 +40,13 @@ export const SelectContainer = styled.div`
 			width: 100%;
 			height: auto;
 			padding: 11%;
+			font-size: ${theme.fontSizes.small};
+			@media ${theme.device.tabletL} {
+				font-size: ${theme.fontSizes.xsmall};
+			}
+			@media ${theme.device.mobileL} {
+				font-size: ${theme.fontSizes.xxsmall};
+			}
 		}
 	}
 `

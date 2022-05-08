@@ -3,109 +3,137 @@ import colors from 'styles/colors'
 import theme from 'styles/fonts'
 
 export const MainContainer = styled.div`
-	justify-content: space-between;
-	align-items: center;
-	padding: 10% 14.5%;
-	.home__intro {
+	margin: auto 0;
+
+	.Its {
+		color: ${colors.primary};
+		font-weight: 500;
+	}
+	.home {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
-		.home__intro_txt {
-			font-size: ${theme.fontSizes.titleSize};
-			color: ${colors.gray_33};
-			font-family: Noto Sans, Noto Sans KR;
-			span {
-				font-weight: 600;
+		justify-content: center;
+		width: 100%;
+		padding: 10% 0;
+
+		&__title {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			width: 45%;
+
+			&__main {
+				font-size: ${theme.fontSizes.subTitleSize};
+				font-weight: 300;
+				> span {
+					font-weight: 500;
+				}
+			}
+
+			&__sub {
+				font-size: ${theme.fontSizes.base};
+				color: ${colors.gray_33};
+				font-weight: 300;
+			}
+
+			&__btn {
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+				gap: 10px;
+				width: 23%;
+				background-color: ${colors.primary};
+				color: ${colors.white_ff};
+				font-size: ${theme.fontSizes.base};
+				padding: 1.7% 0 1.5% 0;
+				border-radius: 10px;
+				&:hover {
+					filter: brightness(80%);
+				}
+				svg {
+					width: 10%;
+					height: 10%;
+				}
 			}
 		}
-		.home__intro_plat {
-			display: flex;
-			gap: 10px;
+		> img {
+			width: 20%;
 		}
-		.home__intro_stxt {
-			font-size: 20px;
-			color: ${colors.gray_77};
-			margin-top: 20px;
+	}
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		background-color: ${colors.white_ff};
+		border: solid 1px ${colors.gray_ee};
+
+		hr {
+			border: solid 1px ${colors.gray_ee};
+			width: 65%;
 		}
-		.home__intro_stxt2 {
-			font-size: ${theme.fontSizes.xl};
-			color: ${colors.primary};
+		img {
+			width: 35%;
 		}
-		.home__intro_btn {
+		> div {
+			font-size: ${theme.fontSizes.subTitleSize};
+			padding: 10% 0;
 			display: flex;
 			align-items: center;
-			background-color: ${colors.primary};
-			font-size: ${theme.fontSizes.xl};
-			color: white;
-			border-radius: 8px;
-			padding: 8px 12px;
-			margin-top: 20px;
-			font-family: Noto Sans, Noto Sans KR;
-			transition: 0.3s;
-			gap: 5px;
-			&:hover {
-				filter: brightness(80%);
+			justify-content: space-between;
+			width: 65%;
+			font-weight: 300;
+		}
+	}
+
+	.done {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 80px;
+		width: 100%;
+		padding: 10% 0;
+
+		> div {
+			width: 65%;
+		}
+
+		&__title {
+			font-size: ${theme.fontSizes.subTitleSize};
+			font-weight: 300;
+		}
+
+		&__data {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.data {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				&__1 {
+					font-weight: 300;
+					color: ${colors.gray_55};
+					font-size: ${theme.fontSizes.xxxl};
+				}
+				&__2 {
+					font-weight: 500;
+					font-size: 64px;
+				}
+				&__3 {
+					font-size: ${theme.fontSizes.xxsmall};
+					color: ${colors.gray_aa};
+				}
+			}
+			svg {
+				width: 60px;
+				height: 60px;
+				fill: ${colors.gray_55};
 			}
 		}
-	}
-
-	.home__preview {
-		margin-top: 150px;
-		width: 100%;
-	}
-
-	.home__result {
-		margin-top: 100px;
-		align-items: center;
-	}
-	.home__result_txt {
-		font-size: ${theme.fontSizes.subTitleSize};
-		color: ${colors.gray_33};
-		font-family: Noto Sans, Noto Sans KR;
-	}
-	.home__result_txt2 {
-		font-size: ${theme.fontSizes.xxxl};
-		span {
-			font-weight: 600;
-		}
-	}
-	.home__result_plat {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-	}
-	.home__result_stxt {
-		font-size: ${theme.fontSizes.base};
-	}
-	.home__result_img {
-		display: flex;
-		justify-content: space-evenly;
-		text-align: center;
-		margin-top: 100px;
-	}
-	.home__result_txt3 {
-		font-size: ${theme.fontSizes.subTitleSize};
-		color: ${colors.gray_55};
-		font-weight: 600;
-		margin-top: 15px;
-		span {
-			font-size: 20px;
-			color: ${colors.gray_aa};
-		}
-	}
-	.home__result_txt4 {
-		color: ${colors.gray_55};
-		font-size: ${theme.fontSizes.xl};
-		margin-top: 15px;
-	}
-	.home__result_svg {
-		width: 130px;
-		height: 130px;
-		fill: ${colors.gray_55};
-	}
-	.home__btn_svg {
-		margin-top: 2px;
-		width: 15px;
-		height: 15px;
 	}
 `

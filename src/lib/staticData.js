@@ -1,3 +1,7 @@
+import { ReactComponent as Member } from 'assets/svg/member.svg'
+import { ReactComponent as Members } from 'assets/svg/members.svg'
+import { ReactComponent as Like } from 'assets/svg/like.svg'
+
 export const homeMenus = [
 	{ id: 1, name: '팀 찾기', to: '/list' },
 	{ id: 2, name: '커뮤니티', to: '/post' },
@@ -78,18 +82,50 @@ export const makingChoiceSkill = [
 	{ id: 6 }
 ]
 
-export const makingTitle = [
-	{ id: 1, name: '팀 목적 정하기' },
-	{ id: 2, name: '기술 선택하기' },
-	{ id: 3, name: '팀 이름 정하기' },
-	{ id: 4, name: '팀 설명 입력하기' },
-	{ id: 5, name: '팀을 성공적으로 만들었습니다!' }
+//* host page
+export const hostTitle = [
+	'팀 목적 정하기',
+	'기술 선택하기',
+	'팀이름 정하기',
+	'팀 설명 입력하기',
+	'팀을 성공적으로 만들었습니다!'
 ]
 
-export const makingLink = [
-	{ id: 1, prev: '/', next: '/making/skill' },
-	{ id: 2, prev: '/making/purpose', next: '/making/name' },
-	{ id: 3, prev: '/making/skill', next: '/making/description' },
-	{ id: 4, prev: '/making/name', next: '/making/success' },
-	{ id: 5, prev: '/making/description', next: 'openModal' }
+export const hostLink = [
+	{ prev: '/', next: '/making/skill' },
+	{ prev: '/making/purpose', next: '/making/name' },
+	{ prev: '/making/skill', next: '/making/description' },
+	{ prev: '/making/name', next: '/making/success' },
+	{ prev: '/team/4/home', next: 'openModal' }
+]
+
+export const successInfo = [
+	'모집중인 팀에 등록을 하셔야 팀에대한 정보가 공개적으로 노출돼요',
+	'다른 사용자가 모집중인 팀페이지를 통해 팀가입 요청을 하면 팀에 초대를 할 수 있어요',
+	'지금 등록 안해도 마이페이지 안에 내 팀 메뉴를 통해서 언제든지 등록할 수 있어요',
+	'모집이 완료되면 모집중인 팀을 비활성화 할 수 있으며, 언제든지 활성화 할 수 있어요'
+]
+
+export const homeDoneData = [
+	{
+		id: 1,
+		Icon: Member,
+		data1: '누적 스터디 멤버',
+		data2: '10,000+',
+		data3: '(2022년 04월 01일 기준)'
+	},
+	{
+		id: 2,
+		Icon: Members,
+		data1: '누적 스터디 개설 수',
+		data2: '3,000+',
+		data3: '(2022년 04월 01일 기준)'
+	},
+	{
+		id: 3,
+		Icon: Like,
+		data1: '스터디 평균 만족도',
+		data2: '4.5/5.0',
+		data3: '(스터디, 프로젝트 만족도 평균)'
+	}
 ]

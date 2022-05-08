@@ -8,7 +8,7 @@ const Modal = ({ onCloseModal }) => (
 			<button className="modal__memo_close" onClick={onCloseModal}>
 				<Close />
 			</button>
-			<p>메모 추가</p>
+			<span>메모 추가</span>
 		</div>
 	</ModalContainer>
 )

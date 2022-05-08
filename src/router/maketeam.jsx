@@ -1,19 +1,19 @@
-import { lazy } from 'react'
-import { useRoutes } from 'react-router-dom'
+import { Navigate, useRoutes } from 'react-router-dom'
 
-const Purpose = lazy(() => import('../pages/Making/Purpose'))
-const Skill = lazy(() => import('../pages/Making/Skill'))
-const Name = lazy(() => import('../pages/Making/Name'))
-const Description = lazy(() => import('../pages/Making/Description'))
-const Success = lazy(() => import('../pages/Making/Success.jsx'))
+import Purpose from '../pages/Making/Purpose'
+import Skill from '../pages/Making/Skill'
+import Name from '../pages/Making/Name'
+import Description from '../pages/Making/Description'
+import Success from '../pages/Making/Success'
 
 const MakingPageRouterConfig = () => {
 	const routes = useRoutes([
-		{ path: '/purpose', element: <Purpose /> },
-		{ path: '/skill', element: <Skill /> },
-		{ path: '/name', element: <Name /> },
-		{ path: '/description', element: <Description /> },
-		{ path: '/success', element: <Success /> }
+		{ path: '/', element: <Navigate to="/making/purpose" /> },
+		{ path: 'purpose', element: <Purpose /> },
+		{ path: 'skill', element: <Skill /> },
+		{ path: 'name', element: <Name /> },
+		{ path: 'description', element: <Description /> },
+		{ path: 'success', element: <Success /> }
 	])
 
 	return routes

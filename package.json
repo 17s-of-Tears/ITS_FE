@@ -16,8 +16,11 @@
 		],
 		"rules": {
 			"import/prefer-default-export": "off",
-			"import/no-unresolved": 0,
-			"import/extensions": 0
+			"no-unused-vars": "off",
+			"import/no-unresolved": "off",
+			"no-unused-expressions": "off",
+			"import/extensions": "off",
+			"no-nested-ternary": "off"
 		}
 	},
 	"browserslist": {

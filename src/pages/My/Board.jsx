@@ -2,7 +2,7 @@ import React from 'react'
 
 const Board = () => (
 	<>
-		<p>작성한 글</p>
+		<span>작성한 글</span>
 	</>
 )
 

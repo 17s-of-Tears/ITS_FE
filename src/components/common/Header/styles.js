@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import colors from 'styles/colors'
+import theme from 'styles/fonts'
 
 export const HeaderContainer = styled.div`
 	height: 80px;
@@ -16,14 +17,24 @@ export const HeaderContainer = styled.div`
 	.header__menus {
 		display: flex;
 		gap: 20px;
+
 		a {
 			text-decoration: none;
 			color: ${colors.gray_77};
-			font-size: 20px;
+			font-size: ${theme.fontSizes.xl};
 			font-weight: 500;
 			transition: 0.3s;
 			&:hover {
 				filter: brightness(80%);
+			}
+			@media ${theme.device.NoteBook} {
+				font-size: ${theme.fontSizes.lg};
+			}
+			@media ${theme.device.tabletL} {
+				font-size: ${theme.fontSizes.base};
+			}
+			@media ${theme.device.mobileL} {
+				font-size: ${theme.fontSizes.small};
 			}
 		}
 		.current__page {
@@ -35,7 +46,7 @@ export const HeaderContainer = styled.div`
 		}
 	}
 	.header__user_btn {
-		font-size: 16px;
+		font-size: ${theme.fontSizes.base};
 		border: none;
 		background-color: ${colors.primary};
 		color: white;
@@ -46,6 +57,15 @@ export const HeaderContainer = styled.div`
 		transition: 0.3s;
 		&:hover {
 			filter: brightness(80%);
+		}
+		@media ${theme.device.NoteBook} {
+			font-size: ${theme.fontSizes.small};
+		}
+		@media ${theme.device.tabletL} {
+			font-size: ${theme.fontSizes.xsmall};
+		}
+		@media ${theme.device.mobileL} {
+			font-size: ${theme.fontSizes.xxsmall};
 		}
 	}
 `

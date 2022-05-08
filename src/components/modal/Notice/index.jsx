@@ -8,8 +8,8 @@ const Modal = ({ onCloseModal }) => (
 			<button className="modal__notice_close" onClick={onCloseModal}>
 				<Close />
 			</button>
-			<p>제목</p>
-			<p>내용</p>
+			<span>제목</span>
+			<span>내용</span>
 		</div>
 	</ModalContainer>
 )
