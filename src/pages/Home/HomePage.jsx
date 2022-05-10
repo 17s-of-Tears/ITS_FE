@@ -39,7 +39,8 @@ const HomePage = () => {
 					<div className="content__study">
 						<span>
 							<span className="Its">It's 스터디</span> <br />
-							이츠에서 스터디를 시작해 보세요
+							이츠에서 원하는 언어를 선택해서 <br />
+							스터디를 시작해 보세요
 						</span>
 						<img src="/images/logo.png" alt="home" />
 					</div>
@@ -48,7 +49,11 @@ const HomePage = () => {
 						<img src="/images/logo.png" alt="home" />
 						<span>
 							<span className="Its">It's 프로젝트</span> <br />
-							이츠에서 프로젝트를 시작해 보세요
+							이츠에서 팀을 만들거나
+							<br />
+							팀원으로 들어가서
+							<br />
+							프로젝트를 시작해 보세요
 						</span>
 					</div>
 				</div>
@@ -61,12 +66,23 @@ const HomePage = () => {
 						</span>
 					</div>
 					<div className="done__data">
-						{homeDoneData.map(({ id, Icon, data1, data2, data3 }) => (
-							<div key={id} className="data">
-								<Icon />
-								<span className="data__1">{data1}</span>
-								<span className="data__2">{data2}</span>
-								<span className="data__3">{data3}</span>
+						{homeDoneData.map(v => (
+							<div key={v.id} className="data">
+								<v.Icon />
+								<span className="data__1">{v.text}</span>
+								<span className="data__2">
+									{v.name !== 'Liker' ? (
+										`${v.data
+											.toLocaleString()
+											.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}+`
+									) : (
+										<>
+											{v.data}
+											<span className="data__2__small">/ 5.0</span>
+										</>
+									)}
+								</span>
+								<span className="data__3">{v.info}</span>
 							</div>
 						))}
 					</div>

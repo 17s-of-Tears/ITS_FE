@@ -126,4 +126,10 @@ export const LoginContainer = styled.div`
 			}
 		}
 	}
+	.form {
+		.message {
+			color: ${colors.primary};
+			display: flex;
+		}
+	}
 `

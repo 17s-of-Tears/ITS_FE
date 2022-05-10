@@ -9,23 +9,23 @@ export const MainContainer = styled.div`
 	.list__top {
 		margin-top: 50px;
 		padding: 0 14.5%;
-		font-size: ${theme.fontSizes.titleSize};
+		font-size: ${theme.fontSizes.subTitleSize};
 		font-weight: 500;
 		@media ${theme.device.tabletL} {
-			font-size: ${theme.fontSizes.subTitleSize};
+			font-size: ${theme.fontSizes.big};
 		}
 		@media ${theme.device.mobileL} {
-			font-size: ${theme.fontSizes.big};
+			font-size: ${theme.fontSizes.xxxl};
 		}
 		.list__top_filter {
-			font-size: ${theme.fontSizes.big};
+			font-size: ${theme.fontSizes.xxxl};
 			font-weight: 400;
 			color: ${colors.gray_aa};
 			@media ${theme.device.tabletL} {
-				font-size: ${theme.fontSizes.xxxl};
+				font-size: ${theme.fontSizes.xxl};
 			}
 			@media ${theme.device.mobileL} {
-				font-size: ${theme.fontSizes.xxl};
+				font-size: ${theme.fontSizes.xl};
 			}
 		}
 	}
@@ -46,29 +46,29 @@ export const MainContainer = styled.div`
 		align-items: flex-end;
 		gap: 10px;
 		.list__info_total {
-			font-size: ${theme.fontSizes.big};
+			font-size: ${theme.fontSizes.xxxl};
 			color: ${colors.gray_33};
 			@media ${theme.device.NoteBook} {
-				font-size: ${theme.fontSizes.xxxl};
-			}
-			@media ${theme.device.tabletL} {
 				font-size: ${theme.fontSizes.xxl};
 			}
-			@media ${theme.device.mobileL} {
+			@media ${theme.device.tabletL} {
 				font-size: ${theme.fontSizes.xl};
+			}
+			@media ${theme.device.mobileL} {
+				font-size: ${theme.fontSizes.lg};
 			}
 		}
 		.list__info_join {
-			font-size: ${theme.fontSizes.lg};
+			font-size: ${theme.fontSizes.base};
 			color: ${colors.gray_aa};
 			@media ${theme.device.NoteBook} {
-				font-size: ${theme.fontSizes.base};
-			}
-			@media ${theme.device.tabletL} {
 				font-size: ${theme.fontSizes.small};
 			}
-			@media ${theme.device.mobileL} {
+			@media ${theme.device.tabletL} {
 				font-size: ${theme.fontSizes.xsmall};
+			}
+			@media ${theme.device.mobileL} {
+				font-size: ${theme.fontSizes.xxsmall};
 			}
 		}
 	}

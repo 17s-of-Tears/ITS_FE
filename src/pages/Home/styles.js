@@ -123,6 +123,12 @@ export const MainContainer = styled.div`
 				&__2 {
 					font-weight: 500;
 					font-size: 64px;
+
+					&__small {
+						font-weight: 300;
+						color: ${colors.gray_aa};
+						font-size: ${theme.fontSizes.xxl};
+					}
 				}
 				&__3 {
 					font-size: ${theme.fontSizes.xxsmall};

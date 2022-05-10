@@ -64,6 +64,7 @@ export const CardContainer = styled.div`
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			gap: 10px;
 			font-size: ${theme.fontSizes.small};
 			color: ${colors.gray_33};
 			@media ${theme.device.NoteBook} {

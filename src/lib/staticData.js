@@ -1,6 +1,7 @@
 import { ReactComponent as Member } from 'assets/svg/member.svg'
 import { ReactComponent as Members } from 'assets/svg/members.svg'
 import { ReactComponent as Like } from 'assets/svg/like.svg'
+import Liker from 'pages/My/Liker'
 
 export const homeMenus = [
 	{ id: 1, name: '팀 찾기', to: '/list' },
@@ -109,23 +110,26 @@ export const successInfo = [
 export const homeDoneData = [
 	{
 		id: 1,
+		name: 'Member',
 		Icon: Member,
-		data1: '누적 스터디 멤버',
-		data2: '10,000+',
-		data3: '(2022년 04월 01일 기준)'
+		text: '누적 스터디 멤버',
+		data: '10000',
+		info: '(2022년 04월 01일 기준)'
 	},
 	{
 		id: 2,
+		name: 'Members',
 		Icon: Members,
-		data1: '누적 스터디 개설 수',
-		data2: '3,000+',
-		data3: '(2022년 04월 01일 기준)'
+		text: '누적 스터디 개설 수',
+		data: '3000',
+		info: '(2022년 04월 01일 기준)'
 	},
 	{
 		id: 3,
+		name: 'Liker',
 		Icon: Like,
-		data1: '스터디 평균 만족도',
-		data2: '4.5/5.0',
-		data3: '(스터디, 프로젝트 만족도 평균)'
+		text: '스터디 평균 만족도',
+		data: '4.5',
+		info: '(스터디, 프로젝트 만족도 평균)'
 	}
 ]

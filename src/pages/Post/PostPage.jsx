@@ -1,5 +1,5 @@
-import AppLayout from 'layouts/AppLayout'
 import React from 'react'
+import AppLayout from 'layouts/AppLayout'
 
 const PostPage = () => (
 	<AppLayout>
