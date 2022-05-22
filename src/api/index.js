@@ -8,4 +8,4 @@ const instance = url =>
 		withCredentials: true
 	})
 
-export const user = instance('user')
+export const user = instance('users')

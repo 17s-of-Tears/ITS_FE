@@ -1,18 +1,20 @@
-import React, { useCallback, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useCallback, useState } from 'react'
+import { useDispatch } from 'react-redux'
 
 import { ReactComponent as Close } from 'assets/svg/close.svg'
 import { ReactComponent as Cat } from 'assets/svg/github.svg'
-
 import Logo from 'components/common/Logo'
+import { logInRequest, signUpRequest } from 'store/user/user.actions'
 import { LoginContainer } from './styles'
 
 const Modal = ({ onCloseModal }) => {
+	const dispatch = useDispatch()
+
 	const [isLoginMode, setIsLoginMode] = useState(true)
 
 	const onChangeMode = () => setIsLoginMode(prev => !prev)
 
-	const [name, setName] = useState('')
+	const [nickname, setNickname] = useState('')
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [passwordConfirm, setPasswordConfirm] = useState('')
@@ -26,17 +28,9 @@ const Modal = ({ onCloseModal }) => {
 	const [isEmail, setIsEmail] = useState(false)
 	const [isPassword, setIsPassword] = useState(false)
 	const [isPasswordConfirm, setIsPasswordConfirm] = useState(false)
-	const router = useNavigate()
-
-	const onSubmit = useCallback(
-		async e => {
-			e.preventDefault()
-		},
-		[email, name, password, router]
-	)
 
 	const onChangeName = useCallback(e => {
-		setName(e.target.value)
+		setNickname(e.target.value)
 		if (e.target.value.length < 2 || e.target.value.length > 8) {
 			setNameMessage('2글자 이상 8글자 미만으로 입력해주세요.')
 			setIsName(false)
@@ -91,6 +85,17 @@ const Modal = ({ onCloseModal }) => {
 			}
 		},
 		[password]
+	)
+
+	//* 로그인 & 회원가입
+	const onSubmit = useCallback(
+		e => {
+			e.preventDefault()
+			isLoginMode
+				? dispatch(logInRequest({ email, password }))
+				: dispatch(signUpRequest({ email, nickname, password }))
+		},
+		[dispatch, email, isLoginMode, nickname, password]
 	)
 
 	return (
@@ -177,7 +182,7 @@ const Modal = ({ onCloseModal }) => {
 								placeholder="닉네임"
 								className="modal__login_pw"
 							/>
-							{name.length > 0 && (
+							{nickname.length > 0 && (
 								<span className={`message ${isName ? 'success' : 'error'}`}>
 									{nameMessage}
 								</span>
