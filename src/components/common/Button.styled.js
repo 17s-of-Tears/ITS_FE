@@ -9,6 +9,14 @@ export const ButtonContainer = styled.button`
 	outline: none;
 	transition: 400ms;
 	cursor: pointer;
+	position: relative;
+
+	.loading {
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		transform: translateY(-50%);
+	}
 
 	${({ px, py }) => {
 		const padding = { padding: '8px 12px' }

@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
+import LoadingSpinner from '@/components/common/LoadingSpinner'
 import RouterConfig from '@/router'
 import GlobalStyle from '@/styles/GlobalStyled'
 import theme from '@/styles/theme'
@@ -13,12 +14,12 @@ const App = () => (
 		<BrowserRouter>
 			<ThemeProvider theme={theme}>
 				<GlobalStyle />
-				<Suspense fallback={<span>Loading...</span>}>
+				<Suspense fallback={<LoadingSpinner primary />}>
 					<RouterConfig />
 				</Suspense>
 			</ThemeProvider>
-			<ToastContainer />
 		</BrowserRouter>
+		<ToastContainer />
 	</>
 )
 

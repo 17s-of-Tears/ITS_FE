@@ -22,7 +22,10 @@ const AuthModal = ({ onCloseModal }) => {
 					onCloseModal={onCloseModal}
 				/>
 			) : (
-				<SignUpModal onChangeAuthMode={onChangeAuthMode} />
+				<SignUpModal
+					onChangeAuthMode={onChangeAuthMode}
+					setAuthMode={setAuthMode}
+				/>
 			)}
 		</AuthModalContainer>
 	)

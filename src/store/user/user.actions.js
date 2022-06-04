@@ -27,3 +27,8 @@ export const logInFailure = error => ({
 	type: types.LOG_IN_FAILURE,
 	error
 })
+
+//* 동기 액션
+export const clearStateAction = () => ({
+	type: types.CLEAR_STATE_SUCCESS
+})

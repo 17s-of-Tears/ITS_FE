@@ -10,7 +10,8 @@ function* signUp(action) {
 		const { data } = yield call(apis.signUpAPI, action.data)
 		yield put(actions.signUpSuccess(data))
 	} catch (error) {
-		yield put(actions.signUpFailure(error))
+		const { message } = error.response.data
+		yield put(actions.signUpFailure(message ? message : '에러가 발생했습니다.'))
 	}
 }
 

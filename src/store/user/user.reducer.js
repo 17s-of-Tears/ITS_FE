@@ -50,6 +50,10 @@ const userReducers = (state = initialState, action) =>
 				draft.logInLoading = false
 				draft.logInError = action.error
 				break
+			case actions.CLEAR_STATE_SUCCESS:
+				draft.logInDone = false
+				draft.signUpDone = false
+				break
 			default:
 				break
 		}
