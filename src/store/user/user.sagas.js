@@ -17,7 +17,7 @@ function* signUp(action) {
 function* logIn(action) {
 	try {
 		const { data } = yield call(apis.loginAPI, action.data)
-		yield put(actions.logInSuccess(data))
+		yield put(actions.logInSuccess(data.user))
 	} catch (error) {
 		yield put(actions.logInFailure(error))
 	}

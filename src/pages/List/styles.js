@@ -11,22 +11,11 @@ export const MainContainer = styled.div`
 		padding: 0 14.5%;
 		font-size: ${theme.fontSizes.subTitleSize};
 		font-weight: 500;
-		@media ${theme.device.tabletL} {
-			font-size: ${theme.fontSizes.big};
-		}
-		@media ${theme.device.mobileL} {
-			font-size: ${theme.fontSizes.xxxl};
-		}
+
 		.list__top_filter {
 			font-size: ${theme.fontSizes.xxxl};
 			font-weight: 400;
 			color: ${colors.gray_aa};
-			@media ${theme.device.tabletL} {
-				font-size: ${theme.fontSizes.xxl};
-			}
-			@media ${theme.device.mobileL} {
-				font-size: ${theme.fontSizes.xl};
-			}
 		}
 	}
 	.list__select {
@@ -48,28 +37,10 @@ export const MainContainer = styled.div`
 		.list__info_total {
 			font-size: ${theme.fontSizes.xxxl};
 			color: ${colors.gray_33};
-			@media ${theme.device.NoteBook} {
-				font-size: ${theme.fontSizes.xxl};
-			}
-			@media ${theme.device.tabletL} {
-				font-size: ${theme.fontSizes.xl};
-			}
-			@media ${theme.device.mobileL} {
-				font-size: ${theme.fontSizes.lg};
-			}
 		}
 		.list__info_join {
 			font-size: ${theme.fontSizes.base};
 			color: ${colors.gray_aa};
-			@media ${theme.device.NoteBook} {
-				font-size: ${theme.fontSizes.small};
-			}
-			@media ${theme.device.tabletL} {
-				font-size: ${theme.fontSizes.xsmall};
-			}
-			@media ${theme.device.mobileL} {
-				font-size: ${theme.fontSizes.xxsmall};
-			}
 		}
 	}
 	.list__card_box {
@@ -79,15 +50,6 @@ export const MainContainer = styled.div`
 		width: 100%;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		@media ${theme.device.NoteBook} {
-			grid-template-columns: repeat(3, 1fr);
-		}
-		@media ${theme.device.tabletL} {
-			grid-template-columns: repeat(2, 1fr);
-		}
-		@media ${theme.device.mobileL} {
-			grid-template-columns: repeat(1, 1fr);
-		}
 	}
 `
 export const SubContainer = styled.div`

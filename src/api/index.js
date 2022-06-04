@@ -9,3 +9,4 @@ const instance = url =>
 	})
 
 export const user = instance('users')
+export const team = instance('teams')

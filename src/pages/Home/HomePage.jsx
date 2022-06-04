@@ -39,7 +39,7 @@ const HomePage = () => {
 					<div className="content__study">
 						<span>
 							<span className="Its">It's 스터디</span> <br />
-							이츠에서 원하는 언어를 선택해서 <br />
+							이츠에서 원하는 언어를 선택해 <br />
 							스터디를 시작해 보세요
 						</span>
 						<img src="/images/logo.png" alt="home" />

@@ -4,7 +4,6 @@ import theme from 'styles/fonts'
 
 export const MainContainer = styled.div`
 	margin: auto 0;
-
 	.Its {
 		color: ${colors.primary};
 		font-weight: 500;
@@ -15,12 +14,12 @@ export const MainContainer = styled.div`
 		justify-content: center;
 		width: 100%;
 		padding: 10% 0;
+		gap: 230px;
 
 		&__title {
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
-			width: 45%;
 
 			&__main {
 				font-size: ${theme.fontSizes.subTitleSize};
@@ -31,7 +30,7 @@ export const MainContainer = styled.div`
 			}
 
 			&__sub {
-				font-size: ${theme.fontSizes.base};
+				font-size: ${theme.fontSizes.lg};
 				color: ${colors.gray_33};
 				font-weight: 300;
 			}
@@ -41,7 +40,7 @@ export const MainContainer = styled.div`
 				align-items: flex-start;
 				justify-content: center;
 				gap: 10px;
-				width: 23%;
+				width: 30%;
 				background-color: ${colors.primary};
 				color: ${colors.white_ff};
 				font-size: ${theme.fontSizes.base};
@@ -57,7 +56,7 @@ export const MainContainer = styled.div`
 			}
 		}
 		> img {
-			width: 20%;
+			width: 25%;
 		}
 	}
 	.content {
@@ -68,22 +67,21 @@ export const MainContainer = styled.div`
 		width: 100%;
 		background-color: ${colors.white_ff};
 		border: solid 1px ${colors.gray_ee};
+		padding: 0 14.5%;
 
 		hr {
 			border: solid 1px ${colors.gray_ee};
-			width: 65%;
+			width: 100%;
 		}
-		img {
-			width: 35%;
-		}
+
 		> div {
 			font-size: ${theme.fontSizes.subTitleSize};
 			padding: 10% 0;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			width: 65%;
 			font-weight: 300;
+			gap: 500px;
 		}
 	}
 
@@ -94,10 +92,10 @@ export const MainContainer = styled.div`
 		justify-content: center;
 		gap: 80px;
 		width: 100%;
-		padding: 10% 0;
+		padding: 10% 14.5%;
 
 		> div {
-			width: 65%;
+			width: 100%;
 		}
 
 		&__title {

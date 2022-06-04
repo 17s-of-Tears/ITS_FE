@@ -27,15 +27,6 @@ export const HeaderContainer = styled.div`
 			&:hover {
 				filter: brightness(80%);
 			}
-			@media ${theme.device.NoteBook} {
-				font-size: ${theme.fontSizes.lg};
-			}
-			@media ${theme.device.tabletL} {
-				font-size: ${theme.fontSizes.base};
-			}
-			@media ${theme.device.mobileL} {
-				font-size: ${theme.fontSizes.small};
-			}
 		}
 		.current__page {
 			color: ${colors.primary};
@@ -57,15 +48,6 @@ export const HeaderContainer = styled.div`
 		transition: 0.3s;
 		&:hover {
 			filter: brightness(80%);
-		}
-		@media ${theme.device.NoteBook} {
-			font-size: ${theme.fontSizes.small};
-		}
-		@media ${theme.device.tabletL} {
-			font-size: ${theme.fontSizes.xsmall};
-		}
-		@media ${theme.device.mobileL} {
-			font-size: ${theme.fontSizes.xxsmall};
 		}
 	}
 `

@@ -31,8 +31,8 @@ const Modal = ({ onCloseModal }) => {
 
 	const onChangeName = useCallback(e => {
 		setNickname(e.target.value)
-		if (e.target.value.length < 2 || e.target.value.length > 8) {
-			setNameMessage('2글자 이상 8글자 미만으로 입력해주세요.')
+		if (e.target.value.length < 2 || e.target.value.length > 6) {
+			setNameMessage('2글자 이상 5글자 이하로 입력해주세요!')
 			setIsName(false)
 		} else {
 			setNameMessage('')
@@ -80,7 +80,7 @@ const Modal = ({ onCloseModal }) => {
 				setPasswordConfirmMessage('')
 				setIsPasswordConfirm(true)
 			} else {
-				setPasswordConfirmMessage('비밀번호가 틀려요.')
+				setPasswordConfirmMessage('비밀번호가 일치하지 않아요!')
 				setIsPasswordConfirm(false)
 			}
 		},
@@ -129,6 +129,7 @@ const Modal = ({ onCloseModal }) => {
 								onChange={onChangePassword}
 								passwordText="비밀번호 (숫자+영문자+특수문자 조합으로 8자리 이상)"
 								title="비밀번호"
+								type="password"
 								typeTitle="password"
 								placeholder="비밀번호"
 								className="modal__login_pw"
@@ -191,6 +192,7 @@ const Modal = ({ onCloseModal }) => {
 								onChange={onChangePassword}
 								passwordText="비밀번호 (숫자+영문자+특수문자 조합으로 8자리 이상)"
 								title="비밀번호"
+								type="password"
 								typeTitle="password"
 								placeholder="비밀번호"
 								className="modal__login_pw"
@@ -204,6 +206,7 @@ const Modal = ({ onCloseModal }) => {
 								onChange={onChangePasswordConfirm}
 								passwordText=" "
 								title="비밀번호 확인"
+								type="password"
 								typeTitle="passwordConfirm"
 								placeholder="비밀번호 확인"
 								className="modal__login_pw"

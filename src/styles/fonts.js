@@ -8,11 +8,11 @@ const fontSizes = {
 	base: calcRem(16),
 	lg: calcRem(18),
 	xl: calcRem(20),
-	xxl: calcRem(22),
-	xxxl: calcRem(24),
-	big: calcRem(30),
-	subTitleSize: calcRem(35),
-	titleSize: calcRem(40)
+	xxl: calcRem(24),
+	xxxl: calcRem(28),
+	big: calcRem(32),
+	subTitleSize: calcRem(36),
+	titleSize: calcRem(42)
 }
 
 const deviceSizes = {
