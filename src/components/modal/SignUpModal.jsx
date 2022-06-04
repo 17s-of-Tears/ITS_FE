@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
 
 import Button from '@/components/common/Button'
 import Input from '@/components/common/Input'
 import useInput from '@/hooks/useInput'
-import { clearStateAction, signUpRequest } from '@/store/user/user.actions'
+import { signUpRequest } from '@/store/user/user.actions'
+import { clearStateSuccessAction } from '@/store/user/user.actions'
 import validtionEmail from '@/utils/validtionEmail'
 import { SignUpModalContainer } from './SignUpModal.styled'
 
@@ -20,17 +21,14 @@ const SignUpModal = ({ onChangeAuthMode, setAuthMode }) => {
 	const [password, onChangePassword] = useInput('')
 	const [passwordCheck, onChangePasswordCheck] = useInput('')
 
-	const [mount, setMount] = useState(false)
-
 	useEffect(() => {
-		setMount(true)
-		if (mount && signUpError) toast.error(signUpError)
-		if (mount && signUpDone) {
+		if (signUpError) toast.error(signUpError)
+		if (signUpDone) {
 			toast.success('회원가입에 성공했습니다.')
 			setAuthMode('login')
-			dispatch(clearStateAction())
+			dispatch(clearStateSuccessAction())
 		}
-	}, [dispatch, mount, setAuthMode, signUpDone, signUpError])
+	}, [dispatch, setAuthMode, signUpDone, signUpError])
 
 	//* 회원가입 시도
 	const onSubmitSignup = e => {

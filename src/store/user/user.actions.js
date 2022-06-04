@@ -50,3 +50,7 @@ export const logoutRequest = () => ({
 export const clearStateSuccessAction = () => ({
 	type: types.CLEAR_STATE_SUCCESS
 })
+
+export const clearStateFailureAction = () => ({
+	type: types.CLEAR_STATE_FAILURE
+})

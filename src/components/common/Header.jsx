@@ -1,5 +1,8 @@
+import { useSelector } from 'react-redux'
+
 import AuthModal from '@/components/modal/AuthModal'
 import useModal from '@/hooks/useModal'
+import Button from './Button'
 import Logo from './Logo'
 import { HeaderContainer } from './Header.styled'
 
@@ -10,9 +13,7 @@ const Header = () => {
 		<>
 			<HeaderContainer>
 				<Logo />
-				<button onClick={onOpenModal} className="header__button">
-					로그인 | 회원가입
-				</button>
+				<Button onClick={onOpenModal}>로그인 | 회원가입</Button>
 			</HeaderContainer>
 			<ModalPortal>
 				<AuthModal onCloseModal={onCloseModal} />

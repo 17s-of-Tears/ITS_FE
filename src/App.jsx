@@ -1,26 +1,40 @@
-import { Suspense } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import { ThemeProvider } from 'styled-components'
 import { ToastContainer } from 'react-toastify'
+import { useDispatch, useSelector } from 'react-redux'
+import { ThemeProvider } from 'styled-components'
 import 'react-toastify/dist/ReactToastify.css'
 
 import LoadingSpinner from '@/components/common/LoadingSpinner'
 import RouterConfig from '@/router'
 import GlobalStyle from '@/styles/GlobalStyled'
 import theme from '@/styles/theme'
+import { loadMyInfoRequest } from '@/store/user/user.actions'
+import { getCookie } from '@/utils/cookie'
 
-const App = () => (
-	<>
-		<BrowserRouter>
-			<ThemeProvider theme={theme}>
-				<GlobalStyle />
-				<Suspense fallback={<LoadingSpinner primary />}>
-					<RouterConfig />
-				</Suspense>
-			</ThemeProvider>
-		</BrowserRouter>
-		<ToastContainer />
-	</>
-)
+const App = () => {
+	const dispatch = useDispatch()
+	const [mount, setMount] = useState(false)
+	const auth = getCookie('auth')
+
+	useEffect(() => {
+		setMount(true)
+		mount && auth && dispatch(loadMyInfoRequest())
+	}, [auth, dispatch, mount])
+
+	return (
+		<>
+			<BrowserRouter>
+				<ThemeProvider theme={theme}>
+					<GlobalStyle />
+					<Suspense fallback={<LoadingSpinner primary />}>
+						<RouterConfig />
+					</Suspense>
+				</ThemeProvider>
+			</BrowserRouter>
+			<ToastContainer />
+		</>
+	)
+}
 
 export default App
