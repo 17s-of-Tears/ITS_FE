@@ -1,10 +1,21 @@
 import { all, call, fork, put, takeLatest } from 'redux-saga/effects'
 
-import * as apis from '../../api/user'
+import { setCookie } from '@/utils/cookie'
+import * as apis from '@/api/user'
 import * as types from './user.types'
 import * as actions from './user.actions'
 
 //* sagas
+function* loadMyInfo() {
+	try {
+		const { data } = yield call(apis.loadMyInfoAPI)
+		yield put(actions.loadMyInfoSuccess(data))
+	} catch (error) {
+		console.log(error)
+		yield put(actions.loadMyInfoFailure('에러가 발생했습니다.'))
+	}
+}
+
 function* signUp(action) {
 	try {
 		const { data } = yield call(apis.signUpAPI, action.data)
@@ -18,13 +29,23 @@ function* signUp(action) {
 function* logIn(action) {
 	try {
 		const { data } = yield call(apis.loginAPI, action.data)
+		setCookie('auth', data.token, {
+			path: '/',
+			secure: true,
+			sameSite: 'none'
+		})
 		yield put(actions.logInSuccess(data.user))
 	} catch (error) {
-		yield put(actions.logInFailure(error))
+		const { message } = error.response.data
+		yield put(actions.logInFailure(message ? message : '에러가 발생했습니다.'))
 	}
 }
 
 //* watch
+function* watchLoadMyInfo() {
+	yield takeLatest(types.LOAD_MY_INFO_REQUEST, loadMyInfo)
+}
+
 function* watchSignUp() {
 	yield takeLatest(types.SIGN_UP_REQUEST, signUp)
 }
@@ -34,5 +55,5 @@ function* watchLogIn() {
 }
 
 export default function* userSaga() {
-	yield all([fork(watchSignUp), fork(watchLogIn)])
+	yield all([fork(watchLoadMyInfo), fork(watchSignUp), fork(watchLogIn)])
 }

@@ -20,6 +20,21 @@ const initialState = {
 const userReducers = (state = initialState, action) =>
 	produce(state, draft => {
 		switch (action.type) {
+			//* LOAD_MY_INFO
+			case actions.LOAD_MY_INFO_REQUEST:
+				draft.loadMyInfoLoading = true
+				draft.loadMyInfoDone = false
+				draft.loadMyInfoError = null
+				break
+			case actions.LOAD_MY_INFO_SUCCESS:
+				draft.loadMyInfoLoading = false
+				draft.loadMyInfoDone = true
+				draft.me = action.data
+				break
+			case actions.LOAD_MY_INFO_FAILURE:
+				draft.loadMyInfoLoading = false
+				draft.loadMyInfoError = action.error
+				break
 			//* SIGN_UP
 			case actions.SIGN_UP_REQUEST:
 				draft.signUpLoading = true
@@ -49,6 +64,10 @@ const userReducers = (state = initialState, action) =>
 			case actions.LOG_IN_FAILURE:
 				draft.logInLoading = false
 				draft.logInError = action.error
+				break
+			//* 동기 액션
+			case actions.LOG_OUT_REQUEST:
+				draft.me = null
 				break
 			case actions.CLEAR_STATE_SUCCESS:
 				draft.logInDone = false

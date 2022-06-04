@@ -1,6 +1,20 @@
 import * as types from './user.types'
 
 //* 회원가입
+export const loadMyInfoRequest = data => ({
+	type: types.LOAD_MY_INFO_REQUEST,
+	data
+})
+export const loadMyInfoSuccess = data => ({
+	type: types.LOAD_MY_INFO_SUCCESS,
+	data
+})
+export const loadMyInfoFailure = error => ({
+	type: types.LOAD_MY_INFO_FAILURE,
+	error
+})
+
+//* 회원가입
 export const signUpRequest = data => ({
 	type: types.SIGN_UP_REQUEST,
 	data
@@ -29,6 +43,10 @@ export const logInFailure = error => ({
 })
 
 //* 동기 액션
-export const clearStateAction = () => ({
+export const logoutRequest = () => ({
+	type: types.LOG_OUT_REQUEST
+})
+
+export const clearStateSuccessAction = () => ({
 	type: types.CLEAR_STATE_SUCCESS
 })

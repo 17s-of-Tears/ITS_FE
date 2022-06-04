@@ -12,21 +12,4 @@ export const HeaderContainer = styled.div`
 	top: 0;
 	z-index: 11;
 	background-color: white;
-
-	.header {
-		&__button {
-			font-size: ${({ theme }) => theme.fontSizes.base};
-			background-color: ${({ theme }) => theme.colors.primary};
-			border: none;
-			color: white;
-			border-radius: 8px;
-			padding: 8px 12px;
-			transition: 0.3s;
-			cursor: pointer;
-
-			&:hover {
-				filter: brightness(80%);
-			}
-		}
-	}
 `

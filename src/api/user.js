@@ -1,4 +1,7 @@
-import { user } from '.'
+import { user, userWithToken } from '.'
+
+//* 유저 정보 조회 API
+export const loadMyInfoAPI = () => userWithToken.get('/me')
 
 //* 회원가입 API
 export const signUpAPI = data => user.post('/signup', data)

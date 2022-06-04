@@ -10,8 +10,6 @@ export const LOG_IN_REQUEST = 'LOG_IN_REQUEST'
 export const LOG_IN_SUCCESS = 'LOG_IN_SUCCESS'
 export const LOG_IN_FAILURE = 'LOG_IN_FAILURE'
 
+//* 동기 액션 타입
 export const LOG_OUT_REQUEST = 'LOG_OUT_REQUEST'
-export const LOG_OUT_SUCCESS = 'LOG_OUT_SUCCESS'
-export const LOG_OUT_FAILURE = 'LOG_OUT_FAILURE'
-
 export const CLEAR_STATE_SUCCESS = 'CLEAR_STATE_SUCCESS'
