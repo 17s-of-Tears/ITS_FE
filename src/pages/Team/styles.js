@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import colors from 'styles/colors'
 
 export const Maincontainer = styled.div`
 	padding: 5% 14.5%;
@@ -8,7 +7,7 @@ export const Maincontainer = styled.div`
 		padding-bottom: 30px;
 		display: flex;
 		gap: 30px;
-		border-bottom: solid 1px ${colors.gray_ea};
+		border-bottom: solid 1px ${({ theme }) => theme.colors.gray_ea};
 		.net {
 			width: 150px;
 			height: 150px;
@@ -16,11 +15,11 @@ export const Maincontainer = styled.div`
 		}
 		.team__profile_name {
 			font-size: 40px;
-			color: ${colors.gray_33};
+			color: ${({ theme }) => theme.colors.gray_33};
 		}
 		.team__profile_intro {
 			font-size: 20px;
-			color: ${colors.gray_77};
+			color: ${({ theme }) => theme.colors.gray_77};
 		}
 		svg {
 			width: 45px;
@@ -44,22 +43,22 @@ export const Maincontainer = styled.div`
 		}
 		.team__menu {
 			font-size: 20px;
-			color: ${colors.gray_77};
+			color: ${({ theme }) => theme.colors.gray_77};
 			font-weight: 300;
 			height: 49px;
 			padding: 10px 0px 10px 20px;
 			border-radius: 5px;
-			border: solid 1px ${colors.gray_dd};
-			background-color: ${colors.white_ff};
+			border: solid 1px ${({ theme }) => theme.colors.gray_dd};
+			background-color: ${({ theme }) => theme.colors.white_ff};
 			text-decoration: none;
 			&.active {
-				border: solid 1px ${colors.primary};
+				border: solid 1px ${({ theme }) => theme.colors.primary};
 				font-weight: bold;
-				color: ${colors.gray_33};
+				color: ${({ theme }) => theme.colors.gray_33};
 			}
 			&:hover {
 				font-weight: bold;
-				color: ${colors.gray_33};
+				color: ${({ theme }) => theme.colors.gray_33};
 			}
 		}
 	}
@@ -71,7 +70,7 @@ export const Maincontainer = styled.div`
 		.team__contents_title {
 			padding: 15px 30px 0px 30px;
 			font-size: 20px;
-			color: ${colors.gray_33};
+			color: ${({ theme }) => theme.colors.gray_33};
 		}
 		.team__contents {
 			display: flex;
@@ -83,10 +82,10 @@ export const Maincontainer = styled.div`
 				width: 50%;
 				height: 379px;
 				border-radius: 5px;
-				background-color: ${colors.white_ff};
+				background-color: ${({ theme }) => theme.colors.white_ff};
 				.notice_txt {
 					font-size: 16px;
-					color: ${colors.gray_77};
+					color: ${({ theme }) => theme.colors.gray_77};
 					padding: 11px 30px 11px 30px;
 					display: flex;
 					align-items: center;
@@ -100,7 +99,7 @@ export const Maincontainer = styled.div`
 					align-items: center;
 					justify-content: center;
 					font-size: 16px;
-					color: ${colors.gray_77};
+					color: ${({ theme }) => theme.colors.gray_77};
 					gap: 10px;
 					p {
 						cursor: pointer;
@@ -111,7 +110,7 @@ export const Maincontainer = styled.div`
 				width: 50%;
 				height: 379px;
 				border-radius: 5px;
-				background-color: ${colors.white_ff};
+				background-color: ${({ theme }) => theme.colors.white_ff};
 				.team__members {
 					padding: 20px 15px 0px 15px;
 					display: grid;
@@ -135,7 +134,7 @@ export const Maincontainer = styled.div`
 			width: 100%;
 			height: 300px;
 			border-radius: 5px;
-			background-color: ${colors.white_ff};
+			background-color: ${({ theme }) => theme.colors.white_ff};
 		}
 	}
 
@@ -145,12 +144,12 @@ export const Maincontainer = styled.div`
 		width: 100%;
 		height: 707px;
 		border-radius: 5px;
-		background-color: ${colors.white_ff};
+		background-color: ${({ theme }) => theme.colors.white_ff};
 		padding: 30px 50px;
 		.memo__contents {
 			width: 25%;
 			height: 650px;
-			background-color: ${colors.gray_eb};
+			background-color: ${({ theme }) => theme.colors.gray_eb};
 			border-radius: 10px;
 			display: flex;
 			flex-direction: column;
@@ -159,11 +158,11 @@ export const Maincontainer = styled.div`
 			gap: 20px;
 			.memo__contents_box {
 				font-size: 18px;
-				color: ${colors.gray_33};
+				color: ${({ theme }) => theme.colors.gray_33};
 				width: 90%;
 				height: 9%;
 				border-radius: 10px;
-				background-color: ${colors.white_ff};
+				background-color: ${({ theme }) => theme.colors.white_ff};
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
@@ -176,9 +175,9 @@ export const Maincontainer = styled.div`
 			}
 			.memo__add_btn {
 				margin-top: 94%;
-				background-color: ${colors.primary};
+				background-color: ${({ theme }) => theme.colors.primary};
 				font-size: 18px;
-				color: ${colors.white_ff};
+				color: ${({ theme }) => theme.colors.white_ff};
 				width: 90%;
 				height: 9%;
 				border-radius: 10px;
@@ -192,7 +191,7 @@ export const Maincontainer = styled.div`
 		width: 100%;
 		height: 707px;
 		border-radius: 5px;
-		background-color: ${colors.white_ff};
+		background-color: ${({ theme }) => theme.colors.white_ff};
 		font-size: 48px;
 		align-items: center;
 		justify-content: center;

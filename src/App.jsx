@@ -1,23 +1,25 @@
-import React, { Suspense } from 'react'
+import { Suspense } from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import styled from 'styled-components'
+import { ThemeProvider } from 'styled-components'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
-import GlobalStyle from 'styles/GlobalStyled'
 import RouterConfig from 'router'
-
-const Container = styled.div`
-	background-color: #f8f9fd;
-`
+import GlobalStyle from 'styles/GlobalStyled'
+import theme from 'styles/theme'
 
 const App = () => (
-	<Container>
+	<>
 		<BrowserRouter>
-			<GlobalStyle />
-			<Suspense fallback={<span>Loading...</span>}>
-				<RouterConfig />
-			</Suspense>
+			<ThemeProvider theme={theme}>
+				<GlobalStyle />
+				<Suspense fallback={<span>Loading...</span>}>
+					<RouterConfig />
+				</Suspense>
+			</ThemeProvider>
+			<ToastContainer />
 		</BrowserRouter>
-	</Container>
+	</>
 )
 
 export default App

@@ -1,4 +1,3 @@
-import Modal from 'components/modal/RegisterModal'
 import { successInfo } from 'lib/staticData'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'

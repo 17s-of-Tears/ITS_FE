@@ -1,8 +1,7 @@
-import React, { useCallback, useMemo, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 import Logo from 'components/common/Logo'
-import RegisterModal from 'components/modal/RegisterModal'
 import MakingPageRouterConfig from 'router/maketeam'
 import { hostLink, hostTitle } from 'lib/staticData'
 import { ButtonWrapper, MainContainer, Progress } from './styles'
@@ -10,8 +9,6 @@ import { ButtonWrapper, MainContainer, Progress } from './styles'
 const MakingPage = () => {
 	const { pathname } = useLocation()
 	const navigate = useNavigate()
-
-	const [isModal, setIsModal] = useState(false)
 
 	const routerData = useMemo(
 		() => ({
@@ -40,7 +37,8 @@ const MakingPage = () => {
 	//* 해당 버튼에 이동할 경로를 정해주고 이동
 	const onMoveToPage = mode => () => {
 		const toPage = routerData[pathname].to[mode]
-		toPage === 'openModal' ? setIsModal(true) : navigate(toPage)
+		// toPage === 'openModal' ? setIsModal(true) : navigate(toPage)
+		toPage === 'openModal' ? console.log('test') : navigate(toPage)
 	}
 
 	return (
@@ -59,7 +57,6 @@ const MakingPage = () => {
 					{buttonText('next')}
 				</button>
 			</ButtonWrapper>
-			{isModal && <RegisterModal setIsModal={setIsModal} />}
 		</MainContainer>
 	)
 }

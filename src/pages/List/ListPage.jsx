@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from 'components/list/Card'
-import SelectBox from 'components/common/Select'
+import SelectBox from 'components/list/SelectBox'
 import AppLayout from 'layouts/AppLayout'
 import { MainContainer } from './styles'
 import cardData from '../../data/cardData'

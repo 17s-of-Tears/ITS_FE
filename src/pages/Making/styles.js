@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import colors from 'styles/colors'
-import theme from 'styles/fonts'
 
 export const MainContainer = styled.div`
 	padding-top: 3%;
@@ -15,30 +13,30 @@ export const MainContainer = styled.div`
 
 	.progress {
 		width: 100%;
-		background-color: ${colors.gray_ee};
+		background-color: ${({ theme }) => theme.colors.gray_ee};
 		height: 15px;
 		border-radius: 7.5px;
 	}
 
 	.making_title {
-		font-size: ${theme.fontSizes.subTitleSize};
+		font-size: ${({ theme }) => theme.fontSizes.subTitleSize};
 	}
 
 	.box {
 		width: 100%;
 		border-radius: 10px;
-		background-color: ${colors.white_ff};
+		background-color: ${({ theme }) => theme.colors.white_ff};
 		padding: 25px 25px;
 
 		.box__title {
 			gap: 10px;
 			.title__txt1 {
-				font-size: ${theme.fontSizes.xxl};
+				font-size: ${({ theme }) => theme.fontSizes.xxl};
 				margin-right: 5px;
 			}
 			.title__txt2 {
-				font-size: ${theme.fontSizes.base};
-				color: ${colors.gray_aa};
+				font-size: ${({ theme }) => theme.fontSizes.base};
+				color: ${({ theme }) => theme.colors.gray_aa};
 			}
 		}
 
@@ -59,17 +57,17 @@ export const MainContainer = styled.div`
 				border-radius: 10px;
 				width: 50%;
 				gap: 10px;
-				border: solid 1px ${colors.gray_ee};
+				border: solid 1px ${({ theme }) => theme.colors.gray_ee};
 				cursor: pointer;
 				&:hover {
-					border: solid 1px ${colors.primary};
+					border: solid 1px ${({ theme }) => theme.colors.primary};
 				}
 				.purpose__txt1 {
-					font-size: ${theme.fontSizes.base};
-					color: ${colors.gray_aa};
+					font-size: ${({ theme }) => theme.fontSizes.base};
+					color: ${({ theme }) => theme.colors.gray_aa};
 				}
 				.purpose__txt2 {
-					font-size: ${theme.fontSizes.xl};
+					font-size: ${({ theme }) => theme.fontSizes.xl};
 				}
 			}
 		}
@@ -88,18 +86,18 @@ export const MainContainer = styled.div`
 					flex-direction: column;
 					align-items: center;
 					gap: 15.5px;
-					border: solid 1px ${colors.gray_ee};
+					border: solid 1px ${({ theme }) => theme.colors.gray_ee};
 					border-radius: 10px;
 					cursor: pointer;
 					&:hover {
-						border: solid 1px ${colors.primary};
+						border: solid 1px ${({ theme }) => theme.colors.primary};
 					}
 					svg {
 						width: 45px;
 					}
 					.skill__txt {
-						font-size: ${theme.fontSizes.lg};
-						color: ${colors.gray_33};
+						font-size: ${({ theme }) => theme.fontSizes.lg};
+						color: ${({ theme }) => theme.colors.gray_33};
 					}
 				}
 			}
@@ -108,18 +106,18 @@ export const MainContainer = styled.div`
 		.box__name {
 			width: 100%;
 			height: 50px;
-			border: solid 1px ${colors.gray_aa};
+			border: solid 1px ${({ theme }) => theme.colors.gray_aa};
 			border-radius: 10px;
-			font-size: ${theme.fontSizes.base};
+			font-size: ${({ theme }) => theme.fontSizes.base};
 			padding-left: 10px;
 		}
 
 		.box__description {
 			width: 100%;
 			height: 150px;
-			border: solid 1px ${colors.gray_aa};
+			border: solid 1px ${({ theme }) => theme.colors.gray_aa};
 			border-radius: 10px;
-			font-size: ${theme.fontSizes.base};
+			font-size: ${({ theme }) => theme.fontSizes.base};
 			padding: 15px 0px 0px 15px;
 		}
 	}
@@ -129,23 +127,23 @@ export const MainContainer = styled.div`
 		flex-direction: column;
 		gap: 15px;
 		width: 100%;
-		font-size: ${theme.fontSizes.base};
+		font-size: ${({ theme }) => theme.fontSizes.base};
 	}
 	.success__img {
 		width: 200px;
 		height: 200px;
 	}
 	.success__txt1 {
-		font-size: ${theme.fontSizes.big};
-		color: ${colors.gray_33};
+		font-size: ${({ theme }) => theme.fontSizes.big};
+		color: ${({ theme }) => theme.colors.gray_33};
 		.success__txt2 {
-			color: ${colors.primary};
+			color: ${({ theme }) => theme.colors.primary};
 			font-weight: 600;
 		}
 	}
 `
 export const Progress = styled.div`
-	background-color: ${colors.primary};
+	background-color: ${({ theme }) => theme.colors.primary};
 	width: ${props => props.width};
 	height: 100%;
 	transition: width 0.3s;
@@ -169,11 +167,11 @@ export const ButtonWrapper = styled.div`
 		}
 	}
 	.beforebtn {
-		color: ${colors.gray_33};
-		background-color: ${colors.gray_ee};
+		color: ${({ theme }) => theme.colors.gray_33};
+		background-color: ${({ theme }) => theme.colors.gray_ee};
 	}
 	.nextbtn {
-		color: ${colors.white_ff};
-		background-color: ${colors.primary};
+		color: ${({ theme }) => theme.colors.white_ff};
+		background-color: ${({ theme }) => theme.colors.primary};
 	}
 `

@@ -1,11 +1,9 @@
 import styled from 'styled-components'
-import colors from 'styles/colors'
-import theme from 'styles/fonts'
 
 export const MainContainer = styled.div`
 	margin: auto 0;
 	.Its {
-		color: ${colors.primary};
+		color: ${({ theme }) => theme.colors.primary};
 		font-weight: 500;
 	}
 	.home {
@@ -22,7 +20,7 @@ export const MainContainer = styled.div`
 			gap: 20px;
 
 			&__main {
-				font-size: ${theme.fontSizes.subTitleSize};
+				font-size: ${({ theme }) => theme.fontSizes.subTitleSize};
 				font-weight: 300;
 				> span {
 					font-weight: 500;
@@ -30,8 +28,8 @@ export const MainContainer = styled.div`
 			}
 
 			&__sub {
-				font-size: ${theme.fontSizes.lg};
-				color: ${colors.gray_33};
+				font-size: ${({ theme }) => theme.fontSizes.lg};
+				color: ${({ theme }) => theme.colors.gray_33};
 				font-weight: 300;
 			}
 
@@ -41,9 +39,9 @@ export const MainContainer = styled.div`
 				justify-content: center;
 				gap: 10px;
 				width: 30%;
-				background-color: ${colors.primary};
-				color: ${colors.white_ff};
-				font-size: ${theme.fontSizes.base};
+				background-color: ${({ theme }) => theme.colors.primary};
+				color: ${({ theme }) => theme.colors.white_ff};
+				font-size: ${({ theme }) => theme.fontSizes.base};
 				padding: 1.7% 0 1.5% 0;
 				border-radius: 10px;
 				&:hover {
@@ -65,17 +63,17 @@ export const MainContainer = styled.div`
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		background-color: ${colors.white_ff};
-		border: solid 1px ${colors.gray_ee};
+		background-color: ${({ theme }) => theme.colors.white_ff};
+		border: solid 1px ${({ theme }) => theme.colors.gray_ee};
 		padding: 0 14.5%;
 
 		hr {
-			border: solid 1px ${colors.gray_ee};
+			border: solid 1px ${({ theme }) => theme.colors.gray_ee};
 			width: 100%;
 		}
 
 		> div {
-			font-size: ${theme.fontSizes.subTitleSize};
+			font-size: ${({ theme }) => theme.fontSizes.subTitleSize};
 			padding: 10% 0;
 			display: flex;
 			align-items: center;
@@ -99,7 +97,7 @@ export const MainContainer = styled.div`
 		}
 
 		&__title {
-			font-size: ${theme.fontSizes.subTitleSize};
+			font-size: ${({ theme }) => theme.fontSizes.subTitleSize};
 			font-weight: 300;
 		}
 
@@ -115,8 +113,8 @@ export const MainContainer = styled.div`
 
 				&__1 {
 					font-weight: 300;
-					color: ${colors.gray_55};
-					font-size: ${theme.fontSizes.xxxl};
+					color: ${({ theme }) => theme.colors.gray_55};
+					font-size: ${({ theme }) => theme.fontSizes.xxxl};
 				}
 				&__2 {
 					font-weight: 500;
@@ -124,19 +122,19 @@ export const MainContainer = styled.div`
 
 					&__small {
 						font-weight: 300;
-						color: ${colors.gray_aa};
-						font-size: ${theme.fontSizes.xxl};
+						color: ${({ theme }) => theme.colors.gray_aa};
+						font-size: ${({ theme }) => theme.fontSizes.xxl};
 					}
 				}
 				&__3 {
-					font-size: ${theme.fontSizes.xxsmall};
-					color: ${colors.gray_aa};
+					font-size: ${({ theme }) => theme.fontSizes.xxsmall};
+					color: ${({ theme }) => theme.colors.gray_aa};
 				}
 			}
 			svg {
 				width: 60px;
 				height: 60px;
-				fill: ${colors.gray_55};
+				fill: ${({ theme }) => theme.colors.gray_55};
 			}
 		}
 	}

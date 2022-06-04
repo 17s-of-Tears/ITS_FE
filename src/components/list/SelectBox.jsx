@@ -1,11 +1,10 @@
 import { KindOptions, SkillOptions, LineOptions } from 'lib/staticData'
-import React from 'react'
-import { SelectContainer } from './styles'
+import { SelectBoxContainer } from './SelectBox.styled'
 
 const SelectBox = () => (
-	<SelectContainer>
-		<div className="select__left">
-			<select className="select__kind">
+	<SelectBoxContainer>
+		<div className="select-left">
+			<select className="select-left__kind">
 				<option value="" selected disabled hidden>
 					종류
 				</option>
@@ -16,7 +15,7 @@ const SelectBox = () => (
 					</option>
 				))}
 			</select>
-			<select className="select__lang">
+			<select className="select-left__lang">
 				<option value="" selected disabled hidden>
 					언어
 				</option>
@@ -28,8 +27,8 @@ const SelectBox = () => (
 				))}
 			</select>
 		</div>
-		<div className="select__right">
-			<select className="select__line">
+		<div className="select-right">
+			<select className="select-right__line">
 				{LineOptions.map(line => (
 					<option key={line.id} value={line.value}>
 						{line.name}
@@ -37,7 +36,7 @@ const SelectBox = () => (
 				))}
 			</select>
 		</div>
-	</SelectContainer>
+	</SelectBoxContainer>
 )
 
 export default SelectBox

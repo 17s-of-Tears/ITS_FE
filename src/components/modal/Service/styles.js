@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import colors from 'styles/colors'
 
 export const ModalContainer = styled.div`
 	position: fixed;
@@ -55,7 +54,7 @@ export const ModalContainer = styled.div`
 				border: solid 2px #f1f3f7;
 				background-color: #f8f9fd;
 				&:hover {
-					border: solid 2px ${colors.primary};
+					border: solid 2px ${({ theme }) => theme.colors.primary};
 				}
 			}
 			.modal__service_member {
@@ -66,7 +65,7 @@ export const ModalContainer = styled.div`
 				border: solid 2px #f1f3f7;
 				background-color: #f8f9fd;
 				&:hover {
-					border: solid 2px ${colors.primary};
+					border: solid 2px ${({ theme }) => theme.colors.primary};
 				}
 			}
 		}
@@ -74,12 +73,12 @@ export const ModalContainer = styled.div`
 			margin-top: 20px;
 			font-size: 39px;
 			font-weight: 500;
-			color: ${colors.gray_33};
+			color: ${({ theme }) => theme.colors.gray_33};
 		}
 		.modal__service_txt2 {
 			margin-top: 10px;
 			font-size: 18px;
-			color: ${colors.gray_77};
+			color: ${({ theme }) => theme.colors.gray_77};
 		}
 		.modal__service_btn {
 			width: 292px;
@@ -88,13 +87,13 @@ export const ModalContainer = styled.div`
 			align-items: center;
 			background-color: #f8f9fd;
 			font-size: 22px;
-			color: ${colors.primary};
-			border: solid 3px ${colors.primary};
+			color: ${({ theme }) => theme.colors.primary};
+			border: solid 3px ${({ theme }) => theme.colors.primary};
 			border-radius: 8px;
 			padding: 12px 35px 12px 35px;
 			font-family: Noto Sans, Noto Sans KR;
 			&:hover {
-				background-color: ${colors.primary};
+				background-color: ${({ theme }) => theme.colors.primary};
 				color: white;
 			}
 		}

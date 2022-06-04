@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import colors from 'styles/colors'
 
 export const ModalContainer = styled.div`
 	position: fixed;
@@ -15,7 +14,7 @@ export const ModalContainer = styled.div`
 	.modal__notice {
 		width: 812px;
 		height: 405px;
-		background-color: ${colors.white_ff};
+		background-color: ${({ theme }) => theme.colors.white_ff};
 		border-radius: 10px;
 		padding: 30px 30px 0px 30px;
 		display: flex;
@@ -32,7 +31,7 @@ export const ModalContainer = styled.div`
 		}
 		p {
 			font-size: 20px;
-			color: ${colors.gray_77};
+			color: ${({ theme }) => theme.colors.gray_77};
 			margin-top: 50px;
 		}
 	}

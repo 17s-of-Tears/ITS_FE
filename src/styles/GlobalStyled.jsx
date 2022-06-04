@@ -3,19 +3,22 @@ import reset from 'styled-reset'
 
 const globalStyle = css`
 	${reset};
+
 	* {
 		box-sizing: border-box;
 	}
+
 	body {
-		max-width: 1920px;
-		min-width: 1440px;
+		background-color: #f8f9fd;
 		line-height: 1.4;
 		font-family: Noto Sans, Noto Sans KR;
 		color: #333;
+
 		textarea {
 			resize: none;
 		}
 	}
+
 	button {
 		text-decoration: none;
 		border: 0;

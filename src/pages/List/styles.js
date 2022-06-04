@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import colors from 'styles/colors'
-import theme from 'styles/fonts'
 
 export const MainContainer = styled.div`
 	hr {
@@ -9,13 +7,13 @@ export const MainContainer = styled.div`
 	.list__top {
 		margin-top: 50px;
 		padding: 0 14.5%;
-		font-size: ${theme.fontSizes.subTitleSize};
+		font-size: ${({ theme }) => theme.fontSizes.subTitleSize};
 		font-weight: 500;
 
 		.list__top_filter {
-			font-size: ${theme.fontSizes.xxxl};
+			font-size: ${({ theme }) => theme.fontSizes.xxxl};
 			font-weight: 400;
-			color: ${colors.gray_aa};
+			color: ${({ theme }) => theme.colors.gray_aa};
 		}
 	}
 	.list__select {
@@ -26,7 +24,7 @@ export const MainContainer = styled.div`
 	}
 	hr {
 		margin-top: 50px;
-		border: solid 1px ${colors.gray_dd};
+		border: solid 1px ${({ theme }) => theme.colors.gray_dd};
 	}
 	.list__card_info {
 		margin-top: 50px;
@@ -35,12 +33,12 @@ export const MainContainer = styled.div`
 		align-items: flex-end;
 		gap: 10px;
 		.list__info_total {
-			font-size: ${theme.fontSizes.xxxl};
-			color: ${colors.gray_33};
+			font-size: ${({ theme }) => theme.fontSizes.xxxl};
+			color: ${({ theme }) => theme.colors.gray_33};
 		}
 		.list__info_join {
-			font-size: ${theme.fontSizes.base};
-			color: ${colors.gray_aa};
+			font-size: ${({ theme }) => theme.fontSizes.base};
+			color: ${({ theme }) => theme.colors.gray_aa};
 		}
 	}
 	.list__card_box {
@@ -58,7 +56,7 @@ export const SubContainer = styled.div`
 	width: 65%;
 
 	.back {
-		border: solid 1px ${colors.gray_dd};
+		border: solid 1px ${({ theme }) => theme.colors.gray_dd};
 		border-radius: 5px;
 		width: 50px;
 		height: 50px;
@@ -84,12 +82,12 @@ export const SubContainer = styled.div`
 			height: auto;
 
 			&__title {
-				font-size: ${theme.fontSizes.subTitleSize};
+				font-size: ${({ theme }) => theme.fontSizes.subTitleSize};
 				padding: 5% 0;
 			}
 
 			&__subtitle {
-				font-size: ${theme.fontSizes.base};
+				font-size: ${({ theme }) => theme.fontSizes.base};
 			}
 
 			&__icon {
@@ -104,7 +102,7 @@ export const SubContainer = styled.div`
 
 			hr {
 				width: 100%;
-				border: solid 1px ${colors.gray_dd};
+				border: solid 1px ${({ theme }) => theme.colors.gray_dd};
 			}
 
 			&__write {
@@ -112,7 +110,7 @@ export const SubContainer = styled.div`
 				flex-direction: column;
 				gap: 50px;
 				padding: 5% 0;
-				font-size: ${theme.fontSizes.lg};
+				font-size: ${({ theme }) => theme.fontSizes.lg};
 
 				span {
 					line-height: 2.5;
@@ -126,15 +124,15 @@ export const SubContainer = styled.div`
 
 				textarea {
 					background-color: #f8f9fd;
-					border: solid 1px ${colors.gray_dd};
+					border: solid 1px ${({ theme }) => theme.colors.gray_dd};
 					border-radius: 5px;
 					padding: 2% 0 0 2%;
 					height: 100px;
 				}
 
 				&__registerbtn {
-					color: ${colors.white_ff};
-					background-color: ${colors.primary};
+					color: ${({ theme }) => theme.colors.white_ff};
+					background-color: ${({ theme }) => theme.colors.primary};
 					width: 15%;
 					margin-left: auto;
 					border-radius: 5px;
