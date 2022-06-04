@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { ReactComponent as Arrow } from '@/assets/svg/arrow.svg'
+import { ReactCompocomponents as ArrowIcon } from '@/assets/svg/arrow.svg'
 import Modal from '@/components/modal/Service'
 import AppLayout from '@/layouts/AppLayout'
 import { homeDoneData } from '@/lib/staticData'
@@ -30,7 +30,7 @@ const HomePage = () => {
 						</span>
 						<button onClick={onOpenModal} className="home__title__btn">
 							서비스 시작하기
-							<Arrow />
+							<ArrowIcon />
 						</button>
 					</div>
 					<img src="/images/two.png" alt="home" />
