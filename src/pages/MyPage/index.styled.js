@@ -1,17 +1,20 @@
 import styled from 'styled-components'
 
-export const MainContainer = styled.div`
+export const MyPageContainer = styled.div`
 	padding: 5% 14.5%;
 	color: ${({ theme }) => theme.colors.gray_70};
+
 	.my__profile_its {
 		font-size: 40px;
 		color: ${({ theme }) => theme.colors.gray_33};
 	}
+
 	.my__profile {
 		width: 100%;
 		display: flex;
 		margin-top: 20px;
 		gap: 16px;
+
 		.my__profile_left {
 			.my__profile_inform {
 				text-align: center;
@@ -21,33 +24,40 @@ export const MainContainer = styled.div`
 				border-radius: 10px;
 				border: solid 1px ${({ theme }) => theme.colors.gray_dd};
 				background-color: ${({ theme }) => theme.colors.white_ff};
+
 				.my__profile_txt1 {
 					margin-top: 10px;
 					font-size: 20px;
 					color: ${({ theme }) => theme.colors.primary};
 				}
+
 				.my__profile_txt2 {
 					font-size: 14px;
 					color: ${({ theme }) => theme.colors.gray_77};
+
 					span {
 						color: ${({ theme }) => theme.colors.primary};
 					}
 				}
+
 				.my__profile_imgbtn {
 					display: flex;
 					justify-content: center;
 					margin-top: 10px;
 					gap: 10px;
+
 					.my__profile_imgsbtn {
 						background-color: ${({ theme }) => theme.colors.primary};
 						color: ${({ theme }) => theme.colors.white_ff};
 						width: 101px;
 						height: 40px;
 						border-radius: 5px;
+
 						&:hover {
 							filter: brightness(80%);
 						}
 					}
+
 					.my__profile_imgdbtn {
 						background-color: ${({ theme }) => theme.colors.gray_ee};
 						color: ${({ theme }) => theme.colors.gray_33};
@@ -59,11 +69,13 @@ export const MainContainer = styled.div`
 						}
 					}
 				}
+
 				.my__profile_nick {
 					margin-top: 20px;
 					font-size: 20px;
 					color: ${({ theme }) => theme.colors.gray_33};
 				}
+
 				.my__profile_nickbox {
 					margin-top: 10px;
 					padding-left: 15px;
@@ -74,38 +86,45 @@ export const MainContainer = styled.div`
 					border-radius: 5px;
 					border: solid 1px ${({ theme }) => theme.colors.gray_aa};
 				}
+
 				.my__profile_nickbtn {
 					margin-top: 10px;
 					display: flex;
 					gap: 10px;
+
 					.my__profile_nickch {
 						color: ${({ theme }) => theme.colors.white_ff};
 						width: 164px;
 						height: 40px;
 						border-radius: 5px;
 						background-color: ${({ theme }) => theme.colors.primary};
+
 						&:hover {
 							filter: brightness(80%);
 						}
 					}
+
 					.my__profile_die {
 						color: ${({ theme }) => theme.colors.white_ff};
 						width: 164px;
 						height: 40px;
 						border-radius: 5px;
 						background-color: ${({ theme }) => theme.colors.red_74};
+
 						&:hover {
 							filter: brightness(80%);
 						}
 					}
 				}
 			}
+
 			.menus {
 				display: flex;
 				flex-direction: column;
 				gap: 8px;
 				width: 100%;
 			}
+
 			.my__profile_team {
 				font-size: 20px;
 				color: ${({ theme }) => theme.colors.gray_77};
@@ -117,17 +136,20 @@ export const MainContainer = styled.div`
 				border: solid 1px ${({ theme }) => theme.colors.gray_dd};
 				background-color: ${({ theme }) => theme.colors.white_ff};
 				text-decoration: none;
+
 				&.active {
 					border: solid 1px ${({ theme }) => theme.colors.primary};
 					font-weight: bold;
 					color: ${({ theme }) => theme.colors.gray_33};
 				}
+
 				&:hover {
 					font-weight: bold;
 					color: ${({ theme }) => theme.colors.gray_33};
 				}
 			}
 		}
+
 		.my__profile_right {
 			height: 652px;
 			width: 80%;
@@ -135,14 +157,17 @@ export const MainContainer = styled.div`
 			border-radius: 10px;
 			border: solid 1px ${({ theme }) => theme.colors.gray_dd};
 			background-color: ${({ theme }) => theme.colors.white_ff};
+
 			hr {
 				margin-top: 30px;
 				margin-bottom: 30px;
 			}
+
 			.my__profile_jointeam {
 				display: flex;
 				gap: 10px;
 				align-items: flex-end;
+
 				.my__profile_teamtxt1 {
 					font-size: 30px;
 					color: ${({ theme }) => theme.colors.gray_33};
@@ -152,22 +177,27 @@ export const MainContainer = styled.div`
 					color: ${({ theme }) => theme.colors.gray_aa};
 				}
 			}
+
 			.my__profile_project {
 				display: flex;
 				justify-content: space-between;
+
 				.my__profile_protxt1 {
 					font-size: 20px;
 					color: ${({ theme }) => theme.colors.gray_33};
 				}
+
 				.my__profile_protxt2 {
 					font-size: 16px;
 					color: ${({ theme }) => theme.colors.gray_77};
 				}
+
 				svg {
 					margin-top: 10px;
 					width: 45px;
 					height: 45px;
 				}
+
 				.my__profile_movebtn {
 					font-size: 16px;
 					color: ${({ theme }) => theme.colors.white_ff};

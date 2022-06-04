@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
-export const MainContainer = styled.div`
+export const HomePageContainer = styled.div`
 	margin: auto 0;
+
 	.Its {
 		color: ${({ theme }) => theme.colors.primary};
 		font-weight: 500;
 	}
+
 	.home {
 		display: flex;
 		align-items: center;

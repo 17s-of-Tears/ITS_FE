@@ -4,7 +4,7 @@ import Card from '@/components/list/Card'
 import SelectBox from '@/components/list/SelectBox'
 import cardData from '@/data/cardData'
 import AppLayout from '@/layouts/AppLayout'
-import { MainContainer } from './styles'
+import { MainContainer } from './index.styled'
 
 const ListPage = () => (
 	<AppLayout>

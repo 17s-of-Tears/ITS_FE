@@ -4,14 +4,14 @@ import { Link, useLocation } from 'react-router-dom'
 import AppLayout from '@/layouts/AppLayout'
 import { myPageMenus } from '@/lib/staticData'
 import MyPageRouterConfig from '@/router/mypage'
-import { MainContainer } from './styles'
+import { MyPageContainer } from './index.styled'
 
 const MyPage = () => {
 	const { pathname } = useLocation()
 
 	return (
 		<AppLayout>
-			<MainContainer>
+			<MyPageContainer>
 				<p className="my__profile_its">MY It&apos;s</p>
 				<div className="my__profile">
 					<div className="my__profile_left">
@@ -56,7 +56,7 @@ const MyPage = () => {
 						</Suspense>
 					</div>
 				</div>
-			</MainContainer>
+			</MyPageContainer>
 		</AppLayout>
 	)
 }

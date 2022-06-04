@@ -1,16 +1,16 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { ReactComponent as ReactLogoIcon } from '@/assets/svg/React.svg'
 import { ReactComponent as NodeLogoIcon } from '@/assets/svg/Node.svg'
+import { LikerPageContainer } from './LikerPage.styled'
 
-const Liker = () => {
+const LikerPage = () => {
 	const navigate = useNavigate()
 	const onMovePageTeam = () => {
 		navigate('/team/4/home')
 	}
 	return (
-		<>
+		<LikerPageContainer>
 			<div className="my__profile_jointeam">
 				<p className="my__profile_teamtxt1">좋아요한 팀</p>
 				<p className="my__profile_teamtxt2">
@@ -34,8 +34,8 @@ const Liker = () => {
 				</button>
 			</div>
 			<hr />
-		</>
+		</LikerPageContainer>
 	)
 }
 
-export default Liker
+export default LikerPage

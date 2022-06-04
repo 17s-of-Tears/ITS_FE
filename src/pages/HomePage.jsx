@@ -4,7 +4,7 @@ import { ReactCompocomponents as ArrowIcon } from '@/assets/svg/arrow.svg'
 import Modal from '@/components/modal/Service'
 import AppLayout from '@/layouts/AppLayout'
 import { homeDoneData } from '@/lib/staticData'
-import { MainContainer } from './styles'
+import { HomePageContainer } from './HomePage.styled'
 
 const HomePage = () => {
 	const [isModal, setIsModal] = useState(false)
@@ -14,7 +14,7 @@ const HomePage = () => {
 
 	return (
 		<AppLayout>
-			<MainContainer>
+			<HomePageContainer>
 				<div className="home">
 					<div className="home__title">
 						<span className="home__title__main">
@@ -88,7 +88,7 @@ const HomePage = () => {
 					</div>
 				</div>
 				{isModal && <Modal onCloseModal={onCloseModal} />}
-			</MainContainer>
+			</HomePageContainer>
 		</AppLayout>
 	)
 }

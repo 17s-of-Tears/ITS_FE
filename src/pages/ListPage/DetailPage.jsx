@@ -6,7 +6,7 @@ import { ReactComponent as ReactIcon } from '@/assets/svg/React.svg'
 import { ReactComponent as NodeIcon } from '@/assets/svg/Node.svg'
 import DetailAside from '@/components/list/DetailAside'
 import AppLayout from '@/layouts/AppLayout'
-import { SubContainer } from './styles'
+import { SubContainer } from './index.styled'
 
 const ListDetail = () => {
 	const navigate = useNavigate()
