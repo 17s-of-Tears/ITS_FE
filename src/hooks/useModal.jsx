@@ -7,6 +7,7 @@ const Container = styled.div`
 	height: 100%;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -21,7 +22,6 @@ const Container = styled.div`
 		}
 
 		&-content {
-			margin-top: 150px;
 			z-index: 12;
 		}
 	}

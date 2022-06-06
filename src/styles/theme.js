@@ -42,6 +42,8 @@ const colors = {
 	gray_dd: '#dddddd',
 	gray_ee: '#eeeeee',
 	gray_eb: '#ebebeb',
+	bgColor: '#F8F9FD',
+	lineColor: '#F1F3F7',
 	white_ff: '#fff',
 	black_22: '#222',
 	red_74: '#e74c3c'

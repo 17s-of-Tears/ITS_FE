@@ -1,41 +1,17 @@
-import React, { useState } from 'react'
-
-import { ReactComponent as Arrow } from '@/assets/svg/arrow.svg'
-import Modal from '@/components/modal/ServiceModal'
+import ServiceModal from '@/components/modal/ServiceModal'
+import Intro from '@/components/home/Intro'
 import AppLayout from '@/layouts/AppLayout'
+import useModal from '@/hooks/useModal'
 import { homeDoneData } from '@/lib/staticData'
-import { MainContainer } from './styles'
-import Button from '@/components/common/Button'
+import { HomePageContainer } from './HomePage.styled'
 
 const HomePage = () => {
-	const [isModal, setIsModal] = useState(false)
-
-	const onOpenModal = () => setIsModal(true)
-	const onCloseModal = () => setIsModal(false)
+	const { ModalPortal, onCloseModal, onOpenModal } = useModal()
 
 	return (
 		<AppLayout>
-			<MainContainer>
-				<div className="home__main">
-					<div className="home__main--title">
-						<span className="home__main--title__main">
-							쉽고 간편하게 <br />
-							<span>스터디</span>와 <span>프로젝트 팀</span>을 구할 수 있는
-							<br />
-							<span>
-								온라인 스터디 매칭 플랫폼 <span className="Its">lt&apos;s</span>
-							</span>
-						</span>
-						<span className="home__main--title__sub">
-							<span className="Its">이츠</span>로 함께 할 팀원을 찾아보세요!
-						</span>
-						<Button onClick={onOpenModal} className="home__main--title__btn">
-							서비스 시작하기
-							<Arrow />
-						</Button>
-					</div>
-					<img src="/images/two.png" alt="home" />
-				</div>
+			<HomePageContainer>
+				<Intro onOpenModal={onOpenModal} />
 				<div className="home__content">
 					<div className="home__content--study">
 						<span>
@@ -88,8 +64,10 @@ const HomePage = () => {
 						))}
 					</div>
 				</div>
-				{isModal && <Modal onCloseModal={onCloseModal} />}
-			</MainContainer>
+				<ModalPortal>
+					<ServiceModal onCloseModal={onCloseModal} />
+				</ModalPortal>
+			</HomePageContainer>
 		</AppLayout>
 	)
 }

@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 
-export const MainContainer = styled.div`
-	.Its {
-		color: ${({ theme }) => theme.colors.primary};
-	}
+export const HomePageContainer = styled.div`
+	margin: auto 0;
 
 	.home__main {
 		display: flex;

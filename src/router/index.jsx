@@ -1,11 +1,11 @@
 import { lazy } from 'react'
 import { useRoutes } from 'react-router-dom'
 
-const Home = lazy(() => import('@/pages/Home/HomePage'))
-const List = lazy(() => import('@/pages/List/ListPage'))
-const Detail = lazy(() => import('@/pages/List/ListDetail'))
+const Home = lazy(() => import('@/pages/HomePage'))
+const List = lazy(() => import('@/pages/ListPage'))
+const Detail = lazy(() => import('@/pages/ListPage/DetailPage'))
 const Post = lazy(() => import('@/pages/Post/PostPage'))
-const My = lazy(() => import('@/pages/My/MyPage'))
+const My = lazy(() => import('@/pages/MyPage'))
 const Team = lazy(() => import('@/pages/Team/TeamPage'))
 const Making = lazy(() => import('@/pages/Making'))
 

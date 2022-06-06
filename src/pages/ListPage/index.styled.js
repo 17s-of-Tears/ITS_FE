@@ -4,6 +4,7 @@ export const MainContainer = styled.div`
 	hr {
 		display: flex;
 	}
+
 	.list__top {
 		margin-top: 50px;
 		padding: 0 14.5%;
@@ -16,31 +17,37 @@ export const MainContainer = styled.div`
 			color: ${({ theme }) => theme.colors.gray_aa};
 		}
 	}
+
 	.list__select {
 		margin-top: 20px;
 		padding: 0 14.5%;
 		display: flex;
 		justify-content: space-between;
 	}
+
 	hr {
 		margin-top: 50px;
 		border: solid 1px ${({ theme }) => theme.colors.gray_dd};
 	}
+
 	.list__card_info {
 		margin-top: 50px;
 		padding: 0 14.5%;
 		display: flex;
 		align-items: flex-end;
 		gap: 10px;
+
 		.list__info_total {
 			font-size: ${({ theme }) => theme.fontSizes.xxxl};
 			color: ${({ theme }) => theme.colors.gray_33};
 		}
+
 		.list__info_join {
 			font-size: ${({ theme }) => theme.fontSizes.base};
 			color: ${({ theme }) => theme.colors.gray_aa};
 		}
 	}
+
 	.list__card_box {
 		margin-top: 80px;
 		padding: 0 14.5%;
