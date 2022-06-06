@@ -1,140 +1,284 @@
 import styled from 'styled-components'
 
 export const MainContainer = styled.div`
-	margin: auto 0;
 	.Its {
 		color: ${({ theme }) => theme.colors.primary};
-		font-weight: 500;
 	}
-	.home {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		padding: 10% 0;
-		gap: 230px;
 
-		&__title {
+	.home__main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 250px;
+		padding: 100px 0px;
+
+		&--title {
 			display: flex;
 			flex-direction: column;
-			gap: 20px;
+			gap: 10px;
+			font-weight: 400;
 
 			&__main {
 				font-size: ${({ theme }) => theme.fontSizes.subTitleSize};
-				font-weight: 300;
-				> span {
-					font-weight: 500;
-				}
 			}
 
 			&__sub {
 				font-size: ${({ theme }) => theme.fontSizes.lg};
-				color: ${({ theme }) => theme.colors.gray_33};
-				font-weight: 300;
 			}
 
 			&__btn {
 				display: flex;
-				align-items: flex-start;
+				align-items: center;
 				justify-content: center;
-				gap: 10px;
-				width: 30%;
-				background-color: ${({ theme }) => theme.colors.primary};
-				color: ${({ theme }) => theme.colors.white_ff};
-				font-size: ${({ theme }) => theme.fontSizes.base};
-				padding: 1.7% 0 1.5% 0;
-				border-radius: 10px;
-				&:hover {
-					filter: brightness(80%);
-				}
-				svg {
-					width: 10%;
-					height: 10%;
-				}
+				width: 180px;
+				font-size: ${({ theme }) => theme.fontSizes.lg};
 			}
 		}
 		> img {
-			width: 25%;
+			width: 400px;
 		}
 	}
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
+	.home__content {
 		background-color: ${({ theme }) => theme.colors.white_ff};
-		border: solid 1px ${({ theme }) => theme.colors.gray_ee};
-		padding: 0 14.5%;
-
-		hr {
-			border: solid 1px ${({ theme }) => theme.colors.gray_ee};
-			width: 100%;
-		}
-
-		> div {
-			font-size: ${({ theme }) => theme.fontSizes.subTitleSize};
-			padding: 10% 0;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			font-weight: 300;
-			gap: 500px;
-		}
-	}
-
-	.done {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: 80px;
-		width: 100%;
-		padding: 10% 14.5%;
+		gap: 100px;
+		padding: 100px 0px;
 
-		> div {
-			width: 100%;
+		&--hr {
+			border: solid 1px ${({ theme }) => theme.colors.gray_ee};
+			width: 1180px;
 		}
 
-		&__title {
-			font-size: ${({ theme }) => theme.fontSizes.subTitleSize};
-			font-weight: 300;
-		}
-
-		&__data {
+		&--study {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: center;
+			gap: 550px;
 
-			.data {
+			> img {
+				width: 250px;
+			}
+		}
+
+		&--project {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 630px;
+
+			> img {
+				width: 250px;
+			}
+		}
+
+		span {
+			font-size: ${({ theme }) => theme.fontSizes.big};
+		}
+	}
+
+	.home__done {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		&--data {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 100px;
+		}
+
+		.data {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	@media screen and (max-width: 1440px) {
+		.home__main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 200px;
+			padding: 100px 0px;
+
+			&--title {
 				display: flex;
 				flex-direction: column;
 				gap: 10px;
 
-				&__1 {
-					font-weight: 300;
-					color: ${({ theme }) => theme.colors.gray_55};
-					font-size: ${({ theme }) => theme.fontSizes.xxxl};
+				&__main {
+					font-size: ${({ theme }) => theme.fontSizes.big};
 				}
-				&__2 {
-					font-weight: 500;
-					font-size: 64px;
 
-					&__small {
-						font-weight: 300;
-						color: ${({ theme }) => theme.colors.gray_aa};
-						font-size: ${({ theme }) => theme.fontSizes.xxl};
-					}
+				&__sub {
+					font-size: ${({ theme }) => theme.fontSizes.base};
 				}
-				&__3 {
-					font-size: ${({ theme }) => theme.fontSizes.xxsmall};
-					color: ${({ theme }) => theme.colors.gray_aa};
+
+				&__btn {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 160px;
+					font-size: ${({ theme }) => theme.fontSizes.base};
 				}
 			}
-			svg {
-				width: 60px;
-				height: 60px;
-				fill: ${({ theme }) => theme.colors.gray_55};
+
+			> img {
+				width: 350px;
+			}
+		}
+		.home__content {
+			background-color: ${({ theme }) => theme.colors.white_ff};
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 100px;
+			padding: 100px 0px;
+
+			&--hr {
+				border: solid 1px ${({ theme }) => theme.colors.gray_ee};
+				width: 1000px;
+			}
+
+			&--study {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 450px;
+
+				> img {
+					width: 200px;
+				}
+			}
+
+			&--project {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 530px;
+
+				> img {
+					width: 200px;
+				}
+			}
+
+			span {
+				font-size: ${({ theme }) => theme.fontSizes.xxxl};
+			}
+		}
+	}
+	@media screen and (max-width: 1024px) {
+		.home__main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 50px;
+			padding: 100px 0px;
+
+			&--title {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				&__main {
+					font-size: ${({ theme }) => theme.fontSizes.xxxl};
+				}
+
+				&__sub {
+					font-size: ${({ theme }) => theme.fontSizes.small};
+				}
+
+				&__btn {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 140px;
+					font-size: ${({ theme }) => theme.fontSizes.small};
+				}
+			}
+			> img {
+				width: 300px;
+			}
+		}
+		.home__content {
+			background-color: ${({ theme }) => theme.colors.white_ff};
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 100px;
+			padding: 100px 0px;
+
+			&--hr {
+				border: solid 1px ${({ theme }) => theme.colors.gray_ee};
+				width: 750px;
+			}
+
+			&--study {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 300px;
+
+				> img {
+					width: 150px;
+				}
+			}
+
+			&--project {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 350px;
+
+				> img {
+					width: 150px;
+				}
+			}
+
+			span {
+				font-size: ${({ theme }) => theme.fontSizes.xxl};
+			}
+		}
+	}
+	@media screen and (max-width: 768px) {
+		.home__main {
+			display: flex;
+			flex-direction: column;
+
+			&--title {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+				&__main {
+					font-size: ${({ theme }) => theme.fontSizes.xxl};
+				}
+			}
+		}
+		.home__content {
+			&--hr {
+				border: solid 1px ${({ theme }) => theme.colors.gray_ee};
+				width: 450px;
+			}
+
+			&--study {
+				display: flex;
+				flex-direction: column;
+				gap: 100px;
+			}
+
+			&--project {
+				display: flex;
+				flex-direction: column-reverse;
+				gap: 100px;
 			}
 		}
 	}

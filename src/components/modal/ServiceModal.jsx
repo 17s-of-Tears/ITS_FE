@@ -1,5 +1,6 @@
 import { ReactComponent as CloseIcon } from '@/assets/svg/close.svg'
 import Logo from '@/components/common/Logo'
+import { useNavigate } from 'react-router-dom'
 import { ServiceModalContainer } from './ServiceModal.styled'
 
 const Modal = ({ onCloseModal }) => {
