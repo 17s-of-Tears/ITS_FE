@@ -14,30 +14,6 @@ export const myPageMenus = [
 	{ id: 3, name: '좋아요한 팀', to: './liker', info: 'liker' }
 ]
 
-export const KindOptions = [
-	{ id: 1, value: 'project', name: '프로젝트' },
-	{ id: 2, value: 'study', name: '스터디' }
-]
-
-export const SkillOptions = [
-	{ id: 1, value: 'React', name: 'React' },
-	{ id: 2, value: 'Node.js', name: 'Node' },
-	{ id: 3, value: 'TypeScript', name: 'TypeScript' },
-	{ id: 4, value: 'Python', name: 'Python' },
-	{ id: 5, value: 'Java', name: 'Java' },
-	{ id: 6, value: 'JavaScript', name: 'JavaScript' },
-	{ id: 7, value: 'Kotlin', name: 'Kotlin' },
-	{ id: 8, value: 'vue', name: 'vue' },
-	{ id: 9, value: 'C#', name: 'C#' },
-	{ id: 10, value: 'C/C++', name: 'C/C++' }
-]
-
-export const LineOptions = [
-	{ id: 1, value: 'recent', name: '최신순' },
-	{ id: 2, value: 'like', name: '인기순' },
-	{ id: 3, value: 'view', name: '조회순' }
-]
-
 export const teamPageMenus = [
 	{ id: 1, name: '팀 페이지', to: './home', info: 'home' },
 	{ id: 2, name: '팀 메모장', to: './memo', info: 'memo' },
@@ -73,15 +49,6 @@ export const memoContents = [
 	{ id: 5 }
 ]
 
-export const makingChoiceSkill = [
-	{ id: 1 },
-	{ id: 2 },
-	{ id: 3 },
-	{ id: 4 },
-	{ id: 5 },
-	{ id: 6 }
-]
-
 //* host page
 export const hostTitle = [
 	'팀 목적 정하기',
@@ -96,7 +63,12 @@ export const hostLink = [
 	{ prev: '/making/purpose', next: '/making/name' },
 	{ prev: '/making/skill', next: '/making/description' },
 	{ prev: '/making/name', next: '/making/success' },
-	{ prev: '/team/4/home', next: 'openModal' }
+	{ prev: '/', next: '/list' }
+]
+
+export const skillLink = [
+	{ prev: '', next: '/making/choice/skillnext' },
+	{ prev: '/making/choice/skillprev', next: '' }
 ]
 
 export const successInfo = [

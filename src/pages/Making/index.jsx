@@ -3,8 +3,8 @@ import { useLocation, useNavigate } from 'react-router-dom'
 
 import Logo from '@/components/common/Logo'
 import MakingPageRouterConfig from '@/router/maketeam'
-import { hostLink, hostTitle } from '@/lib/staticData'
-import { ButtonWrapper, MainContainer, Progress } from './styles'
+import { hostLink, hostTitle } from '@/constant/staticData'
+import { ButtonWrapper, MainContainer, Progress } from './index.styled.js'
 
 const MakingPage = () => {
 	const { pathname } = useLocation()
@@ -29,7 +29,7 @@ const MakingPage = () => {
 				? `${isPrev ? '전 단계로 돌아가기' : '다음 단계로 넘어가기'}`
 				: pathname === '/making/purpose'
 				? `${isPrev ? '홈으로 돌아가기' : '다음 단계로 넘어가기'}`
-				: `${isPrev ? '팀 페이지로 이동하기' : '모집중인 팀 등록하기'}`
+				: `${isPrev ? '홈으로 돌아가기' : '팀 등록 완료하기'}`
 		},
 		[pathname]
 	)
@@ -48,7 +48,9 @@ const MakingPage = () => {
 			<div className="progress">
 				<Progress width={`${(routerData[pathname].count / 5) * 100}%`} />
 			</div>
+
 			<MakingPageRouterConfig />
+
 			<ButtonWrapper>
 				<button className="beforebtn" onClick={onMoveToPage('prev')}>
 					{buttonText('prev')}

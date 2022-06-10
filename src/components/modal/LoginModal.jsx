@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
 
@@ -36,16 +36,19 @@ const SignUpModal = ({ onChangeAuthMode, onCloseModal }) => {
 	}
 
 	//* 로그인 시도
-	const onSubmitLogin = e => {
-		e.preventDefault()
+	const onSubmitLogin = useCallback(
+		e => {
+			e.preventDefault()
 
-		//* 이메일 형식이면 true | 아니면 false
-		const isEmailValid = validtionEmail(email)
-		if (!isEmailValid) return toast.error('이메일 형식이 아닙니다.')
+			//* 이메일 형식이면 true | 아니면 false
+			const isEmailValid = validtionEmail(email)
+			if (!isEmailValid) return toast.error('이메일 형식이 아닙니다.')
 
-		const userData = { email, password }
-		dispatch(logInRequest(userData))
-	}
+			const userData = { email, password }
+			dispatch(logInRequest(userData))
+		},
+		[email]
+	)
 
 	return (
 		<LoginModalContainer>

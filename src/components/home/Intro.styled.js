@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const IntroContainer = styled.div`
 	width: 80%;
 	max-width: 1364px;
-	margin: 200px auto 0;
+	margin: 100px auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -11,7 +11,7 @@ export const IntroContainer = styled.div`
 	@media ${({ theme }) => theme.device.tablet} {
 		margin-top: 100px;
 		flex-direction: column-reverse;
-		gap: 30px;
+		gap: 50px;
 	}
 
 	.intro {
@@ -38,6 +38,11 @@ export const IntroContainer = styled.div`
 
 			&-label {
 				font-size: ${({ theme }) => theme.fontSizes.lg};
+			}
+
+			Button {
+				width: 40%;
+				padding: 10px 0;
 			}
 		}
 

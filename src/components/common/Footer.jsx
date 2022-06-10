@@ -6,7 +6,9 @@ const Footer = () => {
 
 	return (
 		<FooterContainer>
-			<span>Copyright &copy; {nowYear}. It study All Rights Reserved.</span>
+			<div className="footer-text">
+				<span>Copyright &copy; {nowYear}. It study All Rights Reserved.</span>
+			</div>
 		</FooterContainer>
 	)
 }

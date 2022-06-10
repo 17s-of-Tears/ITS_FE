@@ -10,19 +10,33 @@ const DetailAside = () => {
 
 	return (
 		<DetailAsideContainer>
-			<div className="aside-box">
-				<div>모집중</div>
-				<div className="aside-box__liker" onClick={onChangeKiker}>
-					<HeartIcon className={`aside-box__icon${isLiker ? '--fill' : ''}`} />
+			<div className="detailaside__btn">
+				<div className="detailaside__btn-state">모집중</div>
+				<div className="detailaside__btn-liker" onClick={onChangeKiker}>
+					<HeartIcon
+						className={`detailaside__btn-liker-icon${isLiker ? '-fill' : ''}`}
+					/>
 					1개
 				</div>
-				<div className="aside-box__share-group">
+				<div className="detailaside__btn-sharing">
 					<ShareIcon />
 					공유
 				</div>
 			</div>
-			<span>호수님! 이런 팀은 어떨까요?</span>
-			<span>📌 같이 팀프로젝트 하실분 구해요!</span>
+
+			<div className="detailaside__title">
+				<div className="detailaside__title-rectangle" />
+				<span>
+					<span className="detailaside__title-bold">호수님!</span> 이런 팀은
+					어떨까요?
+				</span>
+			</div>
+			<div className="detailaside__content">
+				<span>📌 &nbsp;같이 팀프로젝트 하실분 구해요!</span>
+				<span>📌 &nbsp;같이 팀프로젝트 하실분 구해요!</span>
+				<span>📌 &nbsp;같이 팀프로젝트 하실분 구해요!</span>
+				<span>📌 &nbsp;같이 팀프로젝트 하실분 구해요!</span>
+			</div>
 		</DetailAsideContainer>
 	)
 }

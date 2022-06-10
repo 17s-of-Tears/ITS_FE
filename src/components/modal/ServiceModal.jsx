@@ -7,7 +7,7 @@ import SelectBox from '@/components/home/SelectBox'
 import { ServiceModalContainer } from './ServiceModal.styled'
 
 const ServiceModal = ({ onCloseModal }) => {
-	const [selectedBox, setSelectedBox] = useState('host') //* 'host' | 'memvber'
+	const [selectedBox, setSelectedBox] = useState('host') //* 'host' | 'member'
 	const onClickSelectBox = mode => () => setSelectedBox(mode)
 
 	return (

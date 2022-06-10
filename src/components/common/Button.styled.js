@@ -5,11 +5,15 @@ export const ButtonContainer = styled.button`
 	border-radius: 4px;
 	background-color: ${({ bgColor, theme }) => theme.colors[bgColor]};
 	color: ${({ color }) => color};
-	font-size: 18px;
+	font-size: ${({ theme }) => theme.fontSizes.lg};
 	outline: none;
 	transition: 400ms;
 	cursor: pointer;
 	position: relative;
+
+	@media ${({ theme }) => theme.device.mobileL} {
+		font-size: ${({ theme }) => theme.fontSizes.small};
+	}
 
 	.loading {
 		position: absolute;

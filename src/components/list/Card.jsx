@@ -8,21 +8,24 @@ const Card = ({ title, category, date, skills, comment, hits }) => {
 
 	return (
 		<CardContainer>
-			<div onClick={onMoveToDetail} className="list-box">
-				<span className="list-box__category">{category}</span>
-				<span className="list-box__title">{title}</span>
-				<span className="list-box__date">{date}</span>
-				<div className="list-box__skill-group">
+			<div onClick={onMoveToDetail} className="card">
+				<div className="card__info">
+					<span className="card__info-category  color-aa">{category}</span>
+					<span className="card__info-title">{title}</span>
+					<span className="card__info-date color-aa font-small">{date}</span>
+				</div>
+				<div className="card__skill">
 					{skills.map(skill => (
-						<div className="list-box_skill-item" key={skill.id}>
-							{skill.title}
+						<div className="card__skill-item" key={skill.id}>
+							<span className="font-small">{skill.title}</span>
 							<img src={skill.img} alt={skill.title} />
 						</div>
 					))}
 				</div>
-				<span className="list-box__liker">
-					댓글{comment} | 조회수{hits}
-				</span>
+				<div className="card__liker color-aa font-small">
+					<span>댓글{comment}</span>
+					<span>조회수{hits}</span>
+				</div>
 			</div>
 		</CardContainer>
 	)

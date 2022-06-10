@@ -1,36 +1,36 @@
 import React, { useState } from 'react'
+import Pagination from 'react-js-pagination'
 
-import { ReactComponent as ReactLogoIcon } from '@/assets/svg/React.svg'
-import { ReactComponent as NodeLogoIcon } from '@/assets/svg/Node.svg'
-import { makingChoiceSkill } from '@/lib/staticData'
+import { SkillContainer } from './Skill.styled'
+import SkillCard from '@/components/common/SkillCard'
+import skillData from '@/data/skillData'
 
-const Purpose = () => (
-	<>
-		<div className="box">
-			<div className="box__title">
-				<span className="title__txt1">
-					📗 언어 / 라이브러리 를 선택해주세요!
-				</span>
-				<span className="title__txt2">복수로 선택할 수 있어요!</span>
+const Skill = ({ page, count, setPage }) => {
+	return (
+		<SkillContainer>
+			<div className="skill__title">
+				<span>📗 언어 / 라이브러리 를 선택해주세요!</span>
+				<span className="skill__title-sub">복수로 선택할 수 있어요!</span>
+				<Pagination
+					activePage={page}
+					itemsCountPerPage={12}
+					totalItemsCount={count}
+					pageRangeDisplayed={2}
+					prevPageText={'<'}
+					nextPageText={'>'}
+					onChange={setPage}
+				/>
 			</div>
 
 			<hr />
 
-			<div className="box__skill">
-				{makingChoiceSkill.map(choice => (
-					<div key={choice.id} className="skill__box">
-						<div className="skill__react">
-							<ReactLogoIcon />
-							<span className="skill__txt">react</span>
-						</div>
-						<div className="box__skill_node">
-							<NodeLogoIcon />
-							<span className="skill__txt">node.js</span>
-						</div>
-					</div>
+			<div className="skill__content">
+				{skillData.map(choice => (
+					<SkillCard key={choice.id} choice={choice} />
 				))}
 			</div>
-		</div>
-	</>
-)
-export default Purpose
+		</SkillContainer>
+	)
+}
+
+export default Skill

@@ -12,8 +12,10 @@ const Header = () => {
 	return (
 		<>
 			<HeaderContainer>
-				<Logo />
-				<Button onClick={onOpenModal}>로그인 | 회원가입</Button>
+				<div className="header">
+					<Logo />
+					<Button onClick={onOpenModal}>로그인 | 회원가입</Button>
+				</div>
 			</HeaderContainer>
 			<ModalPortal>
 				<AuthModal onCloseModal={onCloseModal} />

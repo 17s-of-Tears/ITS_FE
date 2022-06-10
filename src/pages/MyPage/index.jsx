@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 import AppLayout from '@/layouts/AppLayout'
-import { myPageMenus } from '@/lib/staticData'
+import { myPageMenus } from '@/constant/staticData'
 import MyPageRouterConfig from '@/router/mypage'
 import { MyPageContainer } from './index.styled'
 

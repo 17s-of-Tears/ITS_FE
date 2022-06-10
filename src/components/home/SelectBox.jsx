@@ -22,7 +22,7 @@ const SelectBox = ({ mode, selectedBox, onClickSelectBox }) => {
 				alt="icon"
 			/>
 			<SelectTextGroup>
-				<h2>{mode === 'host' ? '스터지장이신가요?' : '스터지원이신가요?'}</h2>
+				<h2>{mode === 'host' ? '스터디장이신가요?' : '스터디원이신가요?'}</h2>
 				<span>
 					{mode === 'host'
 						? '팀페이지를 만들 수 있어요!?'

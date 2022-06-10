@@ -1,112 +1,76 @@
 import styled from 'styled-components'
 
 export const CardContainer = styled.div`
-	width: 100%;
 	background-color: ${({ theme }) => theme.colors.white_ff};
 	border-radius: 5px;
-	padding: 10% 0;
+	padding: 30px;
 	cursor: pointer;
+	transition: 300ms;
+	border: 1px solid ${({ theme }) => theme.colors.lineColor};
 
 	&:hover {
-		box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.16);
+		border: 1px solid ${({ theme }) => theme.colors.primary};
 	}
 
-	.list-box {
+	.card {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		align-items: center;
-		gap: 15px;
-		font-size: ${({ theme }) => theme.fontSizes.base};
+		gap: 20px;
 
-		&__category {
-			color: ${({ theme }) => theme.colors.gray_aa};
-
-			@media ${({ theme }) => theme.device.NoteBook} {
-				font-size: ${({ theme }) => theme.fontSizes.small};
-			}
-
-			@media ${({ theme }) => theme.device.tablet} {
-				font-size: ${({ theme }) => theme.fontSizes.small};
-			}
-
-			@media ${({ theme }) => theme.device.mobileM} {
-				font-size: ${({ theme }) => theme.fontSizes.small};
-			}
-		}
-
-		&__title {
-			font-size: ${({ theme }) => theme.fontSizes.lg};
-			color: ${({ theme }) => theme.colors.gray_33};
-
-			@media ${({ theme }) => theme.device.NoteBook} {
-				font-size: ${({ theme }) => theme.fontSizes.base};
-			}
-
-			@media ${({ theme }) => theme.device.tablet} {
-				font-size: ${({ theme }) => theme.fontSizes.small};
-			}
-
-			@media ${({ theme }) => theme.device.mobileM} {
-				font-size: ${({ theme }) => theme.fontSizes.small};
-			}
-		}
-
-		&__date {
-			font-size: ${({ theme }) => theme.fontSizes.small};
-			color: ${({ theme }) => theme.colors.gray_aa};
-
-			@media ${({ theme }) => theme.device.NoteBook} {
-				font-size: ${({ theme }) => theme.fontSizes.small};
-			}
-
-			@media ${({ theme }) => theme.device.tablet} {
-				font-size: ${({ theme }) => theme.fontSizes.small};
-			}
-
-			@media ${({ theme }) => theme.device.mobileM} {
-				font-size: ${({ theme }) => theme.fontSizes.small};
-			}
-		}
-
-		&__skill-group {
-			display: flex;
-			gap: 10px;
-		}
-
-		&__skill__box {
+		&__info {
 			display: flex;
 			flex-direction: column;
+			justify-content: center;
 			align-items: center;
 			gap: 10px;
-			font-size: ${({ theme }) => theme.fontSizes.small};
-			color: ${({ theme }) => theme.colors.gray_33};
-
-			@media ${({ theme }) => theme.device.NoteBook} {
-				font-size: ${({ theme }) => theme.fontSizes.xsmall};
+			&-category {
+				font-size: ${({ theme }) => theme.fontSizes.lg};
+				@media ${({ theme }) => theme.device.tabletL} {
+					font-size: ${({ theme }) => theme.fontSizes.small};
+				}
 			}
-
-			@media ${({ theme }) => theme.device.tablet} {
-				font-size: ${({ theme }) => theme.fontSizes.small};
+			&-title {
+				font-size: ${({ theme }) => theme.fontSizes.xl};
+				@media ${({ theme }) => theme.device.tabletL} {
+					font-size: ${({ theme }) => theme.fontSizes.base};
+				}
 			}
+			&-date {
+			}
+		}
 
-			@media ${({ theme }) => theme.device.mobileM} {
-				font-size: ${({ theme }) => theme.fontSizes.small};
+		&__skill {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
+
+			&-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
 			}
 		}
 
 		&__liker {
-			font-size: ${({ theme }) => theme.fontSizes.small};
-			color: ${({ theme }) => theme.colors.gray_aa};
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+		}
 
-			@media ${({ theme }) => theme.device.NoteBook} {
-				font-size: ${({ theme }) => theme.fontSizes.xsmall};
+		.color {
+			&-aa {
+				color: ${({ theme }) => theme.colors.gray_aa};
 			}
+		}
 
-			@media ${({ theme }) => theme.device.tablet} {
-				font-size: ${({ theme }) => theme.fontSizes.small};
-			}
-
-			@media ${({ theme }) => theme.device.mobileM} {
+		.font-small {
+			font-size: ${({ theme }) => theme.fontSizes.base};
+			@media ${({ theme }) => theme.device.tabletL} {
 				font-size: ${({ theme }) => theme.fontSizes.small};
 			}
 		}
