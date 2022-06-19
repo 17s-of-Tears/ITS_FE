@@ -47,7 +47,7 @@ const SignUpModal = ({ onChangeAuthMode, onCloseModal }) => {
 			const userData = { email, password }
 			dispatch(logInRequest(userData))
 		},
-		[email]
+		[dispatch, email, password]
 	)
 
 	return (

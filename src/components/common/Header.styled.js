@@ -11,13 +11,16 @@ export const HeaderContainer = styled.div`
 	position: sticky;
 	top: 0;
 	z-index: 11;
+
 	.header {
 		width: 80%;
 		max-width: 1364px;
 		margin: 10px auto 10px;
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
 	}
+
 	Button {
 		@media ${({ theme }) => theme.device.mobileL} {
 			font-size: ${({ theme }) => theme.fontSizes.small};

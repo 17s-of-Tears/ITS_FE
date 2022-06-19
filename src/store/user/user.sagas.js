@@ -18,8 +18,8 @@ function* loadMyInfo() {
 
 function* signUp(action) {
 	try {
-		const { data } = yield call(apis.signUpAPI, action.data)
-		yield put(actions.signUpSuccess(data))
+		yield call(apis.signUpAPI, action.data)
+		yield put(actions.signUpSuccess())
 	} catch (error) {
 		const { message } = error.response.data
 		yield put(actions.signUpFailure(message ? message : '에러가 발생했습니다.'))

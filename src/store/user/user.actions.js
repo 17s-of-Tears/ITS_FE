@@ -19,9 +19,8 @@ export const signUpRequest = data => ({
 	type: types.SIGN_UP_REQUEST,
 	data
 })
-export const signUpSuccess = data => ({
-	type: types.SIGN_UP_SUCCESS,
-	data
+export const signUpSuccess = () => ({
+	type: types.SIGN_UP_SUCCESS
 })
 export const signUpFailure = error => ({
 	type: types.SIGN_UP_FAILURE,

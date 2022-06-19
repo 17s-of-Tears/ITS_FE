@@ -44,7 +44,6 @@ const userReducers = (state = initialState, action) =>
 			case actions.SIGN_UP_SUCCESS:
 				draft.signUpLoading = false
 				draft.signUpDone = true
-				draft.me = action.data
 				break
 			case actions.SIGN_UP_FAILURE:
 				draft.signUpLoading = false
