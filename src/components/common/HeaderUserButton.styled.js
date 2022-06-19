@@ -5,7 +5,14 @@ export const UserButtonWrapper = styled.div`
 `
 
 export const UserAvatar = styled.img`
+	width: 50px;
+	height: 50px;
 	cursor: pointer;
+	transition: all 250ms ease;
+
+	&:hover {
+		filter: brightness(80%);
+	}
 `
 
 export const UserPopUp = styled.div`

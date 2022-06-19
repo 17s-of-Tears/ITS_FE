@@ -13,7 +13,7 @@ const Header = () => {
 			<HeaderContainer>
 				<div className="header">
 					<Logo />
-					<HeaderUserButton onOpenModal={onOpenModal} />
+					<HeaderUserButton onOpenLoginModal={onOpenModal} />
 				</div>
 			</HeaderContainer>
 			<ModalPortal>

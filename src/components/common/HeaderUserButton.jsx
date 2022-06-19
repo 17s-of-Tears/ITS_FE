@@ -10,13 +10,25 @@ import {
 	UserButtonWrapper,
 	UserPopUp
 } from './HeaderUserButton.styled'
-import { useEffect } from 'react'
+import useModal from '@/hooks/useModal'
+import MyDataModal from '../modal/MyDataModal'
 
-const HeaderUserButton = ({ onOpenModal }) => {
+const HeaderUserButton = ({ onOpenLoginModal }) => {
 	const dispatch = useDispatch()
 	const { me } = useSelector(state => state.user)
 
+	const {
+		ModalPortal: MyDataModalPortal,
+		onCloseModal: onCloseMyDataModal,
+		onOpenModal: onOpenMyDataModal
+	} = useModal()
+
 	const [popupOpened, onTogglePopupUpened] = useToggle(false)
+
+	const onClickMyData = () => {
+		onTogglePopupUpened()
+		onOpenMyDataModal()
+	}
 
 	const onLogout = () => {
 		dispatch(logoutRequest())
@@ -35,14 +47,17 @@ const HeaderUserButton = ({ onOpenModal }) => {
 					/>
 					{popupOpened && (
 						<UserPopUp>
-							<PopupMenu>내 정보</PopupMenu>
+							<PopupMenu onClick={onClickMyData}>내 정보</PopupMenu>
 							<PopupMenu onClick={onLogout}>로그아웃</PopupMenu>
 						</UserPopUp>
 					)}
 				</UserButtonWrapper>
 			) : (
-				<Button onClick={onOpenModal}>로그인 | 회원가입</Button>
+				<Button onClick={onOpenLoginModal}>로그인 | 회원가입</Button>
 			)}
+			<MyDataModalPortal>
+				<MyDataModal onCloseMyDataModal={onCloseMyDataModal} />
+			</MyDataModalPortal>
 		</>
 	)
 }
