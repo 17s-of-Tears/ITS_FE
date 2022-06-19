@@ -19,6 +19,7 @@
 		}
 	},
 	"rules": {
+		"import/no-named-as-default": "off",
 		"react/react-in-jsx-scope": "off",
 		"import/no-unresolved": "off",
 		"no-useless-escape": "off",

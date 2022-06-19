@@ -1,10 +1,11 @@
 import { all, fork } from 'redux-saga/effects'
 
-import teamSaga from './team/team.sagas'
+// import hostSaga from './host/host.sagas'
 import userSaga from './user/user.sagas'
 
 function* rootSaga() {
-	yield all([fork(userSaga), fork(teamSaga)])
+	// yield all([fork(hostSaga), fork(userSaga)])
+	yield all([fork(userSaga)])
 }
 
 export default rootSaga

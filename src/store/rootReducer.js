@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
 
-import teamReducers from './team/team.reducer'
+import hostReducers from './host/host.reducer'
 import userReducers from './user/user.reducer'
 
 const rootReducer = combineReducers({
-	user: userReducers,
-	team: teamReducers
+	host: hostReducers,
+	user: userReducers
 })
 
 export default rootReducer

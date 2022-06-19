@@ -32,6 +32,7 @@ const device = {
 
 const colors = {
 	primary: '#6C5CE7',
+	secondary: '#A29BFE',
 	gray_77: '#777',
 	gray_f1: '#F1F3F7',
 	gray_33: '#333333',
