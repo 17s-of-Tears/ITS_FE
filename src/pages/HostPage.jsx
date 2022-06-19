@@ -38,7 +38,7 @@ const HostPage = () => {
 	const { title, percent } = hostPageDatas[hostPageNum]
 	const { cardTitle, cardSubTitle } = hostCardDatas[hostPageNum]
 
-	const onMoveHomePage = useCallback(() => navigate('/'), [navigate])
+	const onMoveHomePage = useCallback(to => () => navigate(to), [navigate])
 
 	//* 팀 생성 함수
 	const onCreateTeam = useCallback(() => {
@@ -54,7 +54,7 @@ const HostPage = () => {
 	const onMovePage = useCallback(
 		mode => () => {
 			if (mode === 'prev')
-				hostPageNum > 0 ? dispatch(prevHostPageAction()) : onMoveHomePage()
+				hostPageNum > 0 ? dispatch(prevHostPageAction()) : onMoveHomePage('/')
 			else if (mode === 'next')
 				if (hostPageNum === 1 && skills.length === 0)
 					return toast.error('기술을 한가지 이상 선택해주세요!')
@@ -66,7 +66,7 @@ const HostPage = () => {
 					onCreateTeam()
 					if (createTeamDone) dispatch(nextHostPageAction())
 				} else {
-					hostPageNum < 4 ? dispatch(nextHostPageAction()) : onMoveHomePage()
+					hostPageNum < 4 ? dispatch(nextHostPageAction()) : onMoveHomePage('/')
 				}
 		},
 		[
@@ -125,7 +125,7 @@ const HostPage = () => {
 				)}
 				<div className="host__button-group">
 					{hostPageNum === 4 ? (
-						<Button onClick={onMoveHomePage} fullSize py={12}>
+						<Button onClick={onMoveHomePage('/list')} fullSize py={12}>
 							홈으로 돌아가기
 						</Button>
 					) : (

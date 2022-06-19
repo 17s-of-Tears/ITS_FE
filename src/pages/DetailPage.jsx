@@ -6,12 +6,12 @@ import { ReactComponent as BackArrow } from '@/assets/svg/back_arrow.svg'
 import DetailAside from '@/components/list/DetailAside'
 import AppLayout from '@/components/layouts/AppLayout'
 
-import DetailTitle from './DetailTitle'
-import DetailContent from './DetailContent'
-import DetailComment from './DetailComment'
+import DetailTitle from '../components/list/DetailTitle'
+import DetailContent from '../components/list/DetailContent'
+import DetailComment from '../components/list/DetailComment'
 import { ListDetailContainer } from './DetailPage.styled'
 import { useDispatch, useSelector } from 'react-redux'
-import { UserAvatar } from '../common/HeaderUserButton.styled'
+import { UserAvatar } from '../components/common/HeaderUserButton.styled'
 
 const ListDetail = () => {
 	const navigate = useNavigate()

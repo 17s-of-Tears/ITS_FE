@@ -14,6 +14,9 @@ const initialState = {
 	logOutLoading: false,
 	logOutDone: false,
 	logOutError: null,
+	uploadImgLoading: false,
+	uploadImgDone: false,
+	uploadImgError: null,
 	me: null
 }
 
@@ -63,6 +66,22 @@ const userReducers = (state = initialState, action) =>
 			case actions.LOG_IN_FAILURE:
 				draft.logInLoading = false
 				draft.logInError = action.error
+				break
+			//* UPLOAD_IMG
+			case actions.UPLOAD_IMG_REQUEST:
+				draft.uploadImgLoading = true
+				draft.uploadImgDone = false
+				draft.uploadImgError = null
+				break
+			case actions.UPLOAD_IMG_SUCCESS:
+				draft.uploadImgLoading = false
+				draft.uploadImgDone = true
+				draft.me.isImg = true
+				draft.me.imgUrl = action.data.imgUrl
+				break
+			case actions.UPLOAD_IMG_FAILURE:
+				draft.uploadImgLoading = false
+				draft.uploadImgError = action.error
 				break
 			//* 동기 액션
 			case actions.LOG_OUT_REQUEST:

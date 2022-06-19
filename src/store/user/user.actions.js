@@ -41,6 +41,20 @@ export const logInFailure = error => ({
 	error
 })
 
+//* 프로필사진 업로드
+export const uploadImgRequest = data => ({
+	type: types.UPLOAD_IMG_REQUEST,
+	data
+})
+export const uploadImgSuccess = data => ({
+	type: types.UPLOAD_IMG_SUCCESS,
+	data
+})
+export const uploadImgFailure = error => ({
+	type: types.UPLOAD_IMG_FAILURE,
+	error
+})
+
 //* 동기 액션
 export const logoutRequest = () => ({
 	type: types.LOG_OUT_REQUEST
