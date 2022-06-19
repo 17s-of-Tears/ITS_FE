@@ -10,6 +10,8 @@ import DetailTitle from './DetailTitle'
 import DetailContent from './DetailContent'
 import DetailComment from './DetailComment'
 import { ListDetailContainer } from './DetailPage.styled'
+import { useDispatch, useSelector } from 'react-redux'
+import { UserAvatar } from '../common/HeaderUserButton.styled'
 
 const ListDetail = () => {
 	const navigate = useNavigate()
@@ -31,6 +33,9 @@ const ListDetail = () => {
 		},
 		[comments]
 	)
+
+	const dispatch = useDispatch()
+	const { me } = useSelector(state => state.user)
 
 	return (
 		<AppLayout>
@@ -57,7 +62,12 @@ const ListDetail = () => {
 									id={comment.id}
 									className="comment-list-element"
 								>
-									<span>userImage | userId</span>
+									<div className="comment-list-element-user">
+										<UserAvatar
+											src={me.isImg ? me.imgUrl : `svg/${me.imgUrl}.svg`}
+										/>
+										{me.nickname}
+									</div>
 									<hr />
 									{comment.content}
 								</div>

@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { ReactComponent as ReactIcon } from '@/assets/svg/React.svg'
-import { ReactComponent as NodeIcon } from '@/assets/svg/Nodejs.svg'
-import { ReactComponent as TypeIcon } from '@/assets/svg/Typescript.svg'
+import { ReactComponent as ReactIcon } from '@/assets/svg/skills/React.svg'
+import { ReactComponent as NodeIcon } from '@/assets/svg/skills/Nodejs.svg'
+import { ReactComponent as TypeIcon } from '@/assets/svg/skills/Typescript.svg'
 import { DetailTitleContainer } from './DetailTitle.styled'
 
 const DetailTitle = () => {

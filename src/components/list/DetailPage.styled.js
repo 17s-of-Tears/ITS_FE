@@ -49,6 +49,11 @@ export const ListDetailContainer = styled.div`
 					gap: 10px;
 					margin-bottom: 20px;
 					background-color: ${({ theme }) => theme.colors.white_ff};
+					&-user {
+						display: flex;
+						align-items: center;
+						gap: 10px;
+					}
 				}
 			}
 		}

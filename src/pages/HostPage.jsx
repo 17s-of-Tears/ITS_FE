@@ -64,11 +64,13 @@ const HostPage = () => {
 					if (teamDescription === '')
 						return toast.error('팀 설명을 입력해주세요!')
 					onCreateTeam()
+					if (createTeamDone) dispatch(nextHostPageAction())
 				} else {
 					hostPageNum < 4 ? dispatch(nextHostPageAction()) : onMoveHomePage()
 				}
 		},
 		[
+			createTeamDone,
 			dispatch,
 			hostPageNum,
 			onCreateTeam,
@@ -80,7 +82,6 @@ const HostPage = () => {
 	)
 
 	useEffect(() => {
-		if (createTeamDone) dispatch(nextHostPageAction())
 		if (createTeamError) toast.error('에러가 발생했습니다!')
 	}, [createTeamDone, createTeamError, dispatch])
 
