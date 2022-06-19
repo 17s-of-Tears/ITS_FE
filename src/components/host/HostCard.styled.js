@@ -13,15 +13,18 @@ export const HostCardContainer = styled.div`
 	.host-card {
 		&__header {
 			display: flex;
-			gap: 5px;
+			gap: 10px;
 			align-items: flex-end;
-			padding: 20px;
+			padding: 25px 20px 15px;
 		}
 
 		&__title {
+			font-size: ${({ theme }) => theme.fontSizes.xxl};
 		}
 
 		&__sub-title {
+			font-size: ${({ theme }) => theme.fontSizes.base};
+			color: ${({ theme }) => theme.colors.gray_aa};
 		}
 
 		&__content {

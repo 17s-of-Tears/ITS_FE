@@ -1,6 +1,7 @@
 import HostLayout from '@/components/layouts/HostLayout'
 import HostCard from '@/components/host/HostCard'
 import { useSelector } from 'react-redux'
+import Success from '@/components/host/Success'
 
 const cardDatas = [
 	{ title: '📕 팀의 목적을 선택해주세요!', subTitle: '클릭해서 선택해주세요!' },
@@ -20,7 +21,7 @@ const HostPage = () => {
 	return (
 		<HostLayout>
 			{hostPageNum === 4 ? (
-				'hosu'
+				<Success />
 			) : (
 				<HostCard title={title} subTitle={subTitle}>
 					test
