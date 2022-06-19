@@ -2,19 +2,12 @@ import produce from 'immer'
 import * as actions from './host.types'
 
 const initialState = {
-	hostPageNum: 0,
-	createTeamData: {
-		goal: 'project',
-		skills: [],
-		name: '',
-		description: ''
-	}
+	hostPageNum: 0
 }
 
-const teamReducers = (state = initialState, action) =>
+const hostReducers = (state = initialState, action) =>
 	produce(state, draft => {
 		switch (action.type) {
-			//* 동기 액션 실행
 			case actions.PREV_HOST_PAGE:
 				draft.hostPageNum -= 1
 				break
@@ -29,4 +22,4 @@ const teamReducers = (state = initialState, action) =>
 		}
 	})
 
-export default teamReducers
+export default hostReducers
