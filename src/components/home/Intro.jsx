@@ -27,7 +27,7 @@ const Intro = ({ onOpenModal }) => {
 				</Button>
 			</div>
 			<div className="intro__right">
-				<img src="images/two.png" />
+				<img src="images/intro.png" />
 			</div>
 		</IntroContainer>
 	)

@@ -18,8 +18,10 @@ const SelectBox = ({ mode, selectedBox, onClickSelectBox }) => {
 	return (
 		<SelectBoxContainer onClick={onClickSelectBox} selectedBox={selectedBox}>
 			<img
-				src={`images/${mode === 'host' ? 'group1.png' : 'group2.png'}`}
+				src={`images/${mode === 'host' ? 'studyjang.png' : 'studywon.png'}`}
 				alt="icon"
+				width={'81px'}
+				heigh={'74px'}
 			/>
 			<SelectTextGroup>
 				<h2>{mode === 'host' ? '스터디장이신가요?' : '스터디원이신가요?'}</h2>

@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+
 import { CardContainer } from './Card.styled'
 
 const Card = ({ title, category, date, skills, comment, hits }) => {
@@ -18,7 +19,7 @@ const Card = ({ title, category, date, skills, comment, hits }) => {
 					{skills.map(skill => (
 						<div className="card__skill-item" key={skill.id}>
 							<span className="font-small">{skill.title}</span>
-							<img src={skill.img} alt={skill.title} />
+							<skill.Icon width={'50px'} height={'50px'} />
 						</div>
 					))}
 				</div>

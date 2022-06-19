@@ -1,3 +1,7 @@
+import { ReactComponent as ReactIcon } from '@/assets/svg/skills/react.svg'
+import { ReactComponent as NodejsIcon } from '@/assets/svg/skills/nodejs.svg'
+import { ReactComponent as TypescriptIcon } from '@/assets/svg/skills/typescript.svg'
+
 export default [
 	{
 		id: 1,
@@ -5,9 +9,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -18,9 +22,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -31,9 +35,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -44,9 +48,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -57,9 +61,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -70,9 +74,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -83,9 +87,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -96,9 +100,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -109,9 +113,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -122,9 +126,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -135,9 +139,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -148,9 +152,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -161,9 +165,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -174,9 +178,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -187,9 +191,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -200,9 +204,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -213,9 +217,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -226,9 +230,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -239,9 +243,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100
@@ -252,9 +256,9 @@ export default [
 		category: '프로젝트',
 		date: '2022-04-02',
 		skills: [
-			{ id: 11, title: 'react', img: 'images/react.png' },
-			{ id: 22, title: 'node.js', img: 'images/node.png' },
-			{ id: 33, title: 'typescript', img: 'images/typescript.png' }
+			{ id: 11, title: 'react', Icon: ReactIcon },
+			{ id: 22, title: 'node.js', Icon: NodejsIcon },
+			{ id: 33, title: 'typescript', Icon: TypescriptIcon }
 		],
 		comment: 10,
 		hits: 100

@@ -9,7 +9,7 @@ export const MyDataModalContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 30px;
+	gap: 20px;
 	position: relative;
 
 	> svg {
@@ -22,6 +22,41 @@ export const MyDataModalContainer = styled.div`
 
 		&:hover {
 			fill: ${({ theme }) => theme.colors.primary};
+		}
+	}
+
+	.myprofile {
+		&__img {
+			font-size: ${({ theme }) => theme.fontSizes.xxxl};
+			color: ${({ theme }) => theme.colors.primary};
+		}
+		&__info {
+			font-size: ${({ theme }) => theme.fontSizes.lg};
+			&-pm {
+				color: ${({ theme }) => theme.colors.primary};
+			}
+		}
+		&__nick {
+			font-size: ${({ theme }) => theme.fontSizes.xxxl};
+		}
+		&__btn {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			font-size: ${({ theme }) => theme.fontSizes.lg};
+
+			> Button {
+				padding: 10px 20px;
+				width: 140px;
+			}
+
+			&-ee {
+				background-color: ${({ theme }) => theme.colors.gray_ee};
+				color: ${({ theme }) => theme.colors.gray_33};
+			}
+			&-red {
+				background-color: ${({ theme }) => theme.colors.red_74};
+			}
 		}
 	}
 `
