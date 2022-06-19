@@ -1,4 +1,4 @@
-import AppLayout from '@/layouts/AppLayout'
+import AppLayout from '@/components/layouts/AppLayout'
 import ListFilter from '@/components/list/ListFilter'
 import CardBox from '@/components/list/CardBox'
 

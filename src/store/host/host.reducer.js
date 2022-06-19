@@ -15,6 +15,9 @@ const teamReducers = (state = initialState, action) =>
 			case actions.NEXT_HOST_PAGE:
 				draft.hostPageNum += 1
 				break
+			case actions.CLEAR_HOST_PAGE:
+				draft.hostPageNum = 0
+				break
 			default:
 				break
 		}

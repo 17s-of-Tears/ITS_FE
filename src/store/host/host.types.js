@@ -1,2 +1,3 @@
 export const PREV_HOST_PAGE = 'PREV_HOST_PAGE'
 export const NEXT_HOST_PAGE = 'NEXT_HOST_PAGE'
+export const CLEAR_HOST_PAGE = 'CLEAR_HOST_PAGE'

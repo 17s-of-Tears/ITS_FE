@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { ReactComponent as BackArrow } from '@/assets/svg/back_arrow.svg'
 
 import DetailAside from '@/components/list/DetailAside'
-import AppLayout from '@/layouts/AppLayout'
+import AppLayout from '@/components/layouts/AppLayout'
 
 import DetailTitle from './DetailTitle'
 import DetailContent from './DetailContent'

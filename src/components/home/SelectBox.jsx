@@ -11,7 +11,7 @@ const SelectBox = ({ mode, selectedBox, onClickSelectBox }) => {
 	const navigate = useNavigate()
 
 	const onMovePage = useCallback(
-		() => (mode === 'host' ? navigate('/making/purpose') : navigate('/list')),
+		() => (mode === 'host' ? navigate('/host') : navigate('/list')),
 		[mode, navigate]
 	)
 

@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import Logo from '@/components/common/Logo'
@@ -5,6 +7,7 @@ import Button from '@/components/common/Button'
 import ProgressBar from '@/components/host/ProgressBar'
 import { hostPageData } from '@/constant/hostData'
 import {
+	clearHostPageAction,
 	nextHostPageAction,
 	prevHostPageAction
 } from '@/store/host/host.actions'
@@ -12,16 +15,26 @@ import { HostLayoutContainer } from './HostLayout.styled'
 
 const HostLayout = ({ children }) => {
 	const dispatch = useDispatch()
+	const navigate = useNavigate()
 	const { hostPageNum } = useSelector(state => state.host)
 
 	const onMovePage = mode => () => {
-		if (mode === 'prev') hostPageNum > 0 && dispatch(prevHostPageAction())
-		else if (mode === 'next') hostPageNum < 4 && dispatch(nextHostPageAction())
+		if (mode === 'prev')
+			hostPageNum > 0 ? dispatch(prevHostPageAction()) : navigate('/')
+		else if (mode === 'next')
+			hostPageNum < 4 ? dispatch(nextHostPageAction()) : navigate('/')
 	}
+
+	//* 호스트 페이지 초기화 (언마운트 시)
+	useEffect(() => {
+		return () => {
+			dispatch(clearHostPageAction())
+		}
+	}, [dispatch])
 
 	return (
 		<HostLayoutContainer>
-			<Logo noLink />
+			<Logo />
 			<h2 className="host__title">{hostPageData[hostPageNum].title}</h2>
 			<div className="host__content">
 				<ProgressBar percent={hostPageData[hostPageNum].percent} />
