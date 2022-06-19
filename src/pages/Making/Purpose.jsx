@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { PurposeContainer } from '@/pages/Making/Purpose.styled.js'
 import PurposeBox from '@/components/common/PurposeBox'
 
-const Purpose = () => {
-	const [selectedBox, setSelectedBox] = useState('project') // 'project' | 'study'
+const Purpose = ({ teamInfo, setTeamInfo }) => {
+	const [selectedBox, setSelectedBox] = useState(teamInfo.teamPurpose) // 'project' | 'study'
 	const onClickSelectBox = mode => () => setSelectedBox(mode)
 
 	return (
@@ -17,12 +17,26 @@ const Purpose = () => {
 				<PurposeBox
 					mode="project"
 					selectedBox={'project' === selectedBox}
-					onClickSelectBox={onClickSelectBox('project')}
+					onClickSelectBox={() => {
+						onClickSelectBox('project')
+						setSelectedBox('project')
+						setTeamInfo(prev => ({
+							...prev,
+							teamPurpose: 'project'
+						}))
+					}}
 				/>
 				<PurposeBox
 					mode="study"
 					selectedBox={'study' === selectedBox}
-					onClickSelectBox={onClickSelectBox('study')}
+					onClickSelectBox={() => {
+						onClickSelectBox('study')
+						setSelectedBox('study')
+						setTeamInfo(prev => ({
+							...prev,
+							teamPurpose: 'study'
+						}))
+					}}
 				/>
 			</div>
 		</PurposeContainer>

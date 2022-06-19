@@ -1,7 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 
-import { ReactComponent as ReactLogoIcon } from '@/assets/svg/React.svg'
-import { ReactComponent as NodeLogoIcon } from '@/assets/svg/Node.svg'
 import { LikerPageContainer } from './LikerPage.styled'
 
 const LikerPage = () => {
@@ -26,8 +24,6 @@ const LikerPage = () => {
 					<p className="my__profile_protxt2">
 						이츠는 더 쉽게 스터디 팀을 구할 수 있는 방법을 제공합니다.
 					</p>
-					<ReactLogoIcon />
-					<NodeLogoIcon />
 				</div>
 				<button onClick={onMovePageTeam} className="my__profile_movebtn">
 					팀 페이지 이동

@@ -5,57 +5,77 @@ import Logo from '@/components/common/Logo'
 import MakingPageRouterConfig from '@/router/maketeam'
 import { hostLink, hostTitle } from '@/constant/staticData'
 import { ButtonWrapper, MainContainer, Progress } from './index.styled.js'
+import Purpose from './Purpose.jsx'
+import Skill from './Skill.jsx'
+import Name from './Name.jsx'
+import Description from './Description.jsx'
+import Success from './Success.jsx'
 
 const MakingPage = () => {
-	const { pathname } = useLocation()
+	const [step, setStep] = useState(1)
+
+	const [teamInfo, setTeamInfo] = useState({
+		teamPurpose: 'project',
+		teamSkills: [],
+		teamName: '',
+		teamDescripts: ''
+	})
 	const navigate = useNavigate()
 
-	const routerData = useMemo(
-		() => ({
-			'/making/purpose': { title: hostTitle[0], to: hostLink[0], count: 1 },
-			'/making/skill': { title: hostTitle[1], to: hostLink[1], count: 2 },
-			'/making/name': { title: hostTitle[2], to: hostLink[2], count: 3 },
-			'/making/description': { title: hostTitle[3], to: hostLink[3], count: 4 },
-			'/making/success': { title: hostTitle[4], to: hostLink[4], count: 5 }
-		}),
-		[]
-	)
+	const nextPageButton = () => {
+		setStep(prev => prev + 1)
+		if (step > 4) {
+			navigate('/list')
+		}
+	}
+	const prevPageButton = () => {
+		step === 1 ? navigate('/') : setStep(prev => prev - 1)
+	}
+
 	const buttonText = useCallback(
 		mode => {
 			const isPrev = mode === 'prev'
-			const isNotPurposeAndSuccess =
-				pathname !== '/making/purpose' && pathname !== '/making/success'
+			const isNotPurposeAndSuccess = step !== 1 && step !== 5
 			return isNotPurposeAndSuccess
 				? `${isPrev ? '전 단계로 돌아가기' : '다음 단계로 넘어가기'}`
-				: pathname === '/making/purpose'
+				: step === 1
 				? `${isPrev ? '홈으로 돌아가기' : '다음 단계로 넘어가기'}`
-				: `${isPrev ? '홈으로 돌아가기' : '팀 등록 완료하기'}`
+				: `${isPrev ? '전 단계로 돌아가기' : '팀 등록 완료하기'}`
 		},
-		[pathname]
+		[step]
 	)
-
-	//* 해당 버튼에 이동할 경로를 정해주고 이동
-	const onMoveToPage = mode => () => {
-		const toPage = routerData[pathname].to[mode]
-		// toPage === 'openModal' ? setIsModal(true) : navigate(toPage)
-		toPage === 'openModal' ? console.log('test') : navigate(toPage)
-	}
 
 	return (
 		<MainContainer>
 			<Logo />
-			<span className="making_title">{routerData[pathname].title}</span>
+			<span className="making_title">{hostTitle[step - 1]}</span>
 			<div className="progress">
-				<Progress width={`${(routerData[pathname].count / 5) * 100}%`} />
+				<Progress width={`${(step / 5) * 100}%`} />
 			</div>
 
-			<MakingPageRouterConfig />
+			{step === 1 && <Purpose teamInfo={teamInfo} setTeamInfo={setTeamInfo} />}
+			{step === 2 && <Skill teamInfo={teamInfo} setTeamInfo={setTeamInfo} />}
+			{step === 3 && <Name teamInfo={teamInfo} setTeamInfo={setTeamInfo} />}
+			{step === 4 && (
+				<Description teamInfo={teamInfo} setTeamInfo={setTeamInfo} />
+			)}
+			{step === 5 && <Success teamInfo={teamInfo} setTeamInfo={setTeamInfo} />}
 
 			<ButtonWrapper>
-				<button className="beforebtn" onClick={onMoveToPage('prev')}>
+				<button
+					className="beforebtn"
+					onClick={() => {
+						prevPageButton()
+					}}
+				>
 					{buttonText('prev')}
 				</button>
-				<button className="nextbtn" onClick={onMoveToPage('next')}>
+				<button
+					className="nextbtn"
+					onClick={() => {
+						nextPageButton()
+					}}
+				>
 					{buttonText('next')}
 				</button>
 			</ButtonWrapper>

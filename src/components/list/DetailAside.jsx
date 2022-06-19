@@ -16,7 +16,7 @@ const DetailAside = () => {
 					<HeartIcon
 						className={`detailaside__btn-liker-icon${isLiker ? '-fill' : ''}`}
 					/>
-					1개
+					<span>{isLiker ? '1개' : '0개'}</span>
 				</div>
 				<div className="detailaside__btn-sharing">
 					<ShareIcon />

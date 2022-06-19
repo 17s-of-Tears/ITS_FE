@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const DetailCommentContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
 	.detailcomment {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 		&__info {
 			font-size: ${({ theme }) => theme.fontSizes.base};
 		}
@@ -17,13 +17,13 @@ export const DetailCommentContainer = styled.div`
 			border-radius: 10px;
 		}
 
-		&__btn {
+		&-btn {
 			display: flex;
 			justify-content: flex-end;
 
 			Button {
 				width: 20%;
-				font-size: 14px;
+				font-size: 16px;
 			}
 		}
 	}

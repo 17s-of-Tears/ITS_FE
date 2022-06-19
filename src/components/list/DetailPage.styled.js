@@ -34,6 +34,23 @@ export const ListDetailContainer = styled.div`
 			display: flex;
 			flex-direction: column;
 			gap: 30px;
+
+			.comment-list {
+				width: 100%;
+				height: auto;
+
+				&-element {
+					border: solid 1px ${({ theme }) => theme.colors.gray_ea};
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: flex-start;
+					padding: 20px;
+					gap: 10px;
+					margin-bottom: 20px;
+					background-color: ${({ theme }) => theme.colors.white_ff};
+				}
+			}
 		}
 
 		&__right {

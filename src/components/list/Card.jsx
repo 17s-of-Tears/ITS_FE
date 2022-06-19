@@ -7,8 +7,8 @@ const Card = ({ title, category, date, skills, comment, hits }) => {
 	const onMoveToDetail = () => navigate('/detail')
 
 	return (
-		<CardContainer>
-			<div onClick={onMoveToDetail} className="card">
+		<CardContainer onClick={onMoveToDetail}>
+			<div className="card">
 				<div className="card__info">
 					<span className="card__info-category  color-aa">{category}</span>
 					<span className="card__info-title">{title}</span>
