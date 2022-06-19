@@ -2,7 +2,13 @@ import produce from 'immer'
 import * as actions from './host.types'
 
 const initialState = {
-	hostPageNum: 0
+	hostPageNum: 0,
+	createTeamData: {
+		goal: 'project',
+		skills: [],
+		name: '',
+		description: ''
+	}
 }
 
 const teamReducers = (state = initialState, action) =>

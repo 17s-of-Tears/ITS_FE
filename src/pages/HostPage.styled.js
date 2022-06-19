@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HostLayoutContainer = styled.div`
+export const HostPageContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
