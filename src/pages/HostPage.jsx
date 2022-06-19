@@ -1,10 +1,14 @@
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import Logo from '@/components/common/Logo'
 import Button from '@/components/common/Button'
 import ProgressBar from '@/components/host/ProgressBar'
+import Success from '@/components/host/Success'
+import HostCard from '@/components/host/HostCard'
+import GoalCard from '@/components/host/GoalCard'
+import SkillsCard from '@/components/host/SkillsCard'
 import { hostCardDatas, hostPageDatas } from '@/constant/host'
 import {
 	clearHostPageAction,
@@ -12,18 +16,19 @@ import {
 	prevHostPageAction
 } from '@/store/host/host.actions'
 import { HostPageContainer } from './HostPage.styled'
-import Success from '@/components/host/Success'
-import HostCard from '@/components/host/HostCard'
-import GoalCard from '@/components/host/GoalCard'
+import { toast } from 'react-toastify'
 
 const HostPage = () => {
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
 	const { hostPageNum } = useSelector(state => state.host)
 
+	const [goal, setGoal] = useState('project')
+	const [skills, setSkills] = useState([])
+
 	//* 각 스탭마다 해당하는 데이터 출력
 	const { title, percent } = hostPageDatas[hostPageNum]
-	const { cardTitle, cardSubTitle, HostContent } = hostCardDatas[hostPageNum]
+	const { cardTitle, cardSubTitle } = hostCardDatas[hostPageNum]
 
 	const onMoveHomePage = () => navigate('/')
 
@@ -31,7 +36,9 @@ const HostPage = () => {
 		if (mode === 'prev')
 			hostPageNum > 0 ? dispatch(prevHostPageAction()) : onMoveHomePage()
 		else if (mode === 'next')
-			hostPageNum < 4 ? dispatch(nextHostPageAction()) : onMoveHomePage()
+			if (hostPageNum === 1 && skills.length === 0)
+				return toast.error('기술을 한가지 이상 선택해주세요.')
+		hostPageNum < 4 ? dispatch(nextHostPageAction()) : onMoveHomePage()
 	}
 
 	//* 호스트 페이지 초기화 (언마운트 시)
@@ -52,9 +59,9 @@ const HostPage = () => {
 				) : (
 					<HostCard title={cardTitle} subTitle={cardSubTitle}>
 						{hostPageNum === 0 ? (
-							<GoalCard />
+							<GoalCard goal={goal} setGoal={setGoal} />
 						) : hostPageNum === 1 ? (
-							<GoalCard />
+							<SkillsCard skills={skills} setSkills={setSkills} />
 						) : hostPageNum === 2 ? (
 							<GoalCard />
 						) : (

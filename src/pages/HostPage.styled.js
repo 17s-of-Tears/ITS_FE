@@ -8,7 +8,7 @@ export const HostPageContainer = styled.div`
 	gap: 50px;
 	width: 90%;
 	max-width: 812px;
-	margin: 50px auto 0;
+	margin: 50px auto;
 
 	.host {
 		&__title {

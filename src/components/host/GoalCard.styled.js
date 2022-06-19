@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const GoalCardContainer = styled.div`
 	width: 100%;
@@ -22,6 +22,12 @@ export const GoalCardItem = styled.div`
 	&:hover {
 		border: 1px solid ${({ theme }) => theme.colors.primary};
 	}
+
+	${({ active }) =>
+		active &&
+		css`
+			border: 1px solid ${({ theme }) => theme.colors.primary};
+		`}
 `
 
 export const GoalImage = styled.img`

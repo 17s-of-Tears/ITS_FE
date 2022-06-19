@@ -7,10 +7,15 @@ import {
 	GoalTitle
 } from './GoalCard.styled'
 
-const GoalCard = () => {
+const GoalCard = ({ goal, setGoal }) => {
+	const onChangeGoal = goal => () => setGoal(goal)
+
 	return (
 		<GoalCardContainer>
-			<GoalCardItem>
+			<GoalCardItem
+				active={goal === 'project'}
+				onClick={onChangeGoal('project')}
+			>
 				<GoalImage src="img/project.png" />
 				<GoalTextGroup>
 					<GoalDescription>
@@ -19,7 +24,7 @@ const GoalCard = () => {
 					<GoalTitle>팀 프로젝트</GoalTitle>
 				</GoalTextGroup>
 			</GoalCardItem>
-			<GoalCardItem>
+			<GoalCardItem active={goal === 'study'} onClick={onChangeGoal('study')}>
 				<GoalImage src="img/study.png" />
 				<GoalTextGroup>
 					<GoalDescription>함께 성장할 팀원을 모아보세요!</GoalDescription>
