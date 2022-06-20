@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const ListWrapper = styled.div`
 	width: 80%;
 	max-width: 1364px;
-	margin: 0 auto 50px;
+	margin: 50px auto;
 	display: flex;
 	flex-direction: column;
 	gap: 50px;

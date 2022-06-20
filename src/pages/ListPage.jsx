@@ -21,8 +21,6 @@ const ListPage = () => {
 
 	return (
 		<AppLayout>
-			<ListFilter />
-			<Divide />
 			<ListWrapper>
 				<div className="cardbox__title">
 					<span className="cardbox__title-team">총 {total}개의 팀</span>
