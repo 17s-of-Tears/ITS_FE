@@ -43,7 +43,6 @@ const ListDetail = () => {
 					<DetailTitle>
 						<span className="detailtitle__title">{teamInfo?.teamName}</span>
 						<div className="detailtitle__author">
-							<span>닉네임</span>
 							<span className="detailtitle__author-date">
 								{teamInfo?.createDate}
 							</span>
