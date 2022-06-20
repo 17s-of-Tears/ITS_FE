@@ -6,8 +6,7 @@ const BASE_URI = import.meta.env.VITE_SERVER_URI
 //* 로그인 전 요청
 const instance = url =>
 	axios.create({
-		baseURL: `${BASE_URI}/${url}`,
-		withCredentials: true
+		baseURL: `${BASE_URI}/${url}`
 	})
 
 //* 로그인 후 요청
