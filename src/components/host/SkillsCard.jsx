@@ -43,7 +43,7 @@ const SkillsCard = ({ skills, setSkills }) => {
 						onClick={onSelectSkill(name)}
 						active={skills.indexOf(name) >= 0}
 					>
-						<SkillIcon width="50" height="100%" />
+						<SkillIcon width="50px" height="50px" />
 						<SkillName>{name}</SkillName>
 					</SkillItem>
 				))}

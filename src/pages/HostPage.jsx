@@ -61,6 +61,8 @@ const HostPage = () => {
 					return toast.error('기술을 한가지 이상 선택해주세요!')
 				else if (hostPageNum === 2 && teamName === '')
 					return toast.error('팀 이름을 입력해주세요!')
+				else if (hostPageNum === 2 && teamName.length > 12)
+					return toast.error('12글자 이내로 작성해주세요!')
 				else if (hostPageNum === 3) {
 					if (teamDescription === '')
 						return toast.error('팀 설명을 입력해주세요!')

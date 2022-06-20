@@ -1,7 +1,7 @@
 import axios from 'axios'
 import interceptors from './config/interceptors'
 
-const BASE_URI = 'http://localhost:8000'
+const BASE_URI = import.meta.env.VITE_SERVER_URI
 
 //* 로그인 전 요청
 const instance = url =>
