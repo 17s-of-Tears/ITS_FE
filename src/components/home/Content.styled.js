@@ -37,10 +37,10 @@ export const ContentContainer = styled.div`
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			font-size: ${({ theme }) => theme.fontSizes.xxxl};
+			font-size: ${({ theme }) => theme.fontSizes.big};
 
 			@media ${({ theme }) => theme.device.mobileL} {
-				font-size: ${({ theme }) => theme.fontSizes.xxl};
+				font-size: ${({ theme }) => theme.fontSizes.xxxl};
 			}
 
 			&-primary {

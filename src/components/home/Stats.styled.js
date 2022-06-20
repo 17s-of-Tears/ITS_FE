@@ -24,6 +24,9 @@ export const StatsContainer = styled.div`
 				font-weight: 600;
 				color: ${({ theme }) => theme.colors.primary};
 			}
+			@media ${({ theme }) => theme.device.mobileL} {
+				font-size: ${({ theme }) => theme.fontSizes.xxxl};
+			}
 		}
 
 		&__content {
