@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
 
-import { ReactComponent as BackArrow } from '/svg/back_arrow.svg'
+import { ReactComponent as BackArrow } from '/public/svg/back_arrow.svg'
 import AppLayout from '@/components/layouts/AppLayout'
 import { skillDatas } from '@/constant/host'
 import { getTeamRequest, incViewCountRequest } from '@/store/team/team.actions'
