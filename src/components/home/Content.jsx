@@ -13,12 +13,12 @@ const Content = () => {
 					<span>스터디를 시작해보세요</span>
 				</div>
 				<div className="content__img">
-					<img src="images/introstudy.png" alt="icon" />
+					<img src="images/introstud.png" alt="icon" />
 				</div>
 			</div>
 			<div className="content__bottom">
 				<div className="content__img">
-					<img src="images/introproject.png" alt="icon" />
+					<img src="images/introprojec.png" alt="icon" />
 				</div>
 				<div className="content__title">
 					<span className="content__title-primary">It&apos;s 프로젝트</span>

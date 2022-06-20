@@ -34,6 +34,12 @@ export const ListDetailContainer = styled.div`
 			display: flex;
 			flex-direction: column;
 			gap: 30px;
+			@media ${({ theme }) => theme.device.tabletL} {
+				width: 70%;
+			}
+			@media ${({ theme }) => theme.device.tablet} {
+				width: 100%;
+			}
 
 			.comment-list {
 				width: 100%;

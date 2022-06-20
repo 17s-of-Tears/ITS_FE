@@ -75,9 +75,9 @@ const ListDetail = () => {
 						})}
 					</div>
 				</div>
-				<div className="listdetail__right">
+				{/* <div className="listdetail__right">
 					<DetailAside />
-				</div>
+				</div> */}
 			</ListDetailContainer>
 		</AppLayout>
 	)

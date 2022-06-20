@@ -32,7 +32,7 @@ const SkillsCard = ({ skills, setSkills }) => {
 						<span>클릭해서 선택해보세요!</span>
 					)}
 				</SkillList>
-				<Button onClick={onClearSkill} bgColor="red_74">
+				<Button onClick={onClearSkill} color="gray_33" bgColor="white_ff">
 					초기화
 				</Button>
 			</SkillCardHeader>

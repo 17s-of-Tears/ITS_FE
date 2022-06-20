@@ -24,6 +24,10 @@ export const DetailCommentContainer = styled.div`
 			Button {
 				width: 20%;
 				font-size: 16px;
+				@media ${({ theme }) => theme.device.mobileL} {
+					width: 35%;
+					font-size: 14px;
+				}
 			}
 		}
 	}

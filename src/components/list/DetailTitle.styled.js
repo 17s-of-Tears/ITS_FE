@@ -7,11 +7,20 @@ export const DetailTitleContainer = styled.div`
 	.detailtitle {
 		&__title {
 			font-size: ${({ theme }) => theme.fontSizes.subTitleSize};
+			@media ${({ theme }) => theme.device.NoteBook} {
+				font-size: ${({ theme }) => theme.fontSizes.xxxl};
+			}
+			@media ${({ theme }) => theme.device.mobileL} {
+				font-size: ${({ theme }) => theme.fontSizes.xxl};
+			}
 		}
 
 		&__author {
 			font-size: ${({ theme }) => theme.fontSizes.lg};
 
+			@media ${({ theme }) => theme.device.NoteBook} {
+				font-size: ${({ theme }) => theme.fontSizes.base};
+			}
 			&-date {
 				color: ${({ theme }) => theme.colors.gray_aa};
 			}
@@ -23,6 +32,10 @@ export const DetailTitleContainer = styled.div`
 			> svg {
 				width: 30px;
 				height: 30px;
+				@media ${({ theme }) => theme.device.NoteBook} {
+					width: 25px;
+					height: 25px;
+				}
 			}
 		}
 	}
