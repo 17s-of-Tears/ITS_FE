@@ -39,8 +39,12 @@ export const ContentContainer = styled.div`
 			justify-content: center;
 			font-size: ${({ theme }) => theme.fontSizes.big};
 
-			@media ${({ theme }) => theme.device.mobileL} {
+			@media ${({ theme }) => theme.device.tabletL} {
 				font-size: ${({ theme }) => theme.fontSizes.xxxl};
+			}
+
+			@media ${({ theme }) => theme.device.mobileL} {
+				font-size: ${({ theme }) => theme.fontSizes.xxl};
 			}
 
 			&-primary {
@@ -51,7 +55,8 @@ export const ContentContainer = styled.div`
 
 		&__img {
 			> img {
-				width: 240px;
+				width: 320px;
+				height: 100%;
 			}
 		}
 	}

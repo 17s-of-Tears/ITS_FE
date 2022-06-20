@@ -40,7 +40,6 @@ const Card = ({ createDate, goal, hits, id, skills, teamName }) => {
 				})}
 			</CardGroup>
 			<CardFooter>
-				<span>댓글 0</span>
 				<span>조회수 {hits}</span>
 			</CardFooter>
 		</CardWrapper>

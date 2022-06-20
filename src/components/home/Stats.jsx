@@ -38,7 +38,6 @@ const Stats = () => {
 								</>
 							)}
 						</span>
-						<span className="stats__content-data-info">{info}</span>
 					</div>
 				))}
 			</div>
