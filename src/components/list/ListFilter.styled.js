@@ -64,8 +64,3 @@ export const ListFilterContainer = styled.div`
 		}
 	}
 `
-
-export const ListFilterDivide = styled.hr`
-	margin: 50px 0;
-	border: 1px solid ${({ theme }) => theme.colors.gray_dd};
-`

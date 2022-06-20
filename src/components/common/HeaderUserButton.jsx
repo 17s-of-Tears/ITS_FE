@@ -51,7 +51,7 @@ const HeaderUserButton = ({ onOpenLoginModal }) => {
 							<BottomArrow className={popupOpened && 'active'} />
 						</UserName>
 						<UserAvatar
-							src={me.isImg ? me.imgUrl : `svg/${me.imgUrl}.svg`}
+							src={me.isImg ? me.imgUrl : `/svg/${me.imgUrl}.svg`}
 							alt="profileImg"
 							isHover
 						/>
@@ -60,7 +60,7 @@ const HeaderUserButton = ({ onOpenLoginModal }) => {
 						<UserPopUp>
 							<PopupHeader>
 								<UserAvatar
-									src={me.isImg ? me.imgUrl : `svg/${me.imgUrl}.svg`}
+									src={me.isImg ? me.imgUrl : `/svg/${me.imgUrl}.svg`}
 									alt="profileImg"
 								/>
 								안녕하세요

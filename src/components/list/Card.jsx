@@ -1,34 +1,49 @@
+import { skillDatas } from '@/constant/host'
 import { useNavigate } from 'react-router-dom'
 
-import { CardContainer } from './Card.styled'
+import {
+	CardCategory,
+	CardDate,
+	CardFooter,
+	CardGroup,
+	CardInfo,
+	CardItem,
+	CardTitle,
+	CardWrapper
+} from './Card.styled'
 
-const Card = ({ title, category, date, skills, comment, hits }) => {
+const Card = ({ createDate, goal, hits, id, skills, teamName }) => {
 	const navigate = useNavigate()
+	const onMoveToDetail = () => navigate(`./${id}`)
 
-	const onMoveToDetail = () => navigate('/detail')
+	const skillIcon = skill => skillDatas.find(e => e.name === skill)
 
 	return (
-		<CardContainer onClick={onMoveToDetail}>
-			<div className="card">
-				<div className="card__info">
-					<span className="card__info-category  color-aa">{category}</span>
-					<span className="card__info-title">{title}</span>
-					<span className="card__info-date color-aa font-small">{date}</span>
-				</div>
-				<div className="card__skill">
-					{skills.map(skill => (
-						<div className="card__skill-item" key={skill.id}>
-							<span className="font-small">{skill.title}</span>
-							<skill.Icon width={'50px'} height={'50px'} />
-						</div>
-					))}
-				</div>
-				<div className="card__liker color-aa font-small">
-					<span>댓글{comment}</span>
-					<span>조회수{hits}</span>
-				</div>
-			</div>
-		</CardContainer>
+		<CardWrapper onClick={onMoveToDetail}>
+			<CardInfo>
+				<CardCategory>
+					{goal === 'project' ? '프로젝트' : '스터디'}
+				</CardCategory>
+				<CardTitle>{teamName}</CardTitle>
+				<CardDate>{createDate}</CardDate>
+			</CardInfo>
+			<CardGroup>
+				{skills.map(skill => {
+					const SkillIcon = skillIcon(skill).SkillIcon
+
+					return (
+						<CardItem key={skill}>
+							<span key={skill}>{skill}</span>
+							<SkillIcon width="45px" height="100%" />
+						</CardItem>
+					)
+				})}
+			</CardGroup>
+			<CardFooter>
+				<span>댓글 0</span>
+				<span>조회수 {hits}</span>
+			</CardFooter>
+		</CardWrapper>
 	)
 }
 

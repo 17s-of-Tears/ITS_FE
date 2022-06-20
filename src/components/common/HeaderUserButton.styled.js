@@ -35,6 +35,7 @@ export const UserAvatar = styled.img`
 	transition: all 250ms ease;
 	border-radius: 50%;
 	border: 1px solid ${({ theme }) => theme.colors.lineColor};
+	background-color: ${({ theme }) => theme.colors.gray_ea};
 
 	${({ isHover }) =>
 		isHover &&

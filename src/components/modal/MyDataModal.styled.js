@@ -69,6 +69,7 @@ export const UserAvatar = styled.img`
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
+	background-color: ${({ theme }) => theme.colors.gray_ea};
 	border: 1px solid ${({ theme }) => theme.colors.lineColor};
 `
 

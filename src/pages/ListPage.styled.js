@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
-export const CardBoxContainer = styled.div`
+export const ListWrapper = styled.div`
 	width: 80%;
 	max-width: 1364px;
 	margin: 0 auto 50px;
 	display: flex;
 	flex-direction: column;
 	gap: 50px;
+
 	.cardbox {
 		&__title {
 			display: flex;
@@ -37,23 +38,29 @@ export const CardBoxContainer = styled.div`
 				}
 			}
 		}
-		&__list {
-			width: 100%;
-			display: grid;
-			gap: 20px;
-			grid-template-columns: repeat(4, 1fr);
-
-			@media ${({ theme }) => theme.device.NoteBook} {
-				grid-template-columns: repeat(3, 1fr);
-			}
-
-			@media ${({ theme }) => theme.device.tablet} {
-				grid-template-columns: repeat(2, 1fr);
-			}
-
-			@media ${({ theme }) => theme.device.mobileL} {
-				grid-template-columns: repeat(1, 1fr);
-			}
-		}
 	}
+`
+
+export const CardGird = styled.div`
+	width: 100%;
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
+
+	@media ${({ theme }) => theme.device.NoteBook} {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@media ${({ theme }) => theme.device.tablet} {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media ${({ theme }) => theme.device.mobileL} {
+		grid-template-columns: repeat(1, 1fr);
+	}
+`
+
+export const Divide = styled.hr`
+	margin: 50px 0;
+	border: 1px solid ${({ theme }) => theme.colors.lineColor};
 `

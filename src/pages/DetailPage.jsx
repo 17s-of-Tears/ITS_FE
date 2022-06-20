@@ -1,84 +1,65 @@
-import React, { useCallback, useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate, useParams } from 'react-router-dom'
 
 import { ReactComponent as BackArrow } from '@/assets/svg/back_arrow.svg'
-
-import DetailAside from '@/components/list/DetailAside'
 import AppLayout from '@/components/layouts/AppLayout'
-
-import DetailTitle from '../components/list/DetailTitle'
-import DetailContent from '../components/list/DetailContent'
-import DetailComment from '../components/list/DetailComment'
-import { ListDetailContainer } from './DetailPage.styled'
-import { useDispatch, useSelector } from 'react-redux'
-import { UserAvatar } from '../components/common/HeaderUserButton.styled'
+import { skillDatas } from '@/constant/host'
+import { getTeamRequest } from '@/store/team/team.actions'
+import {
+	DetailContainer,
+	DetailTitle,
+	DetailContent
+} from './DetailPage.styled'
 
 const ListDetail = () => {
+	const dispatch = useDispatch()
+	const { teamInfo } = useSelector(state => state.team)
+
 	const navigate = useNavigate()
+	const { id } = useParams()
+
+	useEffect(() => {
+		dispatch(getTeamRequest(id))
+	}, [dispatch, id])
+
 	const onMoveToPage = () => navigate('/list')
 
-	const [comments, setComments] = useState([])
-
-	const nextId = useRef(1)
-
-	const onInsert = useCallback(
-		content => {
-			const comment = {
-				id: nextId.current,
-				content
-			}
-			console.log(content)
-			setComments(comments => comments.concat(comment))
-			nextId.current += 1
-		},
-		[comments]
-	)
-
-	const dispatch = useDispatch()
-	const { me } = useSelector(state => state.user)
+	const skillIcon = skill => skillDatas.find(e => e.name === skill)
 
 	return (
 		<AppLayout>
-			<ListDetailContainer>
+			<DetailContainer>
 				<div className="listdetail__left">
 					<div className="back" onClick={onMoveToPage}>
 						<BackArrow />
 					</div>
+					<DetailTitle>
+						<span className="detailtitle__title">{teamInfo?.teamName}</span>
+						<div className="detailtitle__author">
+							<span>닉네임</span>
+							<span className="detailtitle__author-date">
+								{teamInfo?.createDate}
+							</span>
+							<span>조회수 {teamInfo?.hits}</span>
+						</div>
+						<div className="detailtitle__icon">
+							{teamInfo?.skills.map(skill => {
+								const SkillIcon = skillIcon(skill).SkillIcon
 
-					<DetailTitle />
-
+								return <SkillIcon key={skill} width="45px" height="100%" />
+							})}
+						</div>
+					</DetailTitle>
 					<hr />
-
-					<DetailContent />
-
+					<DetailContent>
+						<div className="detailcontent__content">
+							{teamInfo?.teamDescription}
+						</div>
+					</DetailContent>
 					<hr />
-
-					<DetailComment onInsert={onInsert} />
-					<div className="comment-list">
-						{comments.map(comment => {
-							return (
-								<div
-									key={comment.id}
-									id={comment.id}
-									className="comment-list-element"
-								>
-									<div className="comment-list-element-user">
-										<UserAvatar
-											src={me.isImg ? me.imgUrl : `svg/${me.imgUrl}.svg`}
-										/>
-										{me.nickname}
-									</div>
-									<hr />
-									{comment.content}
-								</div>
-							)
-						})}
-					</div>
 				</div>
-				{/* <div className="listdetail__right">
-					<DetailAside />
-				</div> */}
-			</ListDetailContainer>
+			</DetailContainer>
 		</AppLayout>
 	)
 }

@@ -11,6 +11,7 @@ import GlobalStyle from '@/styles/GlobalStyled'
 import theme from '@/styles/theme'
 import { loadMyInfoRequest } from '@/store/user/user.actions'
 import { getCookie } from '@/utils/cookie'
+import ScrollToTop from './ScrollToTop'
 
 const App = () => {
 	const dispatch = useDispatch()
@@ -25,6 +26,7 @@ const App = () => {
 			<BrowserRouter>
 				<ThemeProvider theme={theme}>
 					<GlobalStyle />
+					<ScrollToTop />
 					<Suspense fallback={<LoadingSpinner primary />}>
 						<RouterConfig />
 					</Suspense>

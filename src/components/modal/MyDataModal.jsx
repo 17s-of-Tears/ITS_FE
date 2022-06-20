@@ -65,7 +65,7 @@ const MyDataModal = ({ onCloseMyDataModal }) => {
 		<MyDataModalContainer>
 			<CloseIcon onClick={onCloseMyDataModal} />
 			<UserAvatar
-				src={me.isImg ? me.imgUrl : `svg/${me.imgUrl}.svg`}
+				src={me.isImg ? me.imgUrl : `/svg/${me.imgUrl}.svg`}
 				alt="image"
 			/>
 			<span className="myprofile__img">Profile Image</span>

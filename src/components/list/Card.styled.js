@@ -1,78 +1,71 @@
 import styled from 'styled-components'
 
-export const CardContainer = styled.div`
-	background-color: ${({ theme }) => theme.colors.white_ff};
-	border-radius: 5px;
+export const CardWrapper = styled.div`
 	padding: 30px;
-	cursor: pointer;
-	transition: 300ms;
+	background-color: ${({ theme }) => theme.colors.white_ff};
 	border: 1px solid ${({ theme }) => theme.colors.lineColor};
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	cursor: pointer;
+	transition: all 250ms ease;
 
-	&:hover {
-		border: 1px solid ${({ theme }) => theme.colors.primary};
+	> span {
+		font-size: ${({ theme }) => theme.fontSizes.small};
+		color: ${({ theme }) => theme.colors.gray_55};
 	}
 
-	.card {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 20px;
+	&:hover {
+		background-color: ${({ theme }) => theme.colors.bgColor};
+		border: 1px solid ${({ theme }) => theme.colors.primary};
+	}
+`
 
-		&__info {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			gap: 10px;
-			&-category {
-				font-size: ${({ theme }) => theme.fontSizes.lg};
-				@media ${({ theme }) => theme.device.tabletL} {
-					font-size: ${({ theme }) => theme.fontSizes.small};
-				}
-			}
-			&-title {
-				font-size: ${({ theme }) => theme.fontSizes.xl};
-				@media ${({ theme }) => theme.device.tabletL} {
-					font-size: ${({ theme }) => theme.fontSizes.base};
-				}
-			}
-			&-date {
-			}
-		}
+export const CardInfo = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+`
 
-		&__skill {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			gap: 20px;
+export const CardCategory = styled.span`
+	font-size: ${({ theme }) => theme.fontSizes.base};
+	color: ${({ theme }) => theme.colors.gray_aa};
+`
 
-			&-item {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-			}
-		}
+export const CardTitle = styled.span`
+	font-size: ${({ theme }) => theme.fontSizes.xxl};
+	color: ${({ theme }) => theme.colors.gray_33};
+	font-weight: 500;
+`
 
-		&__liker {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 10px;
-		}
+export const CardDate = styled.span`
+	font-size: ${({ theme }) => theme.fontSizes.small};
+	color: ${({ theme }) => theme.colors.gray_aa};
+`
 
-		.color {
-			&-aa {
-				color: ${({ theme }) => theme.colors.gray_aa};
-			}
-		}
+export const CardGroup = styled.div`
+	display: flex;
+	align-items: center;
+	gap: 20px;
+`
 
-		.font-small {
-			font-size: ${({ theme }) => theme.fontSizes.base};
-			@media ${({ theme }) => theme.device.tabletL} {
-				font-size: ${({ theme }) => theme.fontSizes.small};
-			}
-		}
+export const CardItem = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	align-items: center;
+`
+
+export const CardFooter = styled.div`
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	> span {
+		font-size: ${({ theme }) => theme.fontSizes.small};
+		color: ${({ theme }) => theme.colors.gray_55};
 	}
 `
