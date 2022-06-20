@@ -19,3 +19,4 @@ const instanceWithAuth = url => {
 export const user = instance('users')
 export const userWithToken = instanceWithAuth('users')
 export const team = instanceWithAuth('teams')
+export const comment = instanceWithAuth('comments')

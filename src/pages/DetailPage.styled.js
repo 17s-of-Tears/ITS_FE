@@ -5,6 +5,7 @@ export const DetailContainer = styled.div`
 	width: 80%;
 	max-width: 1364px;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 
 	hr {
@@ -30,7 +31,6 @@ export const DetailContainer = styled.div`
 
 	.listdetail {
 		&__left {
-			width: 55%;
 			display: flex;
 			flex-direction: column;
 			gap: 30px;
@@ -39,28 +39,6 @@ export const DetailContainer = styled.div`
 			}
 			@media ${({ theme }) => theme.device.tablet} {
 				width: 100%;
-			}
-
-			.comment-list {
-				width: 100%;
-				height: auto;
-
-				&-element {
-					border: solid 1px ${({ theme }) => theme.colors.gray_ea};
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: flex-start;
-					padding: 20px;
-					gap: 10px;
-					margin-bottom: 20px;
-					background-color: ${({ theme }) => theme.colors.white_ff};
-					&-user {
-						display: flex;
-						align-items: center;
-						gap: 10px;
-					}
-				}
 			}
 		}
 
@@ -75,6 +53,7 @@ export const DetailTitle = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
+
 	.detailtitle {
 		&__title {
 			font-size: ${({ theme }) => theme.fontSizes.subTitleSize};

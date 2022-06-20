@@ -8,11 +8,18 @@ const initialState = {
 	getTeamLoading: false,
 	getTeamDone: false,
 	getTeamError: null,
+	getTeamTotalLoading: false,
+	getTeamTotalDone: false,
+	getTeamTotalError: null,
+	incViewCountLoading: false,
+	incViewCountDone: false,
+	incViewCountError: null,
 	createTeamLoading: false,
 	createTeamDone: false,
 	createTeamError: null,
 	teamList: [],
-	teamInfo: null
+	teamInfo: null,
+	total: 0
 }
 
 const teamReducers = (state = initialState, action) =>
@@ -49,6 +56,36 @@ const teamReducers = (state = initialState, action) =>
 				draft.getTeamLoading = false
 				draft.getTeamError = action.error
 				break
+			//* GET_TEAM_TOTAL
+			case actions.GET_TEAM_TOTAL_REQUEST:
+				draft.getTeamTotalLoading = true
+				draft.getTeamTotalDone = false
+				draft.getTeamTotalError = null
+				draft.teamInfo = null
+				break
+			case actions.GET_TEAM_TOTAL_SUCCESS:
+				draft.getTeamTotalLoading = false
+				draft.getTeamTotalDone = true
+				draft.total = action.data
+				break
+			case actions.GET_TEAM_TOTAL_FAILURE:
+				draft.getTeamTotalLoading = false
+				draft.getTeamTotalError = action.error
+				break
+			//* INC_VIEW_COUNT
+			case actions.INC_VIEW_COUNT_REQUEST:
+				draft.incViewCountLoading = true
+				draft.incViewCountDone = false
+				draft.incViewCountError = null
+				break
+			case actions.INC_VIEW_COUNT_SUCCESS:
+				draft.incViewCountLoading = false
+				draft.incViewCountDone = true
+				break
+			case actions.INC_VIEW_COUNT_FAILURE:
+				draft.incViewCountLoading = false
+				draft.incViewCountError = action.error
+				break
 			//* CREATE_TEAM
 			case actions.CREATE_TEAM_REQUEST:
 				draft.createTeamLoading = true
@@ -62,6 +99,10 @@ const teamReducers = (state = initialState, action) =>
 			case actions.CREATE_TEAM_FAILURE:
 				draft.createTeamLoading = false
 				draft.createTeamError = action.error
+				break
+			//* 동기액션
+			case actions.ADD_COMMENT_ACTION:
+				draft.teamInfo.comments.push(action.data)
 				break
 			default:
 				break

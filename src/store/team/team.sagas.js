@@ -29,6 +29,30 @@ function* getTeam(action) {
 	}
 }
 
+function* getTeamTotal() {
+	try {
+		const { data } = yield call(apis.getTeamTotalAPI)
+		yield put(actions.getTeamTotalSuccess(data))
+	} catch (error) {
+		const { message } = error.response.data
+		yield put(
+			actions.getTeamTotalFailure(message ? message : '에러가 발생했습니다.')
+		)
+	}
+}
+
+function* incViewCount(action) {
+	try {
+		yield call(apis.incViewCountAPI, action.data)
+		yield put(actions.incViewCountSuccess())
+	} catch (error) {
+		const { message } = error.response.data
+		yield put(
+			actions.incViewCountFailure(message ? message : '에러가 발생했습니다.')
+		)
+	}
+}
+
 function* createTeam(action) {
 	try {
 		yield call(apis.createTeamAPI, action.data)
@@ -50,10 +74,24 @@ function* watchGetTeam() {
 	yield takeLatest(types.GET_TEAM_REQUEST, getTeam)
 }
 
+function* watchGetTeamTotal() {
+	yield takeLatest(types.GET_TEAM_TOTAL_REQUEST, getTeamTotal)
+}
+
+function* watchIncViewCount() {
+	yield takeLatest(types.INC_VIEW_COUNT_REQUEST, incViewCount)
+}
+
 function* watchCreateTeam() {
 	yield takeLatest(types.CREATE_TEAM_REQUEST, createTeam)
 }
 
 export default function* userSaga() {
-	yield all([fork(watchGetTeamList), fork(watchGetTeam), fork(watchCreateTeam)])
+	yield all([
+		fork(watchGetTeamList),
+		fork(watchGetTeam),
+		fork(watchGetTeamTotal),
+		fork(watchIncViewCount),
+		fork(watchCreateTeam)
+	])
 }

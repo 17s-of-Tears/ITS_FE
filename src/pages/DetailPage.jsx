@@ -5,12 +5,14 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { ReactComponent as BackArrow } from '@/assets/svg/back_arrow.svg'
 import AppLayout from '@/components/layouts/AppLayout'
 import { skillDatas } from '@/constant/host'
-import { getTeamRequest } from '@/store/team/team.actions'
+import { getTeamRequest, incViewCountRequest } from '@/store/team/team.actions'
 import {
 	DetailContainer,
 	DetailTitle,
 	DetailContent
 } from './DetailPage.styled'
+import CommentForm from '@/components/list/CommentForm'
+import CommentList from '@/components/list/CommentList'
 
 const ListDetail = () => {
 	const dispatch = useDispatch()
@@ -26,6 +28,10 @@ const ListDetail = () => {
 	const onMoveToPage = () => navigate('/list')
 
 	const skillIcon = skill => skillDatas.find(e => e.name === skill)
+
+	useEffect(() => {
+		dispatch(incViewCountRequest(id))
+	}, [dispatch, id])
 
 	return (
 		<AppLayout>
@@ -59,6 +65,9 @@ const ListDetail = () => {
 					</DetailContent>
 					<hr />
 				</div>
+				{/* 추후 구현 예정
+				<CommentForm />
+				<CommentList /> */}
 			</DetailContainer>
 		</AppLayout>
 	)
