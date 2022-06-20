@@ -1,6 +1,6 @@
 # lts_FE
 
-lts_FE
+lts_FE 배포 준비 중...
 <br />
 
 ## todo-list
