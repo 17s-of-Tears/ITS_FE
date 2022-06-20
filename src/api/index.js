@@ -3,7 +3,7 @@ import interceptors from './config/interceptors'
 
 const BASE_URI = import.meta.env.VITE_SERVER_URI
 
-//* 로그인 전 요청
+//* 로그인 전 요청.
 const instance = url =>
 	axios.create({
 		baseURL: `${BASE_URI}/${url}`
