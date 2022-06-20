@@ -1,6 +1,5 @@
 import { ReactComponent as ArrowIcon } from '@/assets/svg/arrow.svg'
-import Button from '@/components/common/Button'
-import { IntroContainer } from './Intro.styled'
+import { IntroContainer, ServiceButton } from './Intro.styled'
 
 const Intro = ({ onOpenModal }) => {
 	return (
@@ -21,10 +20,10 @@ const Intro = ({ onOpenModal }) => {
 					<span className="color--primary">이츠</span>
 					<span className="font--light">로 함께 할 팀원을 찾아보세요!</span>
 				</div>
-				<Button onClick={onOpenModal} className="home__main--title__btn">
-					서비스 시작하기 &nbsp;
+				<ServiceButton onClick={onOpenModal} className="home__main--title__btn">
+					<span>서비스 시작하기</span>
 					<ArrowIcon />
-				</Button>
+				</ServiceButton>
 			</div>
 			<div className="intro__right">
 				<img src="images/intro.png" />

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Button from '@/components/common/Button'
 
 export const IntroContainer = styled.div`
 	width: 80%;
@@ -71,4 +72,11 @@ export const IntroContainer = styled.div`
 			font-weight: 400;
 		}
 	}
+`
+
+export const ServiceButton = styled(Button)`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
 `

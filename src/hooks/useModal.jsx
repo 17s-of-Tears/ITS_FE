@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { memo, useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import styled from 'styled-components'
 
@@ -62,7 +62,7 @@ const useModal = () => {
 	return {
 		onOpenModal: onModalEvent(true),
 		onCloseModal: onModalEvent(false),
-		ModalPortal
+		ModalPortal: memo(ModalPortal)
 	}
 }
 

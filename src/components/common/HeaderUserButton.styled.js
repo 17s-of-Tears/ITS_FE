@@ -33,6 +33,8 @@ export const UserAvatar = styled.img`
 	width: 45px;
 	height: 45px;
 	transition: all 250ms ease;
+	border-radius: 50%;
+	border: 1px solid ${({ theme }) => theme.colors.lineColor};
 
 	${({ isHover }) =>
 		isHover &&
@@ -40,7 +42,7 @@ export const UserAvatar = styled.img`
 			&:hover {
 				filter: brightness(80%);
 			}
-		`}
+		`};
 `
 
 export const UserPopUp = styled.div`

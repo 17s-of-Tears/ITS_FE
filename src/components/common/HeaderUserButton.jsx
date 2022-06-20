@@ -16,6 +16,7 @@ import {
 } from './HeaderUserButton.styled'
 import MyDataModal from '../modal/MyDataModal'
 import Button from './Button'
+import { memo } from 'react'
 
 const HeaderUserButton = ({ onOpenLoginModal }) => {
 	const dispatch = useDispatch()
@@ -85,4 +86,4 @@ const HeaderUserButton = ({ onOpenLoginModal }) => {
 	)
 }
 
-export default HeaderUserButton
+export default memo(HeaderUserButton)

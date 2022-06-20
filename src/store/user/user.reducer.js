@@ -11,12 +11,18 @@ const initialState = {
 	logInLoading: false,
 	logInDone: false,
 	logInError: null,
-	logOutLoading: false,
-	logOutDone: false,
-	logOutError: null,
+	changeNicknameLoading: false,
+	changeNicknameDone: false,
+	changeNicknameError: null,
 	uploadImgLoading: false,
 	uploadImgDone: false,
 	uploadImgError: null,
+	deleteImgLoading: false,
+	deleteImgDone: false,
+	deleteImgError: null,
+	deleteUserLoading: false,
+	deleteUserDone: false,
+	deleteUserError: null,
 	me: null
 }
 
@@ -67,6 +73,21 @@ const userReducers = (state = initialState, action) =>
 				draft.logInLoading = false
 				draft.logInError = action.error
 				break
+			//* CHANGE_NICKNAME
+			case actions.CHANGE_NICKNAME_REQUEST:
+				draft.changeNicknameLoading = true
+				draft.changeNicknameDone = false
+				draft.changeNicknameError = null
+				break
+			case actions.CHANGE_NICKNAME_SUCCESS:
+				draft.changeNicknameLoading = false
+				draft.changeNicknameDone = true
+				draft.me.nickname = action.data.nickname
+				break
+			case actions.CHANGE_NICKNAME_FAILURE:
+				draft.changeNicknameLoading = false
+				draft.changeNicknameError = action.error
+				break
 			//* UPLOAD_IMG
 			case actions.UPLOAD_IMG_REQUEST:
 				draft.uploadImgLoading = true
@@ -76,12 +97,43 @@ const userReducers = (state = initialState, action) =>
 			case actions.UPLOAD_IMG_SUCCESS:
 				draft.uploadImgLoading = false
 				draft.uploadImgDone = true
-				draft.me.isImg = true
+				draft.me.isImg = action.data.isImg
 				draft.me.imgUrl = action.data.imgUrl
 				break
 			case actions.UPLOAD_IMG_FAILURE:
 				draft.uploadImgLoading = false
 				draft.uploadImgError = action.error
+				break
+			//* DELETE_IMG
+			case actions.DELETE_IMG_REQUEST:
+				draft.deleteImgLoading = true
+				draft.deleteImgDone = false
+				draft.deleteImgError = null
+				break
+			case actions.DELETE_IMG_SUCCESS:
+				draft.deleteImgLoading = false
+				draft.deleteImgDone = true
+				draft.me.isImg = action.data.isImg
+				draft.me.imgUrl = action.data.imgUrl
+				break
+			case actions.DELETE_IMG_FAILURE:
+				draft.deleteImgLoading = false
+				draft.deleteImgError = action.error
+				break
+			//* DELETE_USER
+			case actions.DELETE_USER_REQUEST:
+				draft.deleteUserLoading = true
+				draft.deleteUserDone = false
+				draft.deleteUserError = null
+				break
+			case actions.DELETE_USER_SUCCESS:
+				draft.deleteUserLoading = false
+				draft.deleteUserDone = true
+				draft.me = null
+				break
+			case actions.DELETE_USER_FAILURE:
+				draft.deleteUserLoading = false
+				draft.deleteUserError = action.error
 				break
 			//* 동기 액션
 			case actions.LOG_OUT_REQUEST:
@@ -90,6 +142,7 @@ const userReducers = (state = initialState, action) =>
 			case actions.CLEAR_STATE_SUCCESS:
 				draft.logInDone = false
 				draft.signUpDone = false
+				draft.deleteUserDone = false
 				break
 			case actions.CLEAR_STATE_FAILURE:
 				draft.logInError = false

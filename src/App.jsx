@@ -14,13 +14,11 @@ import { getCookie } from '@/utils/cookie'
 
 const App = () => {
 	const dispatch = useDispatch()
-	const [mount, setMount] = useState(false)
 	const auth = getCookie('auth')
 
 	useEffect(() => {
-		setMount(true)
-		mount && auth && dispatch(loadMyInfoRequest())
-	}, [auth, dispatch, mount])
+		auth && dispatch(loadMyInfoRequest())
+	}, [auth, dispatch])
 
 	return (
 		<>

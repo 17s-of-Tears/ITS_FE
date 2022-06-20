@@ -23,12 +23,11 @@ const SignUpModal = ({ onChangeAuthMode, onCloseModal }) => {
 	const [password, onChangePassword] = useInput('')
 
 	useEffect(() => {
-		if (logInError) toast.error(logInError)
 		if (logInDone) {
 			onCloseModal()
 			dispatch(clearStateSuccessAction())
 		}
-	}, [dispatch, logInDone, logInError, onCloseModal])
+	}, [dispatch, logInDone, onCloseModal])
 
 	const onChangeSignUpModal = () => {
 		onChangeAuthMode()

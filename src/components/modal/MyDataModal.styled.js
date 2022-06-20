@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const MyDataModalContainer = styled.div`
 	width: 80%;
@@ -39,7 +39,7 @@ export const MyDataModalContainer = styled.div`
 		}
 
 		&__nick {
-			font-size: ${({ theme }) => theme.fontSizes.xxxl};
+			font-size: ${({ theme }) => theme.fontSizes.lg};
 		}
 
 		&__btn {
@@ -68,4 +68,26 @@ export const MyDataModalContainer = styled.div`
 export const UserAvatar = styled.img`
 	width: 100px;
 	height: 100px;
+	border-radius: 50%;
+	border: 1px solid ${({ theme }) => theme.colors.lineColor};
+`
+
+export const NickNameForm = styled.div`
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+`
+
+export const ButtonGroup = styled.div`
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+
+	${({ size }) =>
+		size === 'full' &&
+		css`
+			width: 100%;
+		`}
 `

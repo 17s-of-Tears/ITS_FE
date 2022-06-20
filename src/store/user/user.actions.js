@@ -41,6 +41,20 @@ export const logInFailure = error => ({
 	error
 })
 
+//* 닉네임 변경
+export const changeNicknameRequest = data => ({
+	type: types.CHANGE_NICKNAME_REQUEST,
+	data
+})
+export const changeNicknameSuccess = data => ({
+	type: types.CHANGE_NICKNAME_SUCCESS,
+	data
+})
+export const changeNicknameFailure = error => ({
+	type: types.CHANGE_NICKNAME_FAILURE,
+	error
+})
+
 //* 프로필사진 업로드
 export const uploadImgRequest = data => ({
 	type: types.UPLOAD_IMG_REQUEST,
@@ -52,6 +66,33 @@ export const uploadImgSuccess = data => ({
 })
 export const uploadImgFailure = error => ({
 	type: types.UPLOAD_IMG_FAILURE,
+	error
+})
+
+//* 프로필사진 삭제
+export const deleteImgRequest = () => ({
+	type: types.DELETE_IMG_REQUEST
+})
+export const deleteImgSuccess = data => ({
+	type: types.DELETE_IMG_SUCCESS,
+	data
+})
+export const deleteImgFailure = error => ({
+	type: types.DELETE_IMG_FAILURE,
+	error
+})
+
+//* 유저탈퇴
+export const deleteUserRequest = data => ({
+	type: types.DELETE_USER_REQUEST,
+	data
+})
+export const deleteUserSuccess = data => ({
+	type: types.DELETE_USER_SUCCESS,
+	data
+})
+export const deleteUserFailure = error => ({
+	type: types.DELETE_USER_FAILURE,
 	error
 })
 
