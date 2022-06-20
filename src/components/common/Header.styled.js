@@ -25,6 +25,9 @@ export const HeaderContainer = styled.div`
 export const HeaderMenu = styled.div`
 	display: flex;
 	gap: 12px;
+	@media ${({ theme }) => theme.device.mobileL} {
+		display: none;
+	}
 
 	a {
 		text-decoration: none;
