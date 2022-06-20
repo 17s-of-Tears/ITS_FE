@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
 	background-color: ${({ theme }) => theme.colors.white_ff};
-	height: 80px;
+	height: 65px;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -20,10 +20,23 @@ export const HeaderContainer = styled.div`
 		align-items: center;
 		justify-content: space-between;
 	}
+`
 
-	Button {
-		@media ${({ theme }) => theme.device.mobileL} {
-			font-size: ${({ theme }) => theme.fontSizes.small};
+export const HeaderMenu = styled.div`
+	display: flex;
+	gap: 12px;
+
+	a {
+		text-decoration: none;
+		color: ${({ theme }) => theme.colors.gray_33};
+		transition: all 250ms ease;
+
+		&.active {
+			color: ${({ theme }) => theme.colors.primary};
+		}
+
+		&:hover {
+			color: ${({ theme }) => theme.colors.primary};
 		}
 	}
 `

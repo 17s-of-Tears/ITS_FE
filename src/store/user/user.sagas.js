@@ -41,6 +41,18 @@ function* logIn(action) {
 	}
 }
 
+function* uploadImg(action) {
+	try {
+		const { data } = yield call(apis.updateImgAPI, action.data)
+		yield put(actions.uploadImgSuccess(data))
+	} catch (error) {
+		const { message } = error.response.data
+		yield put(
+			actions.uploadImgFailure(message ? message : '에러가 발생했습니다.')
+		)
+	}
+}
+
 //* watch
 function* watchLoadMyInfo() {
 	yield takeLatest(types.LOAD_MY_INFO_REQUEST, loadMyInfo)
@@ -54,6 +66,15 @@ function* watchLogIn() {
 	yield takeLatest(types.LOG_IN_REQUEST, logIn)
 }
 
+function* watchUploadImg() {
+	yield takeLatest(types.UPLOAD_IMG_REQUEST, uploadImg)
+}
+
 export default function* userSaga() {
-	yield all([fork(watchLoadMyInfo), fork(watchSignUp), fork(watchLogIn)])
+	yield all([
+		fork(watchLoadMyInfo),
+		fork(watchSignUp),
+		fork(watchLogIn),
+		fork(watchUploadImg)
+	])
 }

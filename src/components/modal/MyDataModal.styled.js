@@ -30,15 +30,18 @@ export const MyDataModalContainer = styled.div`
 			font-size: ${({ theme }) => theme.fontSizes.xxxl};
 			color: ${({ theme }) => theme.colors.primary};
 		}
+
 		&__info {
 			font-size: ${({ theme }) => theme.fontSizes.lg};
 			&-pm {
 				color: ${({ theme }) => theme.colors.primary};
 			}
 		}
+
 		&__nick {
 			font-size: ${({ theme }) => theme.fontSizes.xxxl};
 		}
+
 		&__btn {
 			display: flex;
 			align-items: center;
@@ -54,6 +57,7 @@ export const MyDataModalContainer = styled.div`
 				background-color: ${({ theme }) => theme.colors.gray_ee};
 				color: ${({ theme }) => theme.colors.gray_33};
 			}
+
 			&-red {
 				background-color: ${({ theme }) => theme.colors.red_74};
 			}
