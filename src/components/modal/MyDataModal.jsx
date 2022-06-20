@@ -2,13 +2,11 @@ import { memo, useCallback, useRef, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify'
 
-import { ReactComponent as CloseIcon } from '@/assets/svg/close.svg'
+import { ReactComponent as CloseIcon } from '/public/svg/close.svg'
 import {
 	changeNicknameRequest,
-	clearStateSuccessAction,
 	deleteImgRequest,
 	deleteUserRequest,
-	logoutRequest,
 	uploadImgRequest
 } from '@/store/user/user.actions'
 import useInput from '@/hooks/useInput'
@@ -20,7 +18,6 @@ import {
 	NickNameForm,
 	UserAvatar
 } from './MyDataModal.styled'
-import { removeCookie } from '@/utils/cookie'
 
 const MyDataModal = ({ onCloseMyDataModal }) => {
 	const dispatch = useDispatch()
@@ -65,7 +62,7 @@ const MyDataModal = ({ onCloseMyDataModal }) => {
 		<MyDataModalContainer>
 			<CloseIcon onClick={onCloseMyDataModal} />
 			<UserAvatar
-				src={me.isImg ? me.imgUrl : `/svg/${me.imgUrl}.svg`}
+				src={me.isImg ? me.imgUrl : `/svg/avatar/${me.imgUrl}.svg`}
 				alt="image"
 			/>
 			<span className="myprofile__img">Profile Image</span>

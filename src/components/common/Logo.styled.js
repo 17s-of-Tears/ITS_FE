@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { ReactComponent } from '@/assets/svg/logo.svg'
+import { ReactComponent } from '/public/svg/logo.svg'
 
 export const LogoContainer = styled.div`
 	cursor: pointer;

@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { ContentContainer } from './Content.styled'
 
 const Content = () => {

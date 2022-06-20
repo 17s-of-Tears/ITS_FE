@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { ReactComponent } from '@/assets/svg/bottom_arrow.svg'
+import { ReactComponent } from '/public/svg/bottom_arrow.svg'
 
 export const UserButtonWrapper = styled.div`
 	position: relative;

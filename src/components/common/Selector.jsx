@@ -1,4 +1,4 @@
-import { ReactComponent as BottomArrowIcon } from '@/assets/svg/bottom_arrow.svg'
+import { ReactComponent as BottomArrowIcon } from '/public/svg/bottom_arrow.svg'
 import { StyledSelector } from './Selector.styled'
 
 const Selector = ({ options = [], disabledOption = '', icon, ...props }) => {

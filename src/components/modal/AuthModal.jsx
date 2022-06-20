@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { ReactComponent as CloseIcon } from '@/assets/svg/close.svg'
+import { ReactComponent as CloseIcon } from '/public/svg/close.svg'
 import Logo from '@/components/common/Logo'
 import { AuthModalContainer } from './AuthModal.styled'
 import LoginModal from './LoginModal'

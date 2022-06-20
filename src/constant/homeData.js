@@ -1,6 +1,6 @@
-import { ReactComponent as MemberIcon } from '@/assets/svg/member.svg'
-import { ReactComponent as MembersIcon } from '@/assets/svg/members.svg'
-import { ReactComponent as LikeIcon } from '@/assets/svg/like.svg'
+import { ReactComponent as MemberIcon } from '/public/svg/member.svg'
+import { ReactComponent as MembersIcon } from '/public/svg/members.svg'
+import { ReactComponent as LikeIcon } from '/public/svg/like.svg'
 
 export const menus = [
 	{

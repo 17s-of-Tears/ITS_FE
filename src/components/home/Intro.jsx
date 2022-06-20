@@ -1,4 +1,4 @@
-import { ReactComponent as ArrowIcon } from '@/assets/svg/arrow.svg'
+import { ReactComponent as ArrowIcon } from '/public/svg/arrow.svg'
 import { IntroContainer, ServiceButton } from './Intro.styled'
 
 const Intro = ({ onOpenModal }) => {

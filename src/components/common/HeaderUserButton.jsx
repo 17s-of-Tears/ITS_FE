@@ -1,9 +1,11 @@
+import { memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import useToggle from '@/hooks/useToggle'
 import { removeCookie } from '@/utils/cookie'
 import { logoutRequest } from '@/store/user/user.actions'
 import useModal from '@/hooks/useModal'
+import MyDataModal from '../modal/MyDataModal'
 import {
 	BottomArrow,
 	PopupHeader,
@@ -14,9 +16,7 @@ import {
 	UserName,
 	UserPopUp
 } from './HeaderUserButton.styled'
-import MyDataModal from '../modal/MyDataModal'
 import Button from './Button'
-import { memo } from 'react'
 
 const HeaderUserButton = ({ onOpenLoginModal }) => {
 	const dispatch = useDispatch()
@@ -51,7 +51,7 @@ const HeaderUserButton = ({ onOpenLoginModal }) => {
 							<BottomArrow className={popupOpened && 'active'} />
 						</UserName>
 						<UserAvatar
-							src={me.isImg ? me.imgUrl : `/svg/${me.imgUrl}.svg`}
+							src={me.isImg ? me.imgUrl : `/svg/avatar/${me.imgUrl}.svg`}
 							alt="profileImg"
 							isHover
 						/>
@@ -60,7 +60,7 @@ const HeaderUserButton = ({ onOpenLoginModal }) => {
 						<UserPopUp>
 							<PopupHeader>
 								<UserAvatar
-									src={me.isImg ? me.imgUrl : `/svg/${me.imgUrl}.svg`}
+									src={me.isImg ? me.imgUrl : `/svg/avatar/${me.imgUrl}.svg`}
 									alt="profileImg"
 								/>
 								안녕하세요
