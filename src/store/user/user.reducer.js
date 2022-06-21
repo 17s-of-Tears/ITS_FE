@@ -11,6 +11,9 @@ const initialState = {
 	logInLoading: false,
 	logInDone: false,
 	logInError: null,
+	getUserTotalLoading: false,
+	getUserTotalDone: false,
+	getUserTotalError: null,
 	changeNicknameLoading: false,
 	changeNicknameDone: false,
 	changeNicknameError: null,
@@ -72,6 +75,22 @@ const userReducers = (state = initialState, action) =>
 			case actions.LOG_IN_FAILURE:
 				draft.logInLoading = false
 				draft.logInError = action.error
+				break
+			//* GET_TEAM_TOTAL
+			case actions.GET_USER_TOTAL_REQUEST:
+				draft.getUserTotalLoading = true
+				draft.getUserTotalDone = false
+				draft.getUserTotalError = null
+				draft.UserInfo = null
+				break
+			case actions.GET_USER_TOTAL_SUCCESS:
+				draft.getUserTotalLoading = false
+				draft.getUserTotalDone = true
+				draft.total = action.data
+				break
+			case actions.GET_USER_TOTAL_FAILURE:
+				draft.getUserTotalLoading = false
+				draft.getUserTotalError = action.error
 				break
 			//* CHANGE_NICKNAME
 			case actions.CHANGE_NICKNAME_REQUEST:

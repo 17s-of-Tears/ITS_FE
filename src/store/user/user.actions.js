@@ -41,6 +41,19 @@ export const logInFailure = error => ({
 	error
 })
 
+//* 총 팀 갯수 조회
+export const getUserTotalRequest = () => ({
+	type: types.GET_USER_TOTAL_REQUEST
+})
+export const getUserTotalSuccess = data => ({
+	type: types.GET_USER_TOTAL_SUCCESS,
+	data
+})
+export const getUserTotalFailure = error => ({
+	type: types.GET_USER_TOTAL_FAILURE,
+	error
+})
+
 //* 닉네임 변경
 export const changeNicknameRequest = data => ({
 	type: types.CHANGE_NICKNAME_REQUEST,

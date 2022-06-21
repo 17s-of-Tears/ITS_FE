@@ -45,6 +45,18 @@ function* logIn(action) {
 	}
 }
 
+function* getUserTotal() {
+	try {
+		const { data } = yield call(apis.getUserTotalAPI)
+		yield put(actions.getUserTotalSuccess(data))
+	} catch (error) {
+		const { message } = error.response.data
+		yield put(
+			actions.getUserTotalFailure(message ? message : '에러가 발생했습니다.')
+		)
+	}
+}
+
 function* changeNickname(action) {
 	try {
 		const { data } = yield call(apis.changeNicknameAPI, action.data)
@@ -114,6 +126,10 @@ function* watchLogIn() {
 	yield takeLatest(types.LOG_IN_REQUEST, logIn)
 }
 
+function* watchGetUserTotal() {
+	yield takeLatest(types.GET_USER_TOTAL_REQUEST, getUserTotal)
+}
+
 function* watchChangeNickname() {
 	yield takeLatest(types.CHANGE_NICKNAME_REQUEST, changeNickname)
 }
@@ -135,6 +151,7 @@ export default function* userSaga() {
 		fork(watchLoadMyInfo),
 		fork(watchSignUp),
 		fork(watchLogIn),
+		fork(watchGetUserTotal),
 		fork(watchChangeNickname),
 		fork(watchUploadImg),
 		fork(watchDeleteImg),

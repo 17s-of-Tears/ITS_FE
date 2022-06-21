@@ -9,6 +9,9 @@ export const signUpAPI = data => user.post('/signup', data)
 //* 로그인 API
 export const loginAPI = data => user.post('/login', data)
 
+//* 총 팀의 갯수 조회 API
+export const getUserTotalAPI = () => user.get('/hap')
+
 //* 닉네임 변경 API
 export const changeNicknameAPI = data => userWithToken.post('/nickname', data)
 
