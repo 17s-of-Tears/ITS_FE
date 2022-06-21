@@ -1,6 +1,6 @@
 import { homeDoneData } from '@/constant/homeData'
 import { getTeamTotalRequest } from '@/store/team/team.actions'
-import { getUserTotalRequest } from '@/store/user/user.actions'
+
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { StatsContainer } from './Stats.styled'
@@ -8,11 +8,9 @@ import { StatsContainer } from './Stats.styled'
 const Stats = () => {
 	const dispatch = useDispatch()
 	const { total } = useSelector(state => state.team)
-	const { hap } = useSelector(state => state.user)
 
 	useEffect(() => {
 		dispatch(getTeamTotalRequest())
-		dispatch(getUserTotalRequest())
 	}, [dispatch])
 
 	return (
@@ -49,5 +47,3 @@ const Stats = () => {
 }
 
 export default Stats
-// {data}
-// 									<span className="stats__content-data-small">/ 5.0</span>
